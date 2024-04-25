@@ -134,13 +134,151 @@ Jupyter Notebook, Matplotlib, Numpy, Pandas, Python 3.11.4
   
   &emsp; |&rarr; [./images/oil_energy_sectorFigure124COVID19NewCasesvsNewDeathsScatterPlotwRegression.png](./images/oil_energy_sectorFigure124COVID19NewCasesvsNewDeathsScatterPlotwRegression.png)
   
-  &emsp; |&rarr; [./images/oil_energy_sectorTable111EconomicIndicatorPrices.png](./images/oil_energy_sectorTable111EconomicIndicatorPrices.png)
+  &emsp; |&rarr; [./images/oil_energy_sectorFigure211OilIndustrySharefromNumberofCompanies.png](./images/oil_energy_sectorFigure211OilIndustrySharefromNumberofCompanies.png)
   
+  &emsp; |&rarr; [./images/oil_energy_sectorFigure212OilIndustrySharefromMarketCapitalizationMean.png](./images/oil_energy_sectorFigure212OilIndustrySharefromMarketCapitalizationMean.png)
+
+  &emsp; |&rarr; [./images/oil_energy_sectorFigure213OilIndustrySharefromMarketCapitalizationMedian.png](./images/oil_energy_sectorFigure213OilIndustrySharefromMarketCapitalizationMedian.png)
+  
+  &emsp; |&rarr; [./images/oil_energy_sectorFigure214CompanyCountvsMarketCapMean.png](./images/oil_energy_sectorFigure214CompanyCountvsMarketCapMean.png)
+
+  &emsp; |&rarr; [./images/oil_energy_sectorFigure215MarketCapMeanvsMarketCapMedian.png](./images/oil_energy_sectorFigure215MarketCapMeanvsMarketCapMedian.png)
+
+  &emsp; |&rarr; [./images/oil_energy_sectorFigure221MarketCapitalizationMeanStatisticsbyOilIndustry.png](./images/oil_energy_sectorFigure221MarketCapitalizationMeanStatisticsbyOilIndustry.png)
+
+  &emsp; |&rarr; [./images/oil_energy_sectorFigure231MarketCapitalizationMedianStatisticsbyOilIndustry.png](./images/oil_energy_sectorFigure231MarketCapitalizationMedianStatisticsbyOilIndustry.png)
+
+  &emsp; |&rarr; [./images/oil_energy_sectorFigure241MarketCapitalizationStandardDeviationStatisticsbyOilIndustry.png](./images/oil_energy_sectorFigure241MarketCapitalizationStandardDeviationStatisticsbyOilIndustry.png)
+
+  &emsp; |&rarr; [./images/oil_energy_sectorFigure242MarketCapitalizationSEMStatisticsbyOilIndustry.png](./images/oil_energy_sectorFigure242MarketCapitalizationSEMStatisticsbyOilIndustry.png)
+
+  &emsp; |&rarr; [./images/oil_energy_sectorFigure251CompanyCountvsMarketCapitalizationHistograms.png](./images/oil_energy_sectorFigure251CompanyCountvsMarketCapitalizationHistograms.png)
+
+  &emsp; |&rarr; [./images/oil_energy_sectorFigure311OESIndexAll.png](./images/oil_energy_sectorFigure311OESIndexAll.png)
+
+  &emsp; |&rarr; [./images/oil_energy_sectorFigure311OESIndexAllChange.png](./images/oil_energy_sectorFigure311OESIndexAllChange.png)
+
+  &emsp; |&rarr; [./images/oil_energy_sectorFigure331OESTopIndex.png](./images/oil_energy_sectorFigure331OESTopIndex.png)
+
+  &emsp; |&rarr; [./images/oil_energy_sectorFigure332OESTopIndexChange.png](./images/oil_energy_sectorFigure332OESTopIndexChange.png)
+
+  &emsp; |&rarr; [./images/oil_energy_sectorFigure341AllCompaniesWorldMap.html](./images/oil_energy_sectorFigure341AllCompaniesWorldMap.html)
+
+  &emsp; |&rarr; [./images/oil_energy_sectorFigure342AllCompaniesAmericasandEuropeMap.html](./images/oil_energy_sectorFigure342AllCompaniesAmericasandEuropeMap.html)
+
+  &emsp; |&rarr; [./images/oil_energy_sectorFigure343TopCompaniesWorldMap.html](./images/oil_energy_sectorFigure343TopCompaniesWorldMap.html)
+
+  &emsp; |&rarr; [./images/oil_energy_sectorFigure344TopCompaniesAmericasandEuropeMap.html](./images/oil_energy_sectorFigure344TopCompaniesAmericasandEuropeMap.html)
+
+  &emsp; |&rarr; [./images/oil_energy_sectorFigure345OESTopIndexandOESAllIndex.png](./images/oil_energy_sectorFigure345OESTopIndexandOESAllIndex.png)
+
+  &emsp; |&rarr; [./images/oil_energy_sectorFigure346OESAllIndexvsOESTopIndexScatterPlotwRegression.png](./images/oil_energy_sectorFigure346OESAllIndexvsOESTopIndexScatterPlotwRegression.png)
+
+  &emsp; |&rarr; [./images/oil_energy_sectorFigure347OESTopIndexandOESAllIndexChange.png](./images/oil_energy_sectorFigure347OESTopIndexandOESAllIndexChange.png)
+
+  &emsp; |&rarr; [./images/oil_energy_sectorFigure348OESTopIndexandOESAllIndexChange.png](./images/oil_energy_sectorFigure348OESTopIndexandOESAllIndexChange.png)
+
+  &emsp; |&rarr; [./images/oil_energy_sectorFigure349OESAllIndexvsOESTopIndexChangeScatterPlotwRegression.png](./images/oil_energy_sectorFigure349OESAllIndexvsOESTopIndexChangeScatterPlotwRegression.png)
+
+  &emsp; |&rarr; [./images/oil_energy_sectorFigure411CrudeOilandOESTopIndex.png](./images/oil_energy_sectorFigure411CrudeOilandOESTopIndex.png)
+
+  &emsp; |&rarr; [./images/oil_energy_sectorFigure412CrudeOilandOESTopIndex.png](./images/oil_energy_sectorFigure412CrudeOilandOESTopIndex.png)
+
+  &emsp; |&rarr; [./images/oil_energy_sectorFigure413CrudeOilvsOESTopIndexScatterPlotwRegression.png](./images/oil_energy_sectorFigure413CrudeOilvsOESTopIndexScatterPlotwRegression.png)
+
+  &emsp; |&rarr; [./images/oil_energy_sectorFigure414CrudeOilandOESTopIndexChange.png](./images/oil_energy_sectorFigure414CrudeOilandOESTopIndexChange.png)
+
+  &emsp; |&rarr; [./images/oil_energy_sectorFigure415CrudeOilandOESTopIndexChange.png](./images/oil_energy_sectorFigure415CrudeOilandOESTopIndexChange.png)
+
+  &emsp; |&rarr; [./images/oil_energy_sectorFigure416CrudeOilvsOESTopIndexChangeScatterPlotwRegression.png](./images/oil_energy_sectorFigure416CrudeOilvsOESTopIndexChangeScatterPlotwRegression.png)
+
+  &emsp; |&rarr; [./images/oil_energy_sectorFigure421SP500andOESTopIndex.png](./images/oil_energy_sectorFigure421SP500andOESTopIndex.png)
+
+  &emsp; |&rarr; [./images/oil_energy_sectorFigure422SP500andOESTopIndex.png](./images/oil_energy_sectorFigure422SP500andOESTopIndex.png)
+
+  &emsp; |&rarr; [./images/oil_energy_sectorFigure423SP500vsOESTopIndexScatterPlotwRegression.png](./images/oil_energy_sectorFigure423SP500vsOESTopIndexScatterPlotwRegression.png)
+
+  &emsp; |&rarr; [./images/oil_energy_sectorFigure424SP500andOESTopIndexChange.png](./images/oil_energy_sectorFigure424SP500andOESTopIndexChange.png)
+
+  &emsp; |&rarr; [./images/oil_energy_sectorFigure425SP500andOESTopIndexChange.png](./images/oil_energy_sectorFigure425SP500andOESTopIndexChange.png)
+
+  &emsp; |&rarr; [./images/oil_energy_sectorFigure426SP500vsOESTopIndexChangeScatterPlotwRegression.png](./images/oil_energy_sectorFigure426SP500vsOESTopIndexChangeScatterPlotwRegression.png)
+
+  &emsp; |&rarr; [./images/oil_energy_sectorFigure431GoldandOESTopIndex.png](./images/oil_energy_sectorFigure431GoldandOESTopIndex.png)
+
+  &emsp; |&rarr; [./images/oil_energy_sectorFigure432GoldandOESTopIndex.png](./images/oil_energy_sectorFigure432GoldandOESTopIndex.png)
+
+  &emsp; |&rarr; [./images/oil_energy_sectorFigure433GoldvsOESTopIndexScatterPlotwRegression.png](./images/oil_energy_sectorFigure433GoldvsOESTopIndexScatterPlotwRegression.png)
+
+  &emsp; |&rarr; [./images/oil_energy_sectorFigure434GoldandOESTopIndexChange.png](./images/oil_energy_sectorFigure434GoldandOESTopIndexChange.png)
+
+  &emsp; |&rarr; [./images/oil_energy_sectorFigure435GoldandOESTopIndexChange.png](./images/oil_energy_sectorFigure435GoldandOESTopIndexChange.png)
+
+  &emsp; |&rarr; [./images/oil_energy_sectorFigure436GoldvsOESTopIndexChangeScatterPlotwRegression.png](./images/oil_energy_sectorFigure436GoldvsOESTopIndexChangeScatterPlotwRegression.png)
+
+  &emsp; |&rarr; [./images/oil_energy_sectorFigure451NewCovidCasesandOESTopIndex.png](./images/oil_energy_sectorFigure451NewCovidCasesandOESTopIndex.png)
+
+  &emsp; |&rarr; [./images/oil_energy_sectorFigure452NewCovidCasesandOESTopIndex.png](./images/oil_energy_sectorFigure452NewCovidCasesandOESTopIndex.png)
+
+  &emsp; |&rarr; [./images/oil_energy_sectorFigure453NewCovidCasesvsOESTopIndexScatterPlotwRegression.png](./images/oil_energy_sectorFigure453NewCovidCasesvsOESTopIndexScatterPlotwRegression.png)
+
+  &emsp; |&rarr; [./images/oil_energy_sectorFigure454NewCovidCasesandOESTopIndexChange.png](./images/oil_energy_sectorFigure454NewCovidCasesandOESTopIndexChange.png)
+
+  &emsp; |&rarr; [./images/oil_energy_sectorFigure455NewCovidCasesandOESTopIndexChange.png](./images/oil_energy_sectorFigure455NewCovidCasesandOESTopIndexChange.png)
+
+  &emsp; |&rarr; [./images/oil_energy_sectorFigure456NewCovidCasesvsOESTopIndexChangeScatterPlotwRegression.png](./images/oil_energy_sectorFigure456NewCovidCasesvsOESTopIndexChangeScatterPlotwRegression.png)
+
+  &emsp; |&rarr; [./images/oil_energy_sectorFigure461NewCovidDeathsandOESTopIndex.png](./images/oil_energy_sectorFigure461NewCovidDeathsandOESTopIndex.png)
+
+  &emsp; |&rarr; [./images/oil_energy_sectorFigure462NewCovidDeathsandOESTopIndex.png](./images/oil_energy_sectorFigure462NewCovidDeathsandOESTopIndex.png)
+
+  &emsp; |&rarr; [./images/oil_energy_sectorFigure463NewCovidDeathsvsOESTopIndexScatterPlotwRegression.png](./images/oil_energy_sectorFigure463NewCovidDeathsvsOESTopIndexScatterPlotwRegression.png)
+
+  &emsp; |&rarr; [./images/oil_energy_sectorFigure464NewCovidDeathsandOESTopIndexChange.png](./images/oil_energy_sectorFigure464NewCovidDeathsandOESTopIndexChange.png)
+
+  &emsp; |&rarr; [./images/oil_energy_sectorFigure465NewCovidDeathsandOESTopIndexChange.png](./images/oil_energy_sectorFigure465NewCovidDeathsandOESTopIndexChange.png)
+
+  &emsp; |&rarr; [./images/oil_energy_sectorFigure466NewCovidDeathsvsOESTopIndexChangeScatterPlotwRegression.png](./images/oil_energy_sectorFigure466NewCovidDeathsvsOESTopIndexChangeScatterPlotwRegression.png)
+
+  &emsp; |&rarr; [./images/oil_energy_sectorFigure43610YearBondYieldvsOESTopIndexChangeScatterPlotwRegression.png](./images/oil_energy_sectorFigure43610YearBondYieldvsOESTopIndexChangeScatterPlotwRegression.png)
+
+  &emsp; |&rarr; [./images/oil_energy_sectorFigure44110YearBondYieldandOESTopIndex.png](./images/oil_energy_sectorFigure44110YearBondYieldandOESTopIndex.png)
+
+  &emsp; |&rarr; [./images/oil_energy_sectorFigure44210YearBondYieldandOESTopIndex.png](./images/oil_energy_sectorFigure44210YearBondYieldandOESTopIndex.png)
+
+  &emsp; |&rarr; [./images/oil_energy_sectorFigure44310YearBondYieldvsOESTopIndexScatterPlotwRegression.png](./images/oil_energy_sectorFigure44310YearBondYieldvsOESTopIndexScatterPlotwRegression.png)
+
+  &emsp; |&rarr; [./images/oil_energy_sectorFigure44410YearBondYieldandOESTopIndexChange.png](./images/oil_energy_sectorFigure44410YearBondYieldandOESTopIndexChange.png)
+
+  &emsp; |&rarr; [./images/oil_energy_sectorFigure44510YearBondYieldandOESTopIndexChange.png](./images/oil_energy_sectorFigure44510YearBondYieldandOESTopIndexChange.png)
+
+  &emsp; |&rarr; [./images/oil_energy_sectorTable13USOilEnergySectorCompanies.png](./images/oil_energy_sectorTable13USOilEnergySectorCompanies.png)
+
+  &emsp; |&rarr; [./images/oil_energy_sectorTable32TopCompanyinEachOilIndustryfromMarketCapitalizationMedian.png](./images/oil_energy_sectorTable32TopCompanyinEachOilIndustryfromMarketCapitalizationMedian.png)
+
+  &emsp; |&rarr; [./images/oil_energy_sectorTable111EconomicIndicatorPrices.png](./images/oil_energy_sectorTable111EconomicIndicatorPrices.png)
+
   &emsp; |&rarr; [./images/oil_energy_sectorTable113EconomicIndicatorPricesChange.png](./images/oil_energy_sectorTable113EconomicIndicatorPricesChange.png)
 
   &emsp; |&rarr; [./images/oil_energy_sectorTable121COVID19CasesandDeathsDuringAnalysisPeriodUSA.png](./images/oil_energy_sectorTable121COVID19CasesandDeathsDuringAnalysisPeriodUSA.png)
-  
+
   &emsp; |&rarr; [./images/oil_energy_sectorTable122COVID19NewCasesandNewDeathsChangeUSA.png](./images/oil_energy_sectorTable122COVID19NewCasesandNewDeathsChangeUSA.png)
+
+  &emsp; |&rarr; [./images/oil_energy_sectorTable221OilCompanyMarketCapitalizationMetrics.png](./images/oil_energy_sectorTable221OilCompanyMarketCapitalizationMetrics.png)
+
+  &emsp; |&rarr; [./images/oil_energy_sectorTable221OilIndustryMarketCapitalizationMeanStatistics.png](./images/oil_energy_sectorTable221OilIndustryMarketCapitalizationMeanStatistics.png)
+
+  &emsp; |&rarr; [./images/oil_energy_sectorTable231OilIndustryMarketCapitalizationMedianStatistics.png](./images/oil_energy_sectorTable231OilIndustryMarketCapitalizationMedianStatistics.png)
+
+  &emsp; |&rarr; [./images/oil_energy_sectorTable241OilIndustryMarketCapitalizationStandardDeviationStatistics.png](./images/oil_energy_sectorTable241OilIndustryMarketCapitalizationStandardDeviationStatistics.png)
+
+  &emsp; |&rarr; [./images/oil_energy_sectorTable242OilIndustryMarketCapitalizationSEMStatistics.png](./images/oil_energy_sectorTable242OilIndustryMarketCapitalizationSEMStatistics.png)
+
+  &emsp; |&rarr; [./images/oil_energy_sectorTable341OilEnergySectorIndices.png](./images/oil_energy_sectorTable341OilEnergySectorIndices.png)
+
+  &emsp; |&rarr; [./images/oil_energy_sectorTable471AllMetricsCorrelationMatrix.png](./images/oil_energy_sectorTable471AllMetricsCorrelationMatrix.png)
+
+  &emsp; |&rarr; [./images/oil_energy_sectorTable472AllMetricsChangeCorrelationMatrix.png](./images/oil_energy_sectorTable472AllMetricsChangeCorrelationMatrix.png)
 
   &emsp; |&rarr; [./images/README.md](./images/README.md)
 
