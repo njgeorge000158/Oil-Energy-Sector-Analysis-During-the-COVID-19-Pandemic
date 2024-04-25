@@ -12,6 +12,7 @@ mathx.py
 matplotlibx.py
 pandasx_constants.py
 pandasx.py
+oil_energy_sector_config.py
 
 # Distribution / packaging
 .Python
