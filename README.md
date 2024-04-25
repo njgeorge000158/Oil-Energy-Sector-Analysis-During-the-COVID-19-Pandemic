@@ -1,4 +1,4 @@
-![maksym-kaharlytskyi-u13zBF4r56A-unsplash](https://github.com/SIWhang213/Project-1-group-4/assets/137141385/500f11cf-8bc1-478b-837d-383e914413e9)
+![oil_sector](https://github.com/njgeorge000158/Oil-Energy-Sector-Analysis-During-the-COVID-19-Pandemic/assets/137228821/ef7762de-3193-4cfb-aa40-899e9fe069a7)
 
 -----
 
