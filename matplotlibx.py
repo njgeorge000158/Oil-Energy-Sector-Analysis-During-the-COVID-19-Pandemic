@@ -19,8 +19,8 @@
  #  display_line_chart_from_dataframe
  #  display_stacked_line_subplots
  #
- #  display_box_plot_from_series_list
- #  display_box_plot_from_dataframe
+ #  display_boxplots_from_series_list
+ #  display_boxplot_from_dataframe
  #
  #  display_bar_chart_from_series
  #  display_bar_chart_from_dataframe
@@ -31,7 +31,12 @@
  #  display_pie_chart_from_series
  #  display_multiple_pie_charts_from_dataframe
  #
+ #  display_histogram_from_series
+ #  display_histograms_from_series_list
  #  display_multiple_histograms_from_dataframe
+ #
+ #  display_plot_from_series
+ #  display_plots_from_series_list
  #
  #
  #  Date            Description                             Programmer
@@ -46,6 +51,7 @@ import mathx
 import math
 
 import matplotlib.pyplot as plt
+import pandasx_constants
 import pandas as pd
 
 from scipy import stats
@@ -340,7 +346,9 @@ def display_line_chart_from_xy_series \
          ylabel_font_style_string = 'normal',
          ylabel_pad_float = 10.0,
          xticks_font_size_float = 14.0,
+         xticks_rotation_float = 0.0,
          yticks_font_size_float = 14.0,
+         yticks_rotation_float = 0.0,
          figure_width_float = 9.708,
          figure_length_float = 6.0):
 
@@ -852,7 +860,7 @@ def display_stacked_line_subplots \
 
 #*******************************************************************************************
  #
- #  Function Name:  display_box_plot_from_series_list
+ #  Function Name:  display_boxplots_from_series_list
  #
  #  Function Description:
  #      The function displays a box plot from a list of series.
@@ -901,10 +909,6 @@ def display_stacked_line_subplots \
  #                          The parameter is the x-axis tick font size. 
  #  float   xticks_rotation_float
  #                          The parameter is the x-axis tick rotation in degrees.
- #  float   yticks_font_size_float
- #                          The parameter is the y-axis tick font size. 
- #  float   yticks_rotation_float
- #                          The parameter is the y-axis tick rotation in degrees. 
  #  float   figure_width_float
  #                          The parameter is the figure width. 
  #  float   figure_length_float
@@ -917,7 +921,7 @@ def display_stacked_line_subplots \
  #
  #******************************************************************************************/
 
-def display_box_plot_from_series_list \
+def display_boxplots_from_series_list \
         (input_series_list,
          xticks_label_string_list,
          title_string,
@@ -938,33 +942,31 @@ def display_box_plot_from_series_list \
          ylabel_pad_float = 10.0,
          xticks_font_size_float = 14.0,
          xticks_rotation_float = 0.0,
-         yticks_font_size_float = 14.0,
-         yticks_rotation_float = 0.0,
          figure_width_float = 9.708,
          figure_length_float = 6.0):
     
-    fig1, ax = plt.subplots(figsize = (figure_width_float, figure_length_float))
+    fig1, axs = plt.subplots(figsize = (figure_width_float, figure_length_float))
 
-    ax.boxplot \
+    axs.boxplot \
         (input_series_list,
          vert = vertical_boolean,
          widths = box_widths_float,
          meanline = mean_line_boolean, 
          showmeans = show_means_boolean)
         
-    ax.set_title \
+    axs.set_title \
         (title_string,
          fontdict = {'fontsize': title_font_size_float, 
                      'fontstyle': title_font_style_string},
          pad = title_pad_float)
         
-    ax.set_xlabel \
+    axs.set_xlabel \
         (xlabel_string,
          fontdict = {'fontsize': xlabel_font_size_float, 
                      'fontstyle': xlabel_font_style_string},
          labelpad = xlabel_pad_float)
 
-    ax.set_ylabel \
+    axs.set_ylabel \
         (ylabel_string,
          fontdict = {'fontsize': ylabel_font_size_float, 
                      'fontstyle': ylabel_font_style_string},
@@ -978,17 +980,13 @@ def display_box_plot_from_series_list \
         ticks_index_integer_list.append(index + 1)
 
         
-    ax.set_xticks \
+    axs.set_xticks \
         (ticks_index_integer_list, 
          xticks_label_string_list,
          fontsize = xticks_font_size_float,
          rotation = xticks_rotation_float)
 
-    ax.set_yticks \
-        (fontsize = yticks_font_size_float,
-         rotation = yticks_rotation_float)
-
-        
+            
     if vertical_boolean == True:
         
         plt.grid(axis = 'y')
@@ -1008,7 +1006,7 @@ def display_box_plot_from_series_list \
 
 #*******************************************************************************************
  #
- #  Function Name:  display_box_plot_from_dataframe
+ #  Function Name:  display_boxplot_from_dataframe
  #
  #  Function Description:
  #      The function displays a box plot from a dataframe.
@@ -1082,7 +1080,7 @@ def display_box_plot_from_series_list \
  #
  #******************************************************************************************/
 
-def display_box_plot_from_dataframe \
+def display_boxplot_from_dataframe \
         (input_dataframe,
          x_column_string,
          y_column_string,
@@ -1188,7 +1186,9 @@ def display_box_plot_from_dataframe \
  #  string  xlabel_string   The parameter is the x-axis label.
  #  string  ylabel_string   The parameter is the y-axis label.
  #  list    bar_colors_string_list
- #                          The parameter is the list of bar colors.
+ #                          The parameter is the list of bar chart bar colors.
+ #  boolean horizontal_boolean
+ #                          The parameter indicates whether the bar chart is horizontal.
  #  string  bar_align_string
  #                          The parameter is bar alignment.
  #  string  edge_color_string
@@ -1240,6 +1240,7 @@ def display_bar_chart_from_series \
          xlabel_string,
          ylabel_string,
          bar_colors_string_list,
+         horizontal_boolean = False,
          bar_align_string = 'center',
          edge_color_string = 'black',
          line_width_float = 1.5,
@@ -1262,23 +1263,39 @@ def display_bar_chart_from_series \
          figure_length_float = 6.0):
       
     plt.figure(figsize = (figure_width_float, figure_length_float))
-        
-    plt.bar \
-        (input_series.keys(),
-         input_series,
-         align = bar_align_string,
-         color = bar_colors_string_list,
-         edgecolor = edge_color_string,
-         linewidth = line_width_float,
-         alpha = alpha_float,
-         width = bar_width_float)
-        
+
+            
+    if horizontal_boolean == False:
+    
+        plt.bar \
+            (input_series.keys(),
+             input_series,
+             align = bar_align_string,
+             color = bar_colors_string_list,
+             edgecolor = edge_color_string,
+             linewidth = line_width_float,
+             alpha = alpha_float,
+             width = bar_width_float)
+
+    else:
+
+        plt.barh \
+            (input_series.keys(),
+             input_series,
+             align = bar_align_string,
+             color = bar_colors_string_list,
+             edgecolor = edge_color_string,
+             linewidth = line_width_float,
+             alpha = alpha_float)
+
+            
     plt.title \
         (title_string,
          fontdict = {'fontsize': title_font_size_float, 
                      'fontstyle': title_font_style_string},
          pad = title_pad_float)
 
+            
     plt.xlabel \
         (xlabel_string,
          fontdict = {'fontsize': xlabel_font_size_float, 
@@ -1290,7 +1307,8 @@ def display_bar_chart_from_series \
          fontdict = {'fontsize': ylabel_font_size_float, 
                      'fontstyle': ylabel_font_style_string},
          labelpad = ylabel_pad_float)
-        
+
+            
     plt.xticks \
         (rotation = xtick_label_rotation_float,
          fontsize = xtick_font_size_float)
@@ -1301,7 +1319,8 @@ def display_bar_chart_from_series \
 
             
     plt.grid(axis = 'y')
-        
+
+            
     logx.save_plot_image(title_string)
         
     plt.show()
@@ -1737,7 +1756,7 @@ def display_multiple_scatter_plots_from_xy_series_list \
          edge_colors_string = 'black',
          alpha_float = 0.8,
          suptitle_font_size_float = 20.0,
-         suptitle_font_style_string = 'normal',
+         suptitle_font_weight_string = 'normal',
          suptitle_pad_float = 1.0,         
          title_font_size_float = 20.0,
          title_font_style_string = 'normal',
@@ -1845,7 +1864,8 @@ def display_multiple_scatter_plots_from_xy_series_list \
     
         plt.suptitle \
             (suptitle_string, 
-             fontsize = suptitle_fontsize_float, 
+             fontsize = suptitle_font_size_float,
+             fontweight = suptitle_font_weight_string,
              y = suptitle_pad_float)
 
         logx.save_plot_image(suptitle_string)
@@ -2167,6 +2187,419 @@ def display_multiple_pie_charts_from_dataframe \
 
 #*******************************************************************************************
  #
+ #  Function Name:  display_histogram_from_series
+ #
+ #  Function Description:
+ #      The function displays a histogram from a series and criteria.
+ #
+ #
+ #  Return Type: n/a
+ #
+ #
+ #  Function Parameters:
+ #
+ #  Type    Name            Description
+ #  -----   -------------   ----------------------------------------------
+ #  series
+ #          input_series    The parameter is the input series.
+ #  string  title_string    The parameter is the chart title.
+ #  list    color_string    The parameter is the color of the histogram.
+ #  string  xlabel_string   The parameter is the x-axis label.
+ #  string  ylabel_string   The parameter is the y-axis label.
+ #  integer bins_count_integer
+ #                          The parameter is the number of histogram bins.
+ #  float   alpha_float     The parameter is the alpha (transparency) value.
+ #  boolean grid_boolean    The parameter indicates whether the boxplot displays a grid.
+ #  string  fill_style_string
+ #                          The parameter is the line fills style.
+ #  float   line_width_float
+ #                          The parameter is the line width around a histogram box.       
+ #  string  edge_color_string
+ #                          The parameter is the histogram box edge color.
+ #  boolean display_legend_boolean
+ #                          The parameter indicates whether the legend will be present.
+ #  float   title_font_size_float
+ #                          The parameter is the title font size. 
+ #  string  title_font_style_string
+ #                          The parameter is the title font style.
+ #  float   title_pad_float The parameter is the title space pad value. 
+ #  float   xlabel_font_size_float
+ #                          The parameter is the x-axis font size. 
+ #  string  xlabel_font_style_string
+ #                          The parameter is the x-axis font style.
+ #  float   xlabel_pad_float
+ #                          The parameter is the x-axis space pad value. 
+ #  float   ylabel_font_size_float
+ #                          The parameter is the y-axis font size. 
+ #  string  ylabel_font_style_string
+ #                          The parameter is the y-axis font style.
+ #  float   ylabel_pad_float
+ #                          The parameter is the y-axis space pad value. 
+ #  float   xticks_font_size_float
+ #                          The parameter is the subplot's x-tick label's font size.
+ #  float   xticks_rotation_float
+ #                          The parameter is the subplot's x-tick label's rotation in degrees.
+ #  float   yticks_font_size_float
+ #                          The parameter is the subplot's y-tick label's font size.
+ #  float   yticks_rotation_float
+ #                          The parameter is the subplot's y-tick label's rotation in degrees.
+ #  string  legend_loc_string
+ #                          The parameter is the legend's general location.
+ #  float   legend_font_size_float
+ #                          The parameter is legend's font size.
+ #  tuple   legend_bbox_to_anchor_float_tuple
+ #                          The parameter is the legend's xy-coordinates. 
+ #  float   figure_width_float
+ #                          The parameter is the figure width. 
+ #  float   figure_length_float
+ #                          The parameter is the figure length. 
+ #
+ #
+ #  Date                Description                                 Programmer
+ #  ---------------     ------------------------------------        ------------------
+ #  08/18/2023          Initial Development                         Nicholas J. George
+ #
+ #******************************************************************************************/
+
+def display_histogram_from_series \
+        (input_series,
+         title_string,
+         color_string,
+         xlabel_string = None,
+         ylabel_string = None,
+         bins_count_integer = 20,
+         alpha_float = 1.0,
+         grid_boolean = True,
+         line_width_float = 1.5,
+         edge_color_string = 'black',
+         display_legend_boolean = False,
+         title_font_size_float = 20.0,
+         title_font_style_string = 'normal',
+         title_pad_float = 20.0,
+         xlabel_font_size_float = 16.0,
+         xlabel_font_style_string = 'normal',
+         xlabel_pad_float = 10.0,
+         ylabel_font_size_float = 16.0,
+         ylabel_font_style_string = 'normal',
+         ylabel_pad_float = 10.0,
+         xticks_font_size_float = 14.0,
+         xticks_rotation_float = 90.0,
+         yticks_font_size_float = 14.0,
+         yticks_rotation_float = 0.0,
+         legend_loc_string = 'center right',
+         legend_font_size_float = 14.0,
+         legend_bbox_to_anchor_float_tuple = (1.5, 0.5),
+         figure_width_float = 9.708,
+         figure_length_float = 6.0):
+    
+    input_series \
+        .plot.hist \
+            (bins = bins_count_integer, 
+             alpha = alpha_float, 
+             color = color_string, 
+             linewidth = line_width_float, 
+             edgecolor = edge_color_string, 
+             legend = display_legend_boolean,
+             figsize = (figure_width_float, figure_length_float))
+
+            
+    plt.title \
+        (title_string,
+         fontdict = {'fontsize': title_font_size_float, 
+                     'fontstyle': title_font_style_string},
+         pad = title_pad_float)
+
+            
+    if xlabel_string != None:
+            
+        plt.xlabel \
+            (xlabel_string,
+             fontdict = {'fontsize': xlabel_font_size_float,
+                         'fontstyle': xlabel_font_style_string},
+             labelpad = xlabel_pad_float)
+       
+    if ylabel_string != None:
+            
+        plt.ylabel \
+            (ylabel_string,
+             fontdict = {'fontsize': ylabel_font_size_float,
+                         'fontstyle': ylabel_font_style_string},
+             labelpad = ylabel_pad_float)
+
+            
+    plt.xticks(fontsize = xticks_font_size_float, rotation = xticks_rotation_float)
+       
+    plt.yticks(fontsize = yticks_font_size_float, rotation = yticks_rotation_float)
+
+            
+    if display_legend_boolean == True:
+
+        plt.legend \
+            (loc = legend_loc_string,
+             fontsize = legend_font_size_float,
+             bbox_to_anchor = legend_bbox_to_anchor_float_tuple)
+
+
+    logx.save_plot_image(title_string)
+
+
+# In[17]:
+
+
+#*******************************************************************************************
+ #
+ #  Function Name:  display_histograms_from_series_list
+ #
+ #  Function Description:
+ #      The function receives a series list and formatting parameters for the display
+ #      of multiple histograms in a single figure.
+ #
+ #
+ #  Return Type: n/a
+ #
+ #
+ #  Function Parameters:
+ #
+ #  Type    Name            Description
+ #  -----   -------------   ----------------------------------------------
+ #  series
+ #          input_series    The parameter is the input dataframe
+ #  string  suptitle_string The parameter is the chart title.
+ #  string  supxlabel_string
+ #                          The parameter is the title for the figure's x-axis.
+ #  string  supylabel_string
+ #                          The parameter is the title for the figure's y-axis.
+ #  string  xlabel_string   The parameter is the x-axis label.
+ #  string  ylabel_string   The parameter is the y-axis label.
+ #  list    color_string    The parameter is the histogram color.
+ #  boolean reverse_dimensions_boolean 
+ #                          The parameter indicates whether the histograms share the x-axis.
+ #  boolean share_x_boolean The parameter indicates whether the histograms share the x-axis.
+ #  boolean share_y_boolean The parameter indicates whether the histograms share the y-axis.
+ #  boolean tight_layout_boolean  
+ #                          The parameter indicates whether the figure has a tight layout.
+ #  integer bins_count_integer
+ #                          The parameter is the number of histogram bins.
+ #  float   alpha_float     The parameter is the alpha (transparency) value.
+ #  boolean grid_boolean    The parameter indicates whether the boxplot displays a grid.
+ #  float   line_width_float
+ #                          The parameter is the line width around a histogram box.       
+ #  string  edge_color_string
+ #                          The parameter is the histogram box edge color.
+ #  float   suptitle_x_float
+ #                          The parameter is the figure title's x-coordinate padding.
+ #  float   suptitle_y_float
+ #                          The parameter is the figure title's y-coordinate padding.
+ #  float   suptitle_font_size_float
+ #                          The parameter is the figure title's font size.
+ #  string  suptitle_font_style_string
+ #                          The parameter is the figure title's font style.
+ #  float   supxlabel_x_float
+ #                          The parameter is the figure's x-axis label's 
+ #                          x-coordinate padding.
+ #  float   supxlabel_y_float
+ #                          The parameter is the figure's x-axis label's 
+ #                          y-coordinate padding.
+ #  float   supxlabel_font_size_float
+ #                          The parameter is the figure's x-axis label's font size.
+ #  string  supxlabel_font_style_string
+ #                          The parameter is the figure's x-axis label's font style.
+ #  float   supylabel_x_float
+ #                          The parameter is the figure's y-axis label's 
+ #                          x-coordinate padding.
+ #  float   supylabel_y_float
+ #                          The parameter is the figure's y-axis label's 
+ #                          y-coordinate padding.
+ #  float   supylabel_font_size_float
+ #                          The parameter is the figure's y-axis label's font size.
+ #  string  supylabel_font_style_string
+ #                          The parameter is the figure's y-axis label's font style.
+ #  string  titles_string_list
+ #                          The parameter is the list of chart titles.
+ #  float   title_font_size_float
+ #                          The parameter is the title font size. 
+ #  string  title_font_style_string
+ #                          The parameter is the title font style.
+ #  float   title_pad_float
+ #                          The parameter is the title space pad value. 
+ #  float   title_y_float
+ #                          The parameter is the title's y-axis displacement.
+ #  string  xlabel_string
+ #                          The parameter is the subplot's x-axis label.
+ #  float   xlabel_pad_float  
+ #                          The parameter is the subplot's x-axis label's padding.
+ #  float   xlabel_font_size_float
+ #                          The parameter is the subplot's x-axis label's font size.
+ #  string  xlabel_loc_string
+ #                          The parameter is the subplot's x-axis label's general location.
+ #  string  xlabel_font_style_string
+ #                          The parameter is the subplot's x-axis label's font style.
+ #  string  ylabel_string
+ #                          The parameter is the subplot's y-axis label.
+ #  float   ylabel_pad_float  
+ #                          The parameter is the subplot's y-axis label's padding.
+ #  float   ylabel_font_size_float
+ #                          The parameter is the subplot's y-axis label's font size.
+ #  string  ylabel_loc_string
+ #                          The parameter is the subplot's y-axis label's general location.
+ #  string  ylabel_font_style_string
+ #                          The parameter is the subplot's y-axis label's font style.
+ #  float   figure_width_float
+ #                          The parameter is the figure width. 
+ #  float   figure_length_float
+ #                          The parameter is the figure length. 
+ #
+ #
+ #  Date                Description                                 Programmer
+ #  ---------------     ------------------------------------        ------------------
+ #  08/18/2023          Initial Development                         Nicholas J. George
+ #
+ #******************************************************************************************/  
+
+def display_histograms_from_series_list \
+        (input_series_list,
+         suptitle_string,
+         supxlabel_string = None,
+         supylabel_string = None,
+         xlabel_string = '',
+         ylabel_string = '',
+         color_string = 'firebrick',
+         reverse_dimensions_boolean = True,
+         share_x_boolean = True,
+         share_y_boolean = True,
+         tight_layout_boolean = True,
+         bins_count_integer = 20,
+         alpha_float = 1.0,
+         grid_boolean = True,
+         line_width_float = 1.5,
+         edge_color_string = 'black',
+         suptitle_x_float = 0.5,  
+         suptitle_y_float = 0.9,  
+         suptitle_font_size_float = 20.0,
+         suptitle_font_weight_string = 'normal',
+         supxlabel_x_float = 0.5,  
+         supxlabel_y_float = 0.0,  
+         supxlabel_font_size_float = 16.0,
+         supxlabel_font_weight_string = 'normal',
+         supylabel_x_float = 0.0,  
+         supylabel_y_float = 0.5,  
+         supylabel_font_size_float = 16.0,
+         supylabel_font_weight_string = 'normal',
+         title_font_size_float = 20.0,
+         title_font_style_string = 'normal',
+         title_pad_float = 20.0,
+         xlabel_font_size_float = 16.0,
+         xlabel_font_style_string = 'normal',
+         xlabel_pad_float = 10.0,
+         ylabel_font_size_float = 16.0,
+         ylabel_font_style_string = 'normal',
+         ylabel_pad_float = 10.0,
+         tight_layout_float = 3.0,
+         figure_width_float = 15.0,
+         figure_length_float = 7.5):
+
+    chart_count_integer = len(input_series_list)
+
+    colors_string_list = [color_string] * chart_count_integer
+
+            
+    row_count_integer, column_count_integer \
+        = mathx.calculate_closest_factors(chart_count_integer)
+
+    if reverse_dimensions_boolean == True:
+
+        row_count_integer, column_count_integer = column_count_integer, row_count_integer       
+
+    
+    fig, axs \
+        = plt.subplots \
+            (row_count_integer, 
+             column_count_integer, 
+             figsize = (figure_width_float, figure_length_float),
+             sharex = share_x_boolean,
+             sharey = share_y_boolean, 
+             tight_layout = tight_layout_boolean)
+
+            
+    plt.clf()
+
+
+    fig.suptitle \
+        (suptitle_string,
+         x = suptitle_x_float,
+         y = suptitle_y_float,
+         fontsize = suptitle_font_size_float, 
+         fontweight = suptitle_font_weight_string)
+
+            
+    for index in range(chart_count_integer):
+
+        plt.subplot(row_count_integer, column_count_integer, index + 1)
+
+        
+        input_series_list[index] \
+            .plot.hist \
+                (bins = bins_count_integer, 
+                 alpha = alpha_float,
+                 grid = grid_boolean,
+                 color = colors_string_list[index], 
+                 linewidth = line_width_float, 
+                 edgecolor = edge_color_string,
+                 legend = False)
+
+        
+        plt.title \
+            (input_series_list[index].name,
+             fontdict = {'fontsize': title_font_size_float, 
+                         'fontstyle': title_font_style_string},
+             pad = title_pad_float)
+
+        
+        plt.xlabel \
+            (xlabel_string,
+             fontdict = {'fontsize': xlabel_font_size_float,
+                         'fontstyle': xlabel_font_style_string},
+             labelpad = xlabel_pad_float)
+       
+        plt.ylabel \
+            (ylabel_string,
+             fontdict = {'fontsize': ylabel_font_size_float,
+                         'fontstyle': ylabel_font_style_string},
+             labelpad = ylabel_pad_float)
+
+        
+        plt.tight_layout(pad = 3.0)
+    
+ 
+    if supxlabel_string != None:
+    
+        fig.supxlabel \
+            (supxlabel_string,
+             x = supxlabel_x_float,
+             y = supxlabel_y_float,
+             fontsize = supxlabel_font_size_float, 
+             fontweight = supxlabel_font_weight_string)
+
+    if supylabel_string != None:
+    
+            fig.supylabel \
+                (supylabel_string,
+                 x = supylabel_x_float,
+                 y = supylabel_y_float,
+                 fontsize = supylabel_font_size_float, 
+                 fontweight = supylabel_font_weight_string)
+
+
+    logx.save_plot_image(suptitle_string)
+        
+    plt.show()
+
+
+# In[18]:
+
+
+#*******************************************************************************************
+ #
  #  Function Name:  display_multiple_histograms_from_dataframe
  #
  #  Function Description:
@@ -2185,7 +2618,7 @@ def display_multiple_pie_charts_from_dataframe \
  #          input_dataframe The parameter is the input dataframe
  #  string  suptitle_string The parameter is the chart title.
  #  list    colors_string_list
- #                          The parameter is the list of pie wedge colors.
+ #                          The parameter is the list of histogram colors.
  #  string  supxlabel_string
  #                          The parameter is the title for the figure's x-axis.
  #  string  supylabel_string
@@ -2351,6 +2784,7 @@ def display_multiple_histograms_from_dataframe \
          fontsize = suptitle_font_size_float, 
          fontweight = suptitle_font_weight_string)
 
+            
     ax = axs.ravel()
             
 
@@ -2431,6 +2865,406 @@ def display_multiple_histograms_from_dataframe \
         (wspace = subplot_width_space_float, 
          hspace = subplot_height_space_float)
         
+
+    logx.save_plot_image(suptitle_string)
+        
+    plt.show()
+
+
+# In[19]:
+
+
+#*******************************************************************************************
+ #
+ #  Function Name:  display_plot_from_series
+ #
+ #  Function Description:
+ #      The function displays a plot from a series and criteria.
+ #
+ #
+ #  Return Type: n/a
+ #
+ #
+ #  Function Parameters:
+ #
+ #  Type    Name            Description
+ #  -----   -------------   ----------------------------------------------
+ #  series
+ #          input_series    The parameter is the input series.
+ #  string  title_string    The parameter is the chart title.
+ #  list    color_string    The parameter is the color of the histogram.
+ #  string  xlabel_string   The parameter is the x-axis label.
+ #  string  ylabel_string   The parameter is the y-axis label.
+ #  float   alpha_float     The parameter is the alpha (transparency) value.
+ #  boolean grid_boolean    The parameter indicates whether the boxplot displays a grid.
+ #  boolean display_legend_boolean
+ #                          The parameter indicates whether the legend will be present.
+ #  float   title_font_size_float
+ #                          The parameter is the title font size. 
+ #  string  title_font_style_string
+ #                          The parameter is the title font style.
+ #  float   title_pad_float The parameter is the title space pad value. 
+ #  float   xlabel_font_size_float
+ #                          The parameter is the x-axis font size. 
+ #  string  xlabel_font_style_string
+ #                          The parameter is the x-axis font style.
+ #  float   xlabel_pad_float
+ #                          The parameter is the x-axis space pad value. 
+ #  float   ylabel_font_size_float
+ #                          The parameter is the y-axis font size. 
+ #  string  ylabel_font_style_string
+ #                          The parameter is the y-axis font style.
+ #  float   ylabel_pad_float
+ #                          The parameter is the y-axis space pad value. 
+ #  float   xticks_font_size_float
+ #                          The parameter is the subplot's x-tick label's font size.
+ #  float   xticks_rotation_float
+ #                          The parameter is the subplot's x-tick label's rotation in degrees.
+ #  float   yticks_font_size_float
+ #                          The parameter is the subplot's y-tick label's font size.
+ #  float   yticks_rotation_float
+ #                          The parameter is the subplot's y-tick label's rotation in degrees.
+ #  string  legend_loc_string
+ #                          The parameter is the legend's general location.
+ #  float   legend_font_size_float
+ #                          The parameter is legend's font size.
+ #  tuple   legend_bbox_to_anchor_float_tuple
+ #                          The parameter is the legend's xy-coordinates. 
+ #  float   figure_width_float
+ #                          The parameter is the figure width. 
+ #  float   figure_length_float
+ #                          The parameter is the figure length. 
+ #
+ #
+ #  Date                Description                                 Programmer
+ #  ---------------     ------------------------------------        ------------------
+ #  08/18/2023          Initial Development                         Nicholas J. George
+ #
+ #******************************************************************************************/
+
+def display_plot_from_series \
+        (input_series,
+         title_string,
+         color_string,
+         xlabel_string = None,
+         ylabel_string = None,
+         alpha_float = 1.0,
+         grid_boolean = True,
+         display_legend_boolean = False,
+         title_font_size_float = 20.0,
+         title_font_style_string = 'normal',
+         title_pad_float = 20.0,
+         xlabel_font_size_float = 16.0,
+         xlabel_font_style_string = 'normal',
+         xlabel_pad_float = 10.0,
+         ylabel_font_size_float = 16.0,
+         ylabel_font_style_string = 'normal',
+         ylabel_pad_float = 10.0,
+         xticks_font_size_float = 14.0,
+         xticks_rotation_float = 90.0,
+         yticks_font_size_float = 14.0,
+         yticks_rotation_float = 0.0,
+         legend_loc_string = 'center right',
+         legend_font_size_float = 14.0,
+         legend_bbox_to_anchor_float_tuple = (1.5, 0.5),
+         figure_width_float = 9.708,
+         figure_length_float = 6.0):
+    
+    plt.figure(figsize = (figure_width_float, figure_length_float))
+
+    plt.clf()
+
+            
+    input_series \
+        .plot \
+            (color = color_string,
+             alpha = alpha_float,
+             grid = grid_boolean,
+             legend = display_legend_boolean)
+
+            
+    plt.title \
+        (title_string,
+         fontdict = {'fontsize': title_font_size_float, 
+                     'fontstyle': title_font_style_string},
+         pad = title_pad_float)
+
+            
+    if xlabel_string != None:
+            
+        plt.xlabel \
+            (xlabel_string,
+             fontdict = {'fontsize': xlabel_font_size_float,
+                         'fontstyle': xlabel_font_style_string},
+             labelpad = xlabel_pad_float)
+       
+    if ylabel_string != None:
+            
+        plt.ylabel \
+            (ylabel_string,
+             fontdict = {'fontsize': ylabel_font_size_float,
+                         'fontstyle': ylabel_font_style_string},
+             labelpad = ylabel_pad_float)
+
+            
+    plt.xticks(fontsize = xticks_font_size_float, rotation = xticks_rotation_float)
+       
+    plt.yticks(fontsize = yticks_font_size_float, rotation = yticks_rotation_float)
+
+            
+    if display_legend_boolean == True:
+
+        plt.legend \
+            (loc = legend_loc_string,
+             fontsize = legend_font_size_float,
+             bbox_to_anchor = legend_bbox_to_anchor_float_tuple)
+
+
+    logx.save_plot_image(title_string)
+
+
+# In[20]:
+
+
+#*******************************************************************************************
+ #
+ #  Function Name:  display_plots_from_series_list
+ #
+ #  Function Description:
+ #      The function receives a series list and formatting parameters for the display
+ #      of plots in a single figure.
+ #
+ #
+ #  Return Type: n/a
+ #
+ #
+ #  Function Parameters:
+ #
+ #  Type    Name            Description
+ #  -----   -------------   ----------------------------------------------
+ #  series
+ #          input_series    The parameter is the input dataframe
+ #  string  suptitle_string The parameter is the chart title.
+ #  string  supxlabel_string
+ #                          The parameter is the title for the figure's x-axis.
+ #  string  supylabel_string
+ #                          The parameter is the title for the figure's y-axis.
+ #  string  xlabel_string   The parameter is the x-axis label.
+ #  string  ylabel_string   The parameter is the y-axis label.
+ #  list    color_string    The parameter is the histogram color.
+ #  boolean reverse_dimensions_boolean 
+ #                          The parameter indicates whether the histograms share the x-axis.
+ #  boolean share_x_boolean The parameter indicates whether the histograms share the x-axis.
+ #  boolean share_y_boolean The parameter indicates whether the histograms share the y-axis.
+ #  boolean tight_layout_boolean  
+ #                          The parameter indicates whether the figure has a tight layout.
+ #  float   alpha_float     The parameter is the alpha (transparency) value.
+ #  boolean grid_boolean    The parameter indicates whether the boxplot displays a grid.
+ #  float   suptitle_x_float
+ #                          The parameter is the figure title's x-coordinate padding.
+ #  float   suptitle_y_float
+ #                          The parameter is the figure title's y-coordinate padding.
+ #  float   suptitle_font_size_float
+ #                          The parameter is the figure title's font size.
+ #  string  suptitle_font_style_string
+ #                          The parameter is the figure title's font style.
+ #  float   supxlabel_x_float
+ #                          The parameter is the figure's x-axis label's 
+ #                          x-coordinate padding.
+ #  float   supxlabel_y_float
+ #                          The parameter is the figure's x-axis label's 
+ #                          y-coordinate padding.
+ #  float   supxlabel_font_size_float
+ #                          The parameter is the figure's x-axis label's font size.
+ #  string  supxlabel_font_style_string
+ #                          The parameter is the figure's x-axis label's font style.
+ #  float   supylabel_x_float
+ #                          The parameter is the figure's y-axis label's 
+ #                          x-coordinate padding.
+ #  float   supylabel_y_float
+ #                          The parameter is the figure's y-axis label's 
+ #                          y-coordinate padding.
+ #  float   supylabel_font_size_float
+ #                          The parameter is the figure's y-axis label's font size.
+ #  string  supylabel_font_style_string
+ #                          The parameter is the figure's y-axis label's font style.
+ #  string  titles_string_list
+ #                          The parameter is the list of chart titles.
+ #  float   title_font_size_float
+ #                          The parameter is the title font size. 
+ #  string  title_font_style_string
+ #                          The parameter is the title font style.
+ #  float   title_pad_float
+ #                          The parameter is the title space pad value. 
+ #  float   title_y_float
+ #                          The parameter is the title's y-axis displacement.
+ #  string  xlabel_string
+ #                          The parameter is the subplot's x-axis label.
+ #  float   xlabel_pad_float  
+ #                          The parameter is the subplot's x-axis label's padding.
+ #  float   xlabel_font_size_float
+ #                          The parameter is the subplot's x-axis label's font size.
+ #  string  xlabel_loc_string
+ #                          The parameter is the subplot's x-axis label's general location.
+ #  string  xlabel_font_style_string
+ #                          The parameter is the subplot's x-axis label's font style.
+ #  string  ylabel_string
+ #                          The parameter is the subplot's y-axis label.
+ #  float   ylabel_pad_float  
+ #                          The parameter is the subplot's y-axis label's padding.
+ #  float   ylabel_font_size_float
+ #                          The parameter is the subplot's y-axis label's font size.
+ #  string  ylabel_loc_string
+ #                          The parameter is the subplot's y-axis label's general location.
+ #  string  ylabel_font_style_string
+ #                          The parameter is the subplot's y-axis label's font style.
+ #  float   figure_width_float
+ #                          The parameter is the figure width. 
+ #  float   figure_length_float
+ #                          The parameter is the figure length. 
+ #
+ #
+ #  Date                Description                                 Programmer
+ #  ---------------     ------------------------------------        ------------------
+ #  08/18/2023          Initial Development                         Nicholas J. George
+ #
+ #******************************************************************************************/  
+
+def display_plots_from_series_list \
+        (input_series_list,
+         suptitle_string,
+         supxlabel_string = None,
+         supylabel_string = None,
+         xlabel_string = '',
+         ylabel_string = '',
+         color_string = 'darkgreen',
+         reverse_dimensions_boolean = True,
+         share_x_boolean = True,
+         share_y_boolean = True,
+         tight_layout_boolean = True,
+         alpha_float = 1.0,
+         grid_boolean = True,
+         suptitle_x_float = 0.5,  
+         suptitle_y_float = 0.9,  
+         suptitle_font_size_float = 20.0,
+         suptitle_font_weight_string = 'normal',
+         supxlabel_x_float = 0.5,  
+         supxlabel_y_float = 0.0,  
+         supxlabel_font_size_float = 16.0,
+         supxlabel_font_weight_string = 'normal',
+         supylabel_x_float = 0.0,  
+         supylabel_y_float = 0.5,  
+         supylabel_font_size_float = 16.0,
+         supylabel_font_weight_string = 'normal',
+         title_font_size_float = 20.0,
+         title_font_style_string = 'normal',
+         title_pad_float = 20.0,
+         xlabel_font_size_float = 16.0,
+         xlabel_font_style_string = 'normal',
+         xlabel_pad_float = 10.0,
+         ylabel_font_size_float = 16.0,
+         ylabel_font_style_string = 'normal',
+         ylabel_pad_float = 10.0,
+         xticks_font_size_float = 14.0,
+         xticks_rotation_float = 90.0,
+         yticks_font_size_float = 14.0,
+         yticks_rotation_float = 0.0,
+         tight_layout_float = 3.0,
+         figure_width_float = 15.0,
+         figure_length_float = 10.0):
+
+    chart_count_integer = len(input_series_list)
+
+    colors_string_list = [color_string] * chart_count_integer
+
+            
+    row_count_integer, column_count_integer \
+        = mathx.calculate_closest_factors(chart_count_integer)
+
+    if reverse_dimensions_boolean == True:
+
+        row_count_integer, column_count_integer = column_count_integer, row_count_integer       
+
+    
+    fig, axs \
+        = plt.subplots \
+            (row_count_integer, 
+             column_count_integer, 
+             figsize = (figure_width_float, figure_length_float),
+             sharex = share_x_boolean,
+             sharey = share_y_boolean, 
+             tight_layout = tight_layout_boolean)
+
+            
+    plt.clf()
+
+
+    fig.suptitle \
+        (suptitle_string,
+         x = suptitle_x_float,
+         y = suptitle_y_float,
+         fontsize = suptitle_font_size_float, 
+         fontweight = suptitle_font_weight_string)
+
+            
+    for index in range(chart_count_integer):
+
+        plt.subplot(row_count_integer, column_count_integer, index + 1)
+
+        
+        input_series_list[index] \
+            .plot \
+                (color = colors_string_list[index], 
+                 alpha = alpha_float, 
+                 grid = grid_boolean,
+                 legend = False)
+
+        
+        plt.title \
+            (input_series_list[index].name,
+             fontdict = {'fontsize': title_font_size_float, 
+                         'fontstyle': title_font_style_string},
+             pad = title_pad_float)
+
+        
+        plt.xlabel \
+            (xlabel_string,
+             fontdict = {'fontsize': xlabel_font_size_float,
+                         'fontstyle': xlabel_font_style_string},
+             labelpad = xlabel_pad_float)
+       
+        plt.ylabel \
+            (ylabel_string,
+             fontdict = {'fontsize': ylabel_font_size_float,
+                         'fontstyle': ylabel_font_style_string},
+             labelpad = ylabel_pad_float)
+
+        plt.xticks(fontsize = xticks_font_size_float, rotation = xticks_rotation_float)
+       
+        plt.yticks(fontsize = yticks_font_size_float, rotation = yticks_rotation_float)
+
+        
+        plt.tight_layout(pad = 3.0)
+    
+ 
+    if supxlabel_string != None:
+    
+        fig.supxlabel \
+            (supxlabel_string,
+             x = supxlabel_x_float,
+             y = supxlabel_y_float,
+             fontsize = supxlabel_font_size_float, 
+             fontweight = supxlabel_font_weight_string)
+
+    if supylabel_string != None:
+    
+            fig.supylabel \
+                (supylabel_string,
+                 x = supylabel_x_float,
+                 y = supylabel_y_float,
+                 fontsize = supylabel_font_size_float, 
+                 fontweight = supylabel_font_weight_string)
+
 
     logx.save_plot_image(suptitle_string)
         

@@ -55,6 +55,28 @@ PERCENT_INTEGER_FORMAT = INTEGER_FORMAT + '%'
 TEMPERATURE_FLOAT_FORMAT = FLOAT_FORMAT +'° F'
 
 
+# In[4]:
+
+
+statistics_index_string_list \
+    = ['mean', 'median', 'mode', 'variance', 'std_dev', 'sem', 
+       'minimum', '25%', '50%', '75%', 'maximum', 'count']
+
+statistics_format_dictionary \
+    = {'mean': lambda x: f'{x:.4f}',
+       'median': lambda x: f'{x:.4f}',
+       'mode': lambda x: f'{x:.4f}',
+       'variance': lambda x: f'{x:.4f}',
+       'std_dev': lambda x: f'{x:.4f}',
+       'sem': lambda x: f'{x:.4f}',
+       'minimum': lambda x: f'{x:.2f}',
+       '25%': lambda x: f'{x:.2f}',
+       '50%': lambda x: f'{x:.2f}',
+       '75%': lambda x: f'{x:.2f}',
+       'maximum': lambda x: f'{x:.2f}',
+       'count': lambda x: f'{x:.0f}'}
+
+
 # In[ ]:
 
 
