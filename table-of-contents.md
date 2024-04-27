@@ -1,8 +1,8 @@
-# Student Outcomes Analysis with Pandas
+# Oil-Energy-Sector-Analysis-During-the-COVID-19-Pandemic
 
 ----
 
-## Table of Contents (PyOilSectorAnalysis.ipynb)
+## Table of Contents (oil_energy_sector.ipynb)
 
 ----
 
@@ -78,3 +78,9 @@
 > ## <br> **Section 4.7: Correlation Matrices**
 >> ### **Merge DataFrames**
 >> ### Display **Correlation Matrices**
+
+----
+
+## Copyright
+
+Nicholas J. George © 2023. All Rights Reserved.
