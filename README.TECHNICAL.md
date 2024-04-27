@@ -54,6 +54,8 @@ pandasx_constants.py
 
 pandasx.py
 
+timex.py
+
 If the folders, logs and images, are not present, the IPython notebook will create them.  If the CSV file, oil_companies.csv, is not present in the folder, resources, the program will use APIs to generate the CSV file.  Without the CSV file, execution time is an hour; with it, execution time is approximately 1.5 minutes.
 
 To place the IPython notebook in Log Mode or Image Mode set the parameter for the appropriate subroutine in coding cell #2 to True. If the program is in Log Mode, it writes that information to the log file. If the program is in Image Mode, it writes all dataframes, hvplot maps, and matplotlib plots to PNG files in the folder, images.
@@ -66,7 +68,7 @@ To place the IPython notebook in Log Mode or Image Mode set the parameter for th
 
 #### Source code
 
-oil_energy_sector.ipynb, logx_constants.py, logx.py, mathx.py, matplotlibx.py, oil_energy_sector_config.py, oil_energy_sectorx_constants.py, oil_energy_sectorx.py, pandasx_constants.py, pandasx.py
+oil_energy_sector.ipynb, logx_constants.py, logx.py, mathx.py, matplotlibx.py, oil_energy_sector_config.py, oil_energy_sectorx_constants.py, oil_energy_sectorx.py, pandasx_constants.py, pandasx.py, timex.py
 
 #### Input files
 
