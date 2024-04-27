@@ -94,25 +94,11 @@ Jupyter Notebook, Matplotlib, Numpy, Pandas, Python 3.11.4
 
 #### main branch 
 
-|&rarr; [./logx_constants.py](./logx_constants.py)
-
-|&rarr; [./logx.py](./logx.py)
-
-|&rarr; [./mathx.py](./mathx.py)
-
-|&rarr; [./matplotlibx.py](./matplotlibx.py)
-
-|&rarr; [./oil_energy_sector_config.py](./oil_energy_sector_config.py)
-
 |&rarr; [./oil_energy_sector.ipynb](./oil_energy_sector.ipynb)
 
 |&rarr; [./oil_energy_sectorx_constants.py](./oil_energy_sectorx_constants.py)
 
 |&rarr; [./oil_energy_sectorx.py](./oil_energy_sectorx.py)
-
-|&rarr; [./pandasx_constants.py](./pandasx_constants.py)
-
-|&rarr; [./pandasx.py](./pandasx.py)
 
 |&rarr; [./README.TECHNICAL.md](./README.TECHNICAL.md)
 
