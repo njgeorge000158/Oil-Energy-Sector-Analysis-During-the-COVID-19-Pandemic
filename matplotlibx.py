@@ -2899,6 +2899,15 @@ def display_multiple_histograms_from_dataframe \
  #  boolean grid_boolean    The parameter indicates whether the boxplot displays a grid.
  #  boolean display_legend_boolean
  #                          The parameter indicates whether the legend will be present.
+ #  nparray display_legend_boolean
+ #                          The parameter is the positions of peaks in the graph.
+ #  string  peaks_marker_size_float
+ #                          The parameter is the size of the peaks markers.
+ #  float   peaks_label_y_offset_float
+ #                          The parameter is the y-axis offset of the label
+ #                          from the peaks marker. 
+ #  list   peaks_color_string_list
+ #                          The parameter is the peaks marker and label colors. 
  #  float   title_font_size_float
  #                          The parameter is the title font size. 
  #  string  title_font_style_string
@@ -2951,6 +2960,11 @@ def display_plot_from_series \
          alpha_float = 1.0,
          grid_boolean = True,
          display_legend_boolean = False,
+         peaks_nparray = [],
+         peaks_marker_size_float = 15.0,
+         peaks_font_size_float = 12.0,
+         peaks_label_y_offset_float = 5.0,
+         peaks_color_string_list = ['red', 'blue'],
          title_font_size_float = 20.0,
          title_font_style_string = 'normal',
          title_pad_float = 20.0,
@@ -2981,6 +2995,24 @@ def display_plot_from_series \
              alpha = alpha_float,
              grid = grid_boolean,
              legend = display_legend_boolean)
+
+    if len(peaks_nparray) > 0:
+
+        plt.plot \
+            (input_series.index[peaks_nparray], 
+             input_series.iloc[peaks_nparray], 
+             'x', 
+             markersize = peaks_marker_size_float, 
+             color = peaks_color_string_list[0])
+
+        for i, j in zip(input_series.index[peaks_nparray], input_series.iloc[peaks_nparray]):
+                
+            y_coordinate_float = j + peaks_label_y_offset_float
+                
+            plt.annotate \
+                (i, xy = (i, y_coordinate_float), 
+                 size = peaks_font_size_float, 
+                 color = peaks_color_string_list[1])
 
             
     plt.title \
