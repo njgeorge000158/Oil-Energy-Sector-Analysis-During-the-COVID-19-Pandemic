@@ -6,12 +6,10 @@ __pycache__/
 # C extensions
 *.so
 
-logx_constants.py
 logx.py
 mathx.py
 matplotlibx.py
 oil_energy_sector_config.py
-pandasx_constants.py
 pandasx.py
 timex.py
 
