@@ -36,8 +36,6 @@ python3 -m pip install dataframe-image
 
 The IPython notebook, oil_energy_sector.ipynb, requires the following Python scripts with it in the same folder:
 
-logx_constants.py
-
 logx.py
 
 mathx.py
@@ -49,8 +47,6 @@ oil_energy_sector_config.py
 oil_energy_sectorx_constants.py
 
 oil_energy_sectorx.py
-
-pandasx_constants.py
 
 pandasx.py
 
@@ -68,7 +64,7 @@ To place the IPython notebook in Log Mode or Image Mode set the parameter for th
 
 #### Source code
 
-oil_energy_sector.ipynb, logx_constants.py, logx.py, mathx.py, matplotlibx.py, oil_energy_sector_config.py, oil_energy_sectorx_constants.py, oil_energy_sectorx.py, pandasx_constants.py, pandasx.py, timex.py
+oil_energy_sector.ipynb, logx.py, mathx.py, matplotlibx.py, oil_energy_sector_config.py, oil_energy_sectorx_constants.py, oil_energy_sectorx.py, pandasx.py, timex.py
 
 #### Input files
 
