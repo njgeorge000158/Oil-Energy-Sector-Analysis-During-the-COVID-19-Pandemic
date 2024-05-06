@@ -12,21 +12,21 @@ In addition to those modules, the IPython notebook needs the following to execut
 
 Here are the requisite Terminal commands for the installation of these peripheral modules:
 
-python3 -m pip install yfinance
+pip3 install -U yfinance
 
-python3 -m pip install yahoo_fin
+pip3 install -U yahoo_fin
 
-python3 -m pip install holoviews
+pip3 install -U holoviews
 
-python3 -m pip install hvplot
+pip3 install -U hvplot
 
-python3 -m pip install geoviews
+pip3 install -U geoviews
 
-python3 -m pip install geopy
+pip3 install -U geopy
 
-python3 -m pip install aspose-words
+pip3 install -U aspose-words
 
-python3 -m pip install dataframe-image
+pip3 install -U dataframe-image
 
 ----
 
@@ -54,7 +54,7 @@ timex.py
 
 If the folders, logs and images, are not present, the IPython notebook will create them.  If the CSV file, oil_companies.csv, is not present in the folder, resources, the program will use APIs to generate the CSV file.  Without the CSV file, execution time is an hour; with it, execution time is approximately 1.5 minutes.
 
-To place the IPython notebook in Log Mode or Image Mode set the parameter for the appropriate subroutine in coding cell #2 to True. If the program is in Log Mode, it writes that information to the log file. If the program is in Image Mode, it writes all dataframes, hvplot maps, and matplotlib plots to PNG files in the folder, images.
+To place the IPython notebook in Log Mode or Image Mode set the parameter for the appropriate subroutine in coding cell #2 to True. In Log Mode, it writes that information to the log file in the folder, logs. If the program is in Image Mode, the notebook writes all dataframes, hvplot maps, and matplotlib plots to PNG files in the folder, images.
 
 ----
 
@@ -80,7 +80,7 @@ n/a
 
 #### Software
 
-Jupyter Notebook, Matplotlib, Numpy, Pandas, Python 3.11.4
+Jupyter Notebook, Matplotlib, Numpy, Pandas, Python 3.11.5
 
 ![Jupyter Notebook](https://img.shields.io/badge/jupyter-%23FA0F00.svg?style=for-the-badge&logo=jupyter&logoColor=white)![Matplotlib](https://img.shields.io/badge/Matplotlib-%23ffffff.svg?style=for-the-badge&logo=Matplotlib&logoColor=black)![NumPy](https://img.shields.io/badge/numpy-%23013243.svg?style=for-the-badge&logo=numpy&logoColor=white)![Pandas](https://img.shields.io/badge/pandas-%23150458.svg?style=for-the-badge&logo=pandas&logoColor=white)![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
 
