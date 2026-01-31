@@ -6,15 +6,11 @@
 
 ----
 
-If the computer has Anaconda, Jupyter Notebook, and a recent version of Python, the IPython notebook already has the following dependencies installed: datetime, io, json, matplotlib, numpy, pandas, pathlib, os, pandas, requests, requests_html, scipy.
+If the computer has Anaconda, Jupyter Notebook, and a recent version of Python, the Jupyter Notebook already has the following dependencies installed: datetime, io, json, matplotlib, numpy, pandas, pathlib, os, pandas, requests, and requests_html.
 
-In addition to those modules, the IPython notebook needs the following to execute: yfinance, yahoo_fin, holoviews, hvplot, geoviews, geopy, aspose-words, dataframe-image.
+In addition to those modules, the Jupyter Notebook needs the following to execute: yfinance, yahoo_fin, holoviews, hvplot, geoviews, geopy, aspose-words, dataframe-image.
 
 Here are the requisite Terminal commands for the installation of these peripheral modules:
-
-pip3 install -U yfinance
-
-pip3 install -U yahoo_fin
 
 pip3 install -U holoviews
 
@@ -24,9 +20,13 @@ pip3 install -U geoviews
 
 pip3 install -U geopy
 
+pip3 install -U scipy
+
 pip3 install -U aspose-words
 
 pip3 install -U dataframe-image
+
+pip3 install -U yfinance
 
 ----
 
@@ -34,7 +34,7 @@ pip3 install -U dataframe-image
 
 ----
 
-The IPython notebook, oil_energy_sector.ipynb, requires the following Python scripts with it in the same folder:
+The Jupyter Notebook, oil_energy_sector.ipynb, requires the following Python scripts with it in the same folder:
 
 logx.py
 
@@ -52,9 +52,9 @@ pandasx.py
 
 timex.py
 
-If the folders, logs and images, are not present, the IPython notebook will create them.  If the CSV file, oil_companies.csv, is not present in the folder, resources, the program will use APIs to generate the CSV file.  Without the CSV file, execution time is an hour; with it, execution time is approximately 1.5 minutes.
+If the folders, logs and images, are not present, the Jupyter Notebook will create them.  If the CSV file, oil_companies.csv, is not present in the folder, resources, the program will use APIs to generate the CSV file.  Without the CSV file, execution time is an hour; with it, execution time is approximately 1.5 minutes.
 
-To place the IPython notebook in Log Mode or Image Mode set the parameter for the appropriate subroutine in coding cell #2 to True. In Log Mode, it writes that information to the log file in the folder, logs. If the program is in Image Mode, the notebook writes all dataframes, hvplot maps, and matplotlib plots to PNG files in the folder, images.
+To place the Jupyter Notebook in Log Mode or Image Mode set the parameter for the appropriate subroutine in coding cell #2 to True. In Log Mode, it writes that information to the log file in the folder, logs. If the program is in Image Mode, the notebook writes all dataframes, hvplot maps, and matplotlib plots to PNG files in the folder, images.
 
 ----
 
