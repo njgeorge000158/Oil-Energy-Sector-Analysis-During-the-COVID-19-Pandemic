@@ -22,6 +22,8 @@ pip3 install -U geopy
 
 pip3 install -U scipy
 
+pip3 install -U selenium
+
 pip3 install -U aspose-words
 
 pip3 install -U dataframe-image
