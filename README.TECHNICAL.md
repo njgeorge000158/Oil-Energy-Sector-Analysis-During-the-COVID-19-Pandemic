@@ -8,7 +8,7 @@
 
 If the computer has Anaconda, Jupyter Notebook, and a recent version of Python, the Jupyter Notebook already has the following dependencies installed: datetime, io, json, matplotlib, numpy, pandas, pathlib, os, pandas, requests, and requests_html.
 
-In addition to those modules, the Jupyter Notebook needs the following to execute: yfinance, yahoo_fin, holoviews, hvplot, geoviews, geopy, aspose-words, dataframe-image.
+In addition to those modules, the Jupyter Notebook needs the following to execute: holoviews, hvplot, geoviews, geopy, aspose-words, dataframe-image, selenium, scipy, yfinance.
 
 Here are the requisite Terminal commands for the installation of these peripheral modules:
 
@@ -20,13 +20,13 @@ pip3 install -U geoviews
 
 pip3 install -U geopy
 
-pip3 install -U scipy
-
-pip3 install -U selenium
-
 pip3 install -U aspose-words
 
 pip3 install -U dataframe-image
+
+pip3 install -U selenium
+
+pip3 install -U scipy
 
 pip3 install -U yfinance
 
