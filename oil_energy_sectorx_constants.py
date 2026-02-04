@@ -16,6 +16,7 @@
  #  Date            Description                             Programmer
  #  ----------      ------------------------------------    ------------------
  #  08/22/2023      Initial Development                     Nicholas J. George
+ #  02/03/2026      Specified csv file for tickers          Nicholas J. George
  #
  #******************************************************************************************/
 
@@ -40,6 +41,11 @@ GOLD_YAHOO_TICKER = 'GC=F'
 TEN_YEAR_BOND_YIELD_YAHOO_TICKER = '^TNX'
 
 BITCOIN_YAHOO_TICKER = 'BTC-USD'
+
+
+PUBLICALLY_TRADED_COMPANIES_CSV_FILE = 'data/publically_traded_companies.csv'
+
+PUBLICALLY_TRADED_COMPANIES_TICKER_COLUMN = 'Symbol'
 
 
 GEOAPIFY_QUERY_URL = 'https://api.geoapify.com/v1/geocode/search?text='

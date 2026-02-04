@@ -111,7 +111,7 @@ def return_regression_model_equation_coefficients \
 def return_polynomial_line_series \
         (x_series, 
          y_series):
-       
+
     sample_number_integer = abs(int((x_series.max() - y_series.min()) / 2))
 
     return np.linspace(x_series.min(), x_series.max(), sample_number_integer)
@@ -150,36 +150,36 @@ def return_polynomial_line_series \
 def return_equation_as_string \
         (model_equation_list,
          coefficient_precision_integer = 4):
-   
+
     degree_integer = len(model_equation_list)
 
-            
+
     for index, term in enumerate(model_equation_list):
-            
+
         temp_string = str(round(float(term), coefficient_precision_integer))
-            
+
         if degree_integer > 1:
-                
+
             temp_string = temp_string + 'x' + '^' + str(degree_integer)
-                
+
         elif degree_integer == 1:
-                
+
             temp_string = temp_string + 'x'
-          
+
         if degree_integer == len(model_equation_list):
-            
+
             equation_string = temp_string
-            
+
         else:
-            
+
             equation_string = equation_string + ' + ' + temp_string
-                
+
         degree_integer -= 1
 
-            
+
     equation_string = 'y = ' + equation_string
 
-            
+
     return equation_string
 
 
@@ -216,19 +216,19 @@ def return_r_squared_value \
         (x_series, 
          y_series, 
          degree_integer):
-    
+
     coefficients_float_nparray = np.polyfit(x_series, y_series, degree_integer)
-  
+
     pPoly1D = np.poly1d(coefficients_float_nparray)
 
 
     yhatList = pPoly1D(x_series)
-    
+
     ybar_float = y_series.sum() / len(y_series)
 
 
     ssreg_float = ((yhatList - ybar_float) ** 2).sum()
-    
+
     sstot_float = ((y_series - ybar_float) ** 2).sum()
 
 
@@ -267,7 +267,7 @@ def is_perfect_square(positive_integer):
 
     positive_integer = int(positive_integer)
 
-    
+
     if positive_integer < 0:
 
         return False
@@ -276,23 +276,23 @@ def is_perfect_square(positive_integer):
 
         return True
 
-    
+
     x_integer = positive_integer // 2
-    
+
     seen = set([x_integer])
 
-    
+
     while x_integer * x_integer != positive_integer:
-    
+
         x_integer = (x_integer + (positive_integer // x_integer)) // 2
-    
+
         if x_integer in seen: 
-            
+
             return False
-    
+
         seen.add(x_integer)
 
-    
+
     return True
 
 
@@ -328,31 +328,31 @@ def is_perfect_square(positive_integer):
 def calculate_closest_factors(positive_integer):
 
     positive_integer = int(positive_integer)
-    
+
     if positive_integer <= 0:
 
         return [0, 0]
 
-    
+
     a_integer, b_integer, i_integer = 1, positive_integer, 0
 
-    
+
     while a_integer < b_integer:
-        
+
         i_integer += 1
-        
+
         if positive_integer % i_integer == 0:
-            
+
             a_integer = i_integer
-            
+
             b_integer = positive_integer // a_integer
 
-    
+
     if positive_integer > 2 and a_integer > b_integer:
 
         a_integer, b_integer = b_integer, a_integer
 
-    
+
     return [b_integer, a_integer]
 
 

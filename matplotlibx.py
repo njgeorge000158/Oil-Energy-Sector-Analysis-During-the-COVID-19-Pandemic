@@ -122,12 +122,12 @@ def display_linear_regression_line \
          font_color_string = 'blue'):
 
     (slope, intercept, rvalue, pvalue, stderr) = stats.linregress(x_series, y_series)
-            
+
     linear_regression_series = (x_series * slope) + intercept
 
     r_squared_float = rvalue * rvalue
 
-            
+
     plt.plot \
         (x_series,
          linear_regression_series,
@@ -138,7 +138,7 @@ def display_linear_regression_line \
     linear_equation_string \
         = 'y = ' + str(round(slope, coefficient_precision_integer)) \
           + 'x + ' + str(round(intercept, coefficient_precision_integer))
-    
+
     plt.annotate \
         (linear_equation_string,
          (x_coordinate_float, y_coordinate_float),
@@ -146,9 +146,9 @@ def display_linear_regression_line \
          fontweight = font_weight_string,
          color = font_color_string)   
 
-            
+
     logx.print_and_log_text('r-value:     {:.4f}'.format(rvalue))
-        
+
     logx.print_and_log_text('r-squared:   {:.4f}\n'.format(r_squared_float))
 
 
@@ -214,9 +214,9 @@ def display_polynomial_regression_line \
     model_equation_list \
         = mathx.return_regression_model_equation_coefficients \
             (x_series, y_series, degree_integer)
- 
+
     polynomial_line_series = mathx.return_polynomial_line_series(x_series, y_series)
-     
+
     plt.plot \
         (polynomial_line_series, 
          model_equation_list(polynomial_line_series),
@@ -224,9 +224,9 @@ def display_polynomial_regression_line \
          linewidth = line_width_float,
          alpha = alpha_float)
 
-            
+
     equation_label_string = mathx.return_equation_as_string(model_equation_list)
-    
+
     plt.annotate \
         (equation_label_string,
          (x_coordinate_float, y_coordinate_float),
@@ -234,14 +234,14 @@ def display_polynomial_regression_line \
           fontweight = font_weight_string,
           color = font_color_string)
 
-            
+
     r_squared_float = mathx.return_r_squared_value(x_series, y_series, degree_integer)
-    
+
     r_value_float = math.sqrt(r_squared_float)
 
-            
+
     logx.print_and_log_text('r-value:     {:.4f}'.format(r_value_float))
-        
+
     logx.print_and_log_text('r-squared:   {:.4f}'.format(r_squared_float))
 
 
@@ -352,7 +352,7 @@ def display_line_chart_from_xy_series \
          figure_length_float = 6.0):
 
     plt.figure(figsize = (figure_width_float, figure_length_float))
-    
+
     plt.plot \
         (x_series,
          y_series,
@@ -384,14 +384,14 @@ def display_line_chart_from_xy_series \
          fontdict = {'fontsize': ylabel_font_size_float,
                      'fontstyle': ylabel_font_style_string},
          labelpad = ylabel_pad_float)
-        
+
     plt.xticks(fontsize = xticks_font_size_float, rotation = xticks_rotation_float)
-       
+
     plt.yticks(fontsize = yticks_font_size_float, rotation = yticks_rotation_float)
 
-            
+
     plt.grid()
-            
+
     logx.save_plot_image(title_string)
 
     plt.show()
@@ -514,7 +514,7 @@ def display_line_chart_from_dataframe \
          legend_bbox_to_anchor_float_tuple = (1.5, 0.5),
          figure_width_float = 9.708,
          figure_length_float = 6.0):
-    
+
     plt.figure(figsize = (figure_width_float, figure_length_float))
 
     input_dataframe \
@@ -534,17 +534,17 @@ def display_line_chart_from_dataframe \
          fontdict = {'fontsize': title_font_size_float, 
                      'fontstyle': title_font_style_string},
          pad = title_pad_float)
-            
+
     if xlabel_string != None:
-            
+
         plt.xlabel \
             (xlabel_string,
              fontdict = {'fontsize': xlabel_font_size_float,
                          'fontstyle': xlabel_font_style_string},
              labelpad = xlabel_pad_float)
-       
+
     if ylabel_string != None:
-            
+
         plt.ylabel \
             (ylabel_string,
              fontdict = {'fontsize': ylabel_font_size_float,
@@ -552,9 +552,9 @@ def display_line_chart_from_dataframe \
              labelpad = ylabel_pad_float)
 
     plt.xticks(fontsize = xticks_font_size_float, rotation = xticks_rotation_float)
-       
+
     plt.yticks(fontsize = yticks_font_size_float, rotation = yticks_rotation_float)
-            
+
     if display_legend_boolean == True:
 
         plt.legend \
@@ -564,7 +564,7 @@ def display_line_chart_from_dataframe \
 
 
     logx.save_plot_image(title_string)
-        
+
     plt.show()
 
 
@@ -682,7 +682,7 @@ def display_line_chart_from_dataframe \
  #  08/18/2023          Initial Development                         Nicholas J. George
  #
  #******************************************************************************************/  
-        
+
 def display_stacked_line_subplots \
         (input_frame_dictionary,
          suptitle_string,
@@ -726,17 +726,17 @@ def display_stacked_line_subplots \
          subplot_height_space_float = None,
          figure_width_float = 9.708,
          figure_length_float = 6.0):
-    
+
     input_dataframe = pd.DataFrame(input_frame_dictionary)
-        
+
     subplot_count_integer = len(input_dataframe.keys())
 
-            
+
     if xlabel_string == None:
 
         xlabel_string = ''
 
-            
+
     fig, axs \
         = plt.subplots \
             (subplot_count_integer, figsize = (figure_width_float, figure_length_float))
@@ -749,16 +749,16 @@ def display_stacked_line_subplots \
          fontweight = suptitle_font_weight_string)
 
     if supxlabel_string != None:
-            
+
         fig.supxlabel \
             (supxlabel_string,
              x = supxlabel_x_float,
              y = supxlabel_y_float,
              fontsize = supxlabel_font_size_float, 
              fontweight = supxlabel_font_weight_string)
-       
+
     if supylabel_string != None:
-            
+
         fig.supylabel \
             (supylabel_string,
              x = supylabel_x_float,
@@ -768,25 +768,25 @@ def display_stacked_line_subplots \
 
 
     legend_line_plot_list = []
-        
+
     legend_line_names_string_list = []
 
-    
+
     for index, subplot in enumerate(axs):
-        
+
         line_subplot, \
             = subplot.plot \
                 (input_dataframe.iloc[:,index], color = colors_string_list[index])
-            
+
         legend_line_plot_list.append(line_subplot)
-            
+
         legend_line_names_string_list.append(input_dataframe.iloc[:,index].name)
-            
+
         subplot.grid()
 
 
         if index == (subplot_count_integer - 1):
-        
+
             subplot.set_xlabel \
                 (xlabel_string, 
                  labelpad = xlabel_pad_float, 
@@ -798,12 +798,12 @@ def display_stacked_line_subplots \
 
             subplot.set_xticklabels(labels = [])
 
-        
+
         if ylabel_string == None:
 
             ylabel_string = input_dataframe.iloc[:,index].name
 
-        
+
         if index == 0 and first_ylabel_pad_boolean == True:
 
             subplot.set_ylabel \
@@ -822,18 +822,18 @@ def display_stacked_line_subplots \
                  loc = ylabel_loc_string, 
                  fontweight = ylabel_font_weight_string)
 
-            
+
         subplot.tick_params \
             (axis = 'x', 
              labelrotation = xtick_label_rotation_float, 
              labelsize = xtick_label_size_float)
-            
+
         subplot.tick_params \
             (axis = 'y', 
              labelrotation = ytick_label_rotation_float, 
              labelsize = ytick_label_size_float)
 
-        
+
     if display_legend_boolean == True:
 
         fig.legend \
@@ -843,14 +843,14 @@ def display_stacked_line_subplots \
              fontsize = legend_font_size_float,
              bbox_to_anchor = legend_bbox_to_anchor_float_tuple)
 
-            
+
     plt.subplots_adjust \
         (wspace = subplot_width_space_float, 
          hspace = subplot_height_space_float)
 
-            
+
     logx.save_plot_image(suptitle_string)
-        
+
     plt.show()
 
 
@@ -943,7 +943,7 @@ def display_boxplots_from_series_list \
          xticks_rotation_float = 0.0,
          figure_width_float = 9.708,
          figure_length_float = 6.0):
-    
+
     fig1, axs = plt.subplots(figsize = (figure_width_float, figure_length_float))
 
     axs.boxplot \
@@ -952,13 +952,13 @@ def display_boxplots_from_series_list \
          widths = box_widths_float,
          meanline = mean_line_boolean, 
          showmeans = show_means_boolean)
-        
+
     axs.set_title \
         (title_string,
          fontdict = {'fontsize': title_font_size_float, 
                      'fontstyle': title_font_style_string},
          pad = title_pad_float)
-        
+
     axs.set_xlabel \
         (xlabel_string,
          fontdict = {'fontsize': xlabel_font_size_float, 
@@ -971,32 +971,32 @@ def display_boxplots_from_series_list \
                      'fontstyle': ylabel_font_style_string},
          labelpad = ylabel_pad_float)
 
-        
+
     ticks_index_integer_list = []
-        
+
     for index, regimen in enumerate(xticks_label_string_list):
-            
+
         ticks_index_integer_list.append(index + 1)
 
-        
+
     axs.set_xticks \
         (ticks_index_integer_list, 
          xticks_label_string_list,
          fontsize = xticks_font_size_float,
          rotation = xticks_rotation_float)
 
-            
+
     if vertical_boolean == True:
-        
+
         plt.grid(axis = 'y')
-        
+
     else:
-            
+
         plt.grid(axis = 'x')
 
-        
+
     logx.save_plot_image(title_string)
-        
+
     plt.show()
 
 
@@ -1111,7 +1111,7 @@ def display_boxplot_from_dataframe \
          yticks_rotation_float = 0.0,
          figure_width_float = 9.708,
          figure_length_float = 6.0):
-    
+
 
     box_plot_axes \
         = input_dataframe \
@@ -1125,7 +1125,7 @@ def display_boxplot_from_dataframe \
                  vert = vertical_boolean,
                  grid = grid_boolean,
                  figsize = (figure_width_float, figure_length_float))
-        
+
     plt.suptitle \
         (suptitle_string,
          x = suptitle_x_float,
@@ -1138,7 +1138,7 @@ def display_boxplot_from_dataframe \
          fontdict = {'fontsize': title_font_size_float, 
                      'fontstyle': title_font_style_string},
          pad = title_pad_float)
-        
+
     plt.xlabel \
         (xlabel_string,
          fontdict = {'fontsize': xlabel_font_size_float, 
@@ -1151,14 +1151,14 @@ def display_boxplot_from_dataframe \
                      'fontstyle': ylabel_font_style_string},
          labelpad = ylabel_pad_float)
 
-        
+
     plt.xticks(fontsize = xticks_font_size_float, rotation = xticks_rotation_float)
-       
+
     plt.yticks(fontsize = yticks_font_size_float, rotation = yticks_rotation_float)
 
-                            
+
     logx.save_plot_image(suptitle_string)
-        
+
     plt.show()
 
 
@@ -1260,12 +1260,12 @@ def display_bar_chart_from_series \
          ytick_font_size_float = 14.0,        
          figure_width_float = 9.708,
          figure_length_float = 6.0):
-      
+
     plt.figure(figsize = (figure_width_float, figure_length_float))
 
-            
+
     if horizontal_boolean == False:
-    
+
         plt.bar \
             (input_series.keys(),
              input_series,
@@ -1287,41 +1287,41 @@ def display_bar_chart_from_series \
              linewidth = line_width_float,
              alpha = alpha_float)
 
-            
+
     plt.title \
         (title_string,
          fontdict = {'fontsize': title_font_size_float, 
                      'fontstyle': title_font_style_string},
          pad = title_pad_float)
 
-            
+
     plt.xlabel \
         (xlabel_string,
          fontdict = {'fontsize': xlabel_font_size_float, 
                      'fontstyle': xlabel_font_style_string},
          labelpad = xlabel_pad_float)
-        
+
     plt.ylabel \
         (ylabel_string,
          fontdict = {'fontsize': ylabel_font_size_float, 
                      'fontstyle': ylabel_font_style_string},
          labelpad = ylabel_pad_float)
 
-            
+
     plt.xticks \
         (rotation = xtick_label_rotation_float,
          fontsize = xtick_font_size_float)
-        
+
     plt.yticks \
         (rotation = ytick_label_rotation_float,
          fontsize = ytick_font_size_float)
 
-            
+
     plt.grid(axis = 'y')
 
-            
+
     logx.save_plot_image(title_string)
-        
+
     plt.show()
 
 
@@ -1428,7 +1428,7 @@ def display_bar_chart_from_dataframe \
          ytick_font_size_float = 14.0,
          figure_width_float = 9.708,
          figure_length_float = 6.0):
-    
+
     input_dataframe.plot.bar \
         (stacked = stacked_boolean,
          align = bar_align_string,
@@ -1441,12 +1441,12 @@ def display_bar_chart_from_dataframe \
          figsize = (figure_width_float, figure_length_float))
 
     if legend_boolean == True:
-        
+
         plt.legend \
             (bbox_to_anchor \
                  = (legend_bbox_to_anchor_float_tuple[0], legend_bbox_to_anchor_float_tuple[1]))
 
-        
+
     plt.title \
         (title_string,
          fontdict = {'fontsize': title_font_size_float, 
@@ -1464,20 +1464,20 @@ def display_bar_chart_from_dataframe \
          fontdict = {'fontsize': ylabel_font_size_float,
                      'fontstyle': ylabel_font_style_string},
          labelpad = ylabel_pad_float)
-        
+
     plt.xticks \
         (rotation = xtick_label_rotation_float,
          fontsize = xtick_font_size_float)
-        
+
     plt.yticks \
         (rotation = ytick_label_rotation_float,
          fontsize = ytick_font_size_float)
 
-            
+
     plt.grid(axis = 'y')
-        
+
     logx.save_plot_image(title_string)
-        
+
     plt.show()
 
 
@@ -1589,9 +1589,9 @@ def display_scatter_plot_from_xy_series \
          ytick_font_size_float = 14.0,        
          figure_width_float = 9.708,
          figure_length_float = 6.0):
-      
+
     plt.figure(figsize = (figure_width_float, figure_length_float))
-        
+
     plt.scatter \
         (x_series, 
          y_series, 
@@ -1607,7 +1607,7 @@ def display_scatter_plot_from_xy_series \
          fontdict = {'fontsize': title_font_size_float, 
                      'fontstyle': title_font_style_string},
          pad = title_pad_float)
-    
+
     plt.xlabel \
         (xlabel_string,
          fontdict = {'fontsize': xlabel_font_size_float, 
@@ -1619,36 +1619,36 @@ def display_scatter_plot_from_xy_series \
          fontdict = {'fontsize': ylabel_font_size_float, 
                      'fontstyle': ylabel_font_style_string},
          labelpad = ylabel_pad_float)
-        
+
     plt.xticks \
         (rotation = xtick_label_rotation_float,
          fontsize = xtick_font_size_float)
-        
+
     plt.yticks \
         (rotation = ytick_label_rotation_float,
          fontsize = ytick_font_size_float)
-        
+
     plt.grid()
 
 
     if degree_integer == 1:
-            
+
         display_linear_regression_line \
             (x_series, y_series,
              equation_x_coordinate_float,
              equation_y_coordinate_float)
-            
+
     elif degree_integer > 1:
-                
+
         display_polynomial_regression_line \
             (x_series, y_series,
              equation_x_coordinate_float,
              equation_y_coordinate_float,
              degree_integer)
 
-        
+
     logx.save_plot_image(title_string)
-        
+
     plt.show()
 
 
@@ -1775,7 +1775,7 @@ def display_multiple_scatter_plots_from_xy_series_list \
          figure_length_float = 5.5181):
 
     scatter_plot_count_integer = len(x_series_list)
-        
+
     if scatter_plot_count_integer != len(y_series_list):
 
         logx.print_and_log_text \
@@ -1793,7 +1793,7 @@ def display_multiple_scatter_plots_from_xy_series_list \
 
     x_length_integer, y_length_integer \
         = mathx.calculate_closest_factors(scatter_plot_count_integer)
-        
+
 
     for index in range(0, scatter_plot_count_integer):
 
@@ -1814,7 +1814,7 @@ def display_multiple_scatter_plots_from_xy_series_list \
              fontdict = {'fontsize': title_font_size_float, 
                          'fontstyle': title_font_style_string},
              pad = title_pad_float)
-    
+
         plt.xlabel \
             (xlabel_string,
              fontdict = {'fontsize': xlabel_font_size_float, 
@@ -1826,32 +1826,32 @@ def display_multiple_scatter_plots_from_xy_series_list \
              fontdict = {'fontsize': ylabel_font_size_float, 
                          'fontstyle': ylabel_font_style_string},
              labelpad = ylabel_pad_float)
-    
+
         plt.xticks \
             (rotation = xtick_label_rotation_float,
              fontsize = xtick_font_size_float)
-        
+
         plt.yticks \
             (rotation = ytick_label_rotation_float,
              fontsize = ytick_font_size_float)
-        
+
         plt.grid()
 
 
         if degree_integer == 1:
 
             logx.print_and_log_text(titles_string_list[index] + ':')
-                
+
             display_linear_regression_line \
                 (x_series_list[index],
                  y_series_list[index],
                  equation_x_coordinate_float_list[index],
                  equation_y_coordinate_float_list[index])
-            
+
         elif degree_integer > 1:
 
             logx.print_and_log_text(titles_string_list[index] + ':')
-                
+
             display_polynomial_regression_line \
                 (x_series_list[index],
                  y_series_list[index],
@@ -1860,7 +1860,7 @@ def display_multiple_scatter_plots_from_xy_series_list \
                  degree_integer)
 
         plt.tight_layout(pad = tight_layout_pad_float)
-    
+
         plt.suptitle \
             (suptitle_string, 
              fontsize = suptitle_font_size_float,
@@ -1868,7 +1868,7 @@ def display_multiple_scatter_plots_from_xy_series_list \
              y = suptitle_pad_float)
 
         logx.save_plot_image(suptitle_string)
-        
+
         plt.show()
 
 
@@ -1941,14 +1941,14 @@ def display_pie_chart_from_series \
          title_pad_float = 5.0,
          figure_width_float = 9.708,
          figure_length_float = 6.0):
-    
+
     temp_series = input_series.copy()
-        
+
     temp_series.rename(None, inplace = True)
 
 
     plt.figure(figsize = (figure_width_float, figure_length_float))
-        
+
     plt.pie \
         (temp_series,
          labels = temp_series.index, 
@@ -1960,16 +1960,16 @@ def display_pie_chart_from_series \
          autopct = auto_pct_string,
          labeldistance = label_distance_float,
          textprops = {'fontsize': chart_font_size_float})
-        
+
     plt.title \
         (title_string,
          fontdict = {'fontsize': title_font_size_float, 
                      'fontstyle': title_font_style_string},
          pad = title_pad_float)   
 
-            
+
     logx.save_plot_image(title_string)
-        
+
     plt.show()
 
 
@@ -2106,7 +2106,7 @@ def display_multiple_pie_charts_from_dataframe \
 
     index = 0
 
-        
+
     fig, axs \
         = plt.subplots \
             (nrows = row_count_integer, ncols = column_count_integer,
@@ -2119,8 +2119,8 @@ def display_multiple_pie_charts_from_dataframe \
          y = suptitle_y_float,
          fontsize = suptitle_font_size_float, 
          fontweight = suptitle_font_weight_string)
-            
-            
+
+
     for row in range(row_count_integer):
         for column in range(column_count_integer):
 
@@ -2134,8 +2134,8 @@ def display_multiple_pie_charts_from_dataframe \
                  labeldistance = label_distance_float,
                  textprops = {'fontsize': chart_font_size_float},
                  subplots = True)
-    
-    
+
+
             if len(titles_string_list) <= 0:
 
                 title_string = input_dataframe.iloc[:, index].name
@@ -2143,7 +2143,7 @@ def display_multiple_pie_charts_from_dataframe \
             else:
 
                 title_string = titles_string_list[index]
-                
+
 
             axs[index].set_title \
                 (title_string,
@@ -2159,7 +2159,7 @@ def display_multiple_pie_charts_from_dataframe \
                  fontsize = xlabel_font_size_float, 
                  loc = xlabel_loc_string, 
                  fontweight = xlabel_font_weight_string)
-            
+
             axs[index].set_ylabel \
                 (ylabel_string, 
                  labelpad = ylabel_pad_float, 
@@ -2167,17 +2167,17 @@ def display_multiple_pie_charts_from_dataframe \
                  loc = ylabel_loc_string, 
                  fontweight = ylabel_font_weight_string)
 
-            
+
             index += 1
 
-        
+
     plt.subplots_adjust \
         (wspace = subplot_width_space_float, 
          hspace = subplot_height_space_float)
-        
+
 
     logx.save_plot_image(suptitle_string)
-        
+
     plt.show()
 
 
@@ -2290,7 +2290,7 @@ def display_histogram_from_series \
          legend_bbox_to_anchor_float_tuple = (1.5, 0.5),
          figure_width_float = 9.708,
          figure_length_float = 6.0):
-    
+
     input_series \
         .plot.hist \
             (bins = bins_count_integer, 
@@ -2301,36 +2301,36 @@ def display_histogram_from_series \
              legend = display_legend_boolean,
              figsize = (figure_width_float, figure_length_float))
 
-            
+
     plt.title \
         (title_string,
          fontdict = {'fontsize': title_font_size_float, 
                      'fontstyle': title_font_style_string},
          pad = title_pad_float)
 
-            
+
     if xlabel_string != None:
-            
+
         plt.xlabel \
             (xlabel_string,
              fontdict = {'fontsize': xlabel_font_size_float,
                          'fontstyle': xlabel_font_style_string},
              labelpad = xlabel_pad_float)
-       
+
     if ylabel_string != None:
-            
+
         plt.ylabel \
             (ylabel_string,
              fontdict = {'fontsize': ylabel_font_size_float,
                          'fontstyle': ylabel_font_style_string},
              labelpad = ylabel_pad_float)
 
-            
+
     plt.xticks(fontsize = xticks_font_size_float, rotation = xticks_rotation_float)
-       
+
     plt.yticks(fontsize = yticks_font_size_float, rotation = yticks_rotation_float)
 
-            
+
     if display_legend_boolean == True:
 
         plt.legend \
@@ -2501,7 +2501,7 @@ def display_histograms_from_series_list \
 
     colors_string_list = [color_string] * chart_count_integer
 
-            
+
     row_count_integer, column_count_integer \
         = mathx.calculate_closest_factors(chart_count_integer)
 
@@ -2509,7 +2509,7 @@ def display_histograms_from_series_list \
 
         row_count_integer, column_count_integer = column_count_integer, row_count_integer       
 
-    
+
     fig, axs \
         = plt.subplots \
             (row_count_integer, 
@@ -2519,7 +2519,7 @@ def display_histograms_from_series_list \
              sharey = share_y_boolean, 
              tight_layout = tight_layout_boolean)
 
-            
+
     plt.clf()
 
 
@@ -2530,12 +2530,12 @@ def display_histograms_from_series_list \
          fontsize = suptitle_font_size_float, 
          fontweight = suptitle_font_weight_string)
 
-            
+
     for index in range(chart_count_integer):
 
         plt.subplot(row_count_integer, column_count_integer, index + 1)
 
-        
+
         input_series_list[index] \
             .plot.hist \
                 (bins = bins_count_integer, 
@@ -2546,32 +2546,32 @@ def display_histograms_from_series_list \
                  edgecolor = edge_color_string,
                  legend = False)
 
-        
+
         plt.title \
             (input_series_list[index].name,
              fontdict = {'fontsize': title_font_size_float, 
                          'fontstyle': title_font_style_string},
              pad = title_pad_float)
 
-        
+
         plt.xlabel \
             (xlabel_string,
              fontdict = {'fontsize': xlabel_font_size_float,
                          'fontstyle': xlabel_font_style_string},
              labelpad = xlabel_pad_float)
-       
+
         plt.ylabel \
             (ylabel_string,
              fontdict = {'fontsize': ylabel_font_size_float,
                          'fontstyle': ylabel_font_style_string},
              labelpad = ylabel_pad_float)
 
-        
+
         plt.tight_layout(pad = 3.0)
-    
- 
+
+
     if supxlabel_string != None:
-    
+
         fig.supxlabel \
             (supxlabel_string,
              x = supxlabel_x_float,
@@ -2580,7 +2580,7 @@ def display_histograms_from_series_list \
              fontweight = supxlabel_font_weight_string)
 
     if supylabel_string != None:
-    
+
             fig.supylabel \
                 (supylabel_string,
                  x = supylabel_x_float,
@@ -2590,7 +2590,7 @@ def display_histograms_from_series_list \
 
 
     logx.save_plot_image(suptitle_string)
-        
+
     plt.show()
 
 
@@ -2767,7 +2767,7 @@ def display_multiple_histograms_from_dataframe \
 
     index = 0
 
-            
+
     fig, axs \
         = plt.subplots \
             (nrows = row_count_integer, ncols = column_count_integer,
@@ -2783,9 +2783,9 @@ def display_multiple_histograms_from_dataframe \
          fontsize = suptitle_font_size_float, 
          fontweight = suptitle_font_weight_string)
 
-            
+
     ax = axs.ravel()
-            
+
 
     for row in range(row_count_integer):
         for column in range(column_count_integer):
@@ -2797,7 +2797,7 @@ def display_multiple_histograms_from_dataframe \
                  alpha = alpha_float,
                  grid = grid_boolean)
 
-            
+
             if len(titles_string_list) <= 0:
 
                 title_string = input_dataframe.keys()[index]
@@ -2806,7 +2806,7 @@ def display_multiple_histograms_from_dataframe \
 
                 title_string = titles_string_list[index]
 
-            
+
             ax[index].set_title \
                 (title_string,
                  fontdict = {'fontsize': title_font_size_float, 
@@ -2820,7 +2820,7 @@ def display_multiple_histograms_from_dataframe \
                  fontsize = xlabel_font_size_float, 
                  loc = xlabel_loc_string, 
                  fontweight = xlabel_font_weight_string)
-            
+
             ax[index].set_ylabel \
                 (ylabel_string, 
                  labelpad = ylabel_pad_float, 
@@ -2832,7 +2832,7 @@ def display_multiple_histograms_from_dataframe \
                 (axis = 'x', 
                  labelrotation = xtick_label_rotation_float, 
                  labelsize = xtick_label_size_float)
-            
+
             ax[index].tick_params \
                 (axis = 'y', 
                  labelrotation = ytick_label_rotation_float, 
@@ -2840,9 +2840,9 @@ def display_multiple_histograms_from_dataframe \
 
             index += 1
 
-       
+
     if supxlabel_string != None:
-    
+
         fig.supxlabel \
             (supxlabel_string,
              x = supxlabel_x_float,
@@ -2851,7 +2851,7 @@ def display_multiple_histograms_from_dataframe \
              fontweight = supxlabel_font_weight_string)
 
     if supylabel_string != None:
-    
+
             fig.supylabel \
                 (supylabel_string,
                  x = supylabel_x_float,
@@ -2863,10 +2863,10 @@ def display_multiple_histograms_from_dataframe \
     plt.subplots_adjust \
         (wspace = subplot_width_space_float, 
          hspace = subplot_height_space_float)
-        
+
 
     logx.save_plot_image(suptitle_string)
-        
+
     plt.show()
 
 
@@ -2982,12 +2982,12 @@ def display_plot_from_series \
          legend_bbox_to_anchor_float_tuple = (1.5, 0.5),
          figure_width_float = 9.708,
          figure_length_float = 6.0):
-    
+
     plt.figure(figsize = (figure_width_float, figure_length_float))
 
     plt.clf()
 
-            
+
     input_series \
         .plot \
             (color = color_string,
@@ -3005,44 +3005,44 @@ def display_plot_from_series \
              color = peaks_color_string_list[0])
 
         for i, j in zip(input_series.index[peaks_nparray], input_series.iloc[peaks_nparray]):
-                
+
             y_coordinate_float = j + peaks_label_y_offset_float
-                
+
             plt.annotate \
                 (i, xy = (i, y_coordinate_float), 
                  size = peaks_font_size_float, 
                  color = peaks_color_string_list[1])
 
-            
+
     plt.title \
         (title_string,
          fontdict = {'fontsize': title_font_size_float, 
                      'fontstyle': title_font_style_string},
          pad = title_pad_float)
 
-            
+
     if xlabel_string != None:
-            
+
         plt.xlabel \
             (xlabel_string,
              fontdict = {'fontsize': xlabel_font_size_float,
                          'fontstyle': xlabel_font_style_string},
              labelpad = xlabel_pad_float)
-       
+
     if ylabel_string != None:
-            
+
         plt.ylabel \
             (ylabel_string,
              fontdict = {'fontsize': ylabel_font_size_float,
                          'fontstyle': ylabel_font_style_string},
              labelpad = ylabel_pad_float)
 
-            
+
     plt.xticks(fontsize = xticks_font_size_float, rotation = xticks_rotation_float)
-       
+
     plt.yticks(fontsize = yticks_font_size_float, rotation = yticks_rotation_float)
 
-            
+
     if display_legend_boolean == True:
 
         plt.legend \
@@ -3208,7 +3208,7 @@ def display_plots_from_series_list \
 
     colors_string_list = [color_string] * chart_count_integer
 
-            
+
     row_count_integer, column_count_integer \
         = mathx.calculate_closest_factors(chart_count_integer)
 
@@ -3216,7 +3216,7 @@ def display_plots_from_series_list \
 
         row_count_integer, column_count_integer = column_count_integer, row_count_integer       
 
-    
+
     fig, axs \
         = plt.subplots \
             (row_count_integer, 
@@ -3226,7 +3226,7 @@ def display_plots_from_series_list \
              sharey = share_y_boolean, 
              tight_layout = tight_layout_boolean)
 
-            
+
     plt.clf()
 
 
@@ -3237,12 +3237,12 @@ def display_plots_from_series_list \
          fontsize = suptitle_font_size_float, 
          fontweight = suptitle_font_weight_string)
 
-            
+
     for index in range(chart_count_integer):
 
         plt.subplot(row_count_integer, column_count_integer, index + 1)
 
-        
+
         input_series_list[index] \
             .plot \
                 (color = colors_string_list[index], 
@@ -3250,20 +3250,20 @@ def display_plots_from_series_list \
                  grid = grid_boolean,
                  legend = False)
 
-        
+
         plt.title \
             (input_series_list[index].name,
              fontdict = {'fontsize': title_font_size_float, 
                          'fontstyle': title_font_style_string},
              pad = title_pad_float)
 
-        
+
         plt.xlabel \
             (xlabel_string,
              fontdict = {'fontsize': xlabel_font_size_float,
                          'fontstyle': xlabel_font_style_string},
              labelpad = xlabel_pad_float)
-       
+
         plt.ylabel \
             (ylabel_string,
              fontdict = {'fontsize': ylabel_font_size_float,
@@ -3271,15 +3271,15 @@ def display_plots_from_series_list \
              labelpad = ylabel_pad_float)
 
         plt.xticks(fontsize = xticks_font_size_float, rotation = xticks_rotation_float)
-       
+
         plt.yticks(fontsize = yticks_font_size_float, rotation = yticks_rotation_float)
 
-        
+
         plt.tight_layout(pad = 3.0)
-    
- 
+
+
     if supxlabel_string != None:
-    
+
         fig.supxlabel \
             (supxlabel_string,
              x = supxlabel_x_float,
@@ -3288,7 +3288,7 @@ def display_plots_from_series_list \
              fontweight = supxlabel_font_weight_string)
 
     if supylabel_string != None:
-    
+
             fig.supylabel \
                 (supylabel_string,
                  x = supylabel_x_float,
@@ -3298,7 +3298,7 @@ def display_plots_from_series_list \
 
 
     logx.save_plot_image(suptitle_string)
-        
+
     plt.show()
 
 
