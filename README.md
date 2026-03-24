@@ -2,7 +2,7 @@
 
 -----
 
-# **The Oil & Gas Energy Sector and the Covid-19 Pandemic: A Multi-Variable Economic Analysis (2020–2022)**
+# **The Economy and the Covid-19 Pandemic: A Multi-Variable Analysis (2020–2022)**
 
 -----
 
