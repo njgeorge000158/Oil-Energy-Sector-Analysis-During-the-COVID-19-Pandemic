@@ -41,7 +41,7 @@
 
 Did the COVID-19 pandemic exert a statistically detectable, directionally consistent, and economically meaningful causal influence on financial market indicators, and, if so, how did that influence evolve across the distinct phases of the pandemic? This project provides a systematic, quantitative answer using econometric time series methods applied to daily pandemic data and daily financial market data spanning the full 966 days of the dataset, from the first recorded U.S. case on January 22, 2020, through September 14, 2022.
 
-The analysis proceeds from the recognition that "COVID affected markets" is too coarse a claim to be informative. More precise questions are necessary: *Which* COVID metric — case counts, death counts, or a combined measure — carried the stronger causal signal? *Which* economic indicators were most reliably predicted by pandemic data? Did the relationship persist across the full pandemic, or was it concentrated in specific phases? And did the form of the relationship — its sign, lag structure, and causal direction — change as the pandemic evolved?
+The analysis proceeds from the recognition that "COVID affected markets" is too coarse a claim to be informative. More precise questions are necessary: *Which* COVID metric — case counts, death counts, or a combined measure — carried the stronger causal signal? *Which* economic indicators were most reliably predicted by pandemic data? Did the relationship persist across the full pandemic, or was it concentrated in specific phases? And, did the form of the relationship — its sign, lag structure, and causal direction — change as the pandemic evolved?
 
 ### 1.2 Data and Scope
 
