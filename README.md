@@ -326,7 +326,7 @@ Taken together, the evidence supports a revised and more precise statement of th
 
 **Notebook:** `econ_anlys_adp_pct_rll7_cml_dth_mts.ipynb`  
 **X Variable:** `covid_deaths` — 7-day rolling average of cumulative deaths, percentage change  
-**Y Variables:** Five metal commodity price series, percentage change  
+**Y Variables:** Five metal price series (gold, silver, platinum, palladium, copper), percentage change  
 **Period:** June 8, 2020 – November 25, 2021 (536 days)  
 **Composite Score:** 56.60
 
