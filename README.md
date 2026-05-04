@@ -181,7 +181,7 @@ The percentage-change analysis strips out shared trending behavior and tests whe
 
 ---
 
-*The Initial Shock percentage-change analysis produces the second-highest scores of any phase with a top score of 60.98 for `covid_c&d` → `stk_mkt`. The top-ranked result exactly mirrors the levels analysis leader for this phase, confirming that the COVID → equity channel during the crash was robust to both the trend-level and short-run specifications. The y-variables `stk_mkt` and `metals` split the Y side, with equity indices scores in the lead.*
+*The Initial Shock percentage-change analysis produces the second-highest scores of any phase with a top score of 60.98 for `covid_c&d` → `stk_mkt`. The top-ranked result exactly mirrors the levels analysis leader for this phase, confirming that the COVID → equity channel during the crash was robust to both the trend-level and short-run specifications. The y-variables `stk_mkt` and `metals` dominate the top rankings, with equity indices scores in the lead.*
 
 ---
 
