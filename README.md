@@ -171,7 +171,7 @@ The percentage-change analysis strips out shared trending behavior and tests whe
 
 ---
 
-*The category `covid_deaths` → `exchg_rts` (exchange rates) leads the Full Period percentage-change analysis with a score of 51.81. The y-variable `exchg_rts` dominates the Y side with 8 of 10 top positions, while `metals` appears in the remaining 2. This is the most distinctive result of the full-period analysis: exchange rate returns maintained the most persistent short-run relationship with COVID mortality percentage changes across the entire 966-day window, outperforming equities, commodities, and interest rates on the full-period metric.*
+*The category `covid_deaths` → `exchg_rts` (exchange rates) leads the Full Period percentage-change analysis with a score of 51.81. The y-variable `exchg_rts` dominates its competitors with 8 of the 10 top positions, while `metals` appears in the remaining two. This is the most distinctive result of the full-period analysis: exchange rate returns maintained the most persistent short-run relationship with COVID mortality percentage changes across the entire 966-day window, outperforming equities, commodities, and interest rates on the full-period metric.*
 
 ---
 
