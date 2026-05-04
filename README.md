@@ -222,7 +222,7 @@ The final output of the candidate selection analysis is a ranked summary of the 
 
 There are two patterns that are immediately evident in this table. First, the score progression confirms a systematic causal decay: **66.06 → 56.60 → 55.67 → 51.81** across Initial Shock, Adaptation, Recovery, and Full Period, respectively. COVID's causal footprint on economic indicators was strongest during the acute onset and attenuated progressively as the pandemic normalized. Second, the y-variable leadership transitions cleanly through three distinct asset classes: equities during the initial shock, metals through the adaptation and recovery phases, and exchange rates for the full period. This finding has direct implications for understanding which market mechanisms transmitted pandemic information to prices at each stage of the crisis.
 
-These four optimal pairings serve as the inputs for the four phase-specific analysis notebooks described in Section 3.
+These four optimal pairings serve as the inputs for the four phase-specific analysis notebooks described below.
 
 ---
 
