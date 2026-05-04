@@ -163,9 +163,13 @@ The levels analysis tests whether COVID data levels (or their cumulative and rol
 
 The percentage-change analysis strips out shared trending behavior and tests whether short-run changes in COVID data predict short-run changes in economic indicator returns. This is a more demanding and more econometrically rigorous evidence standard: both series must be stationary by construction, and detected Granger causality reflects genuine predictive information content rather than shared trend momentum.
 
+---
+
 #### Full Period — Percentage Changes Top 10
 
-![Table 2.1: COVID Data (%) vs. Economic Indicators (%) Top 10 Scores (Full Period)](econ_anlys_fnd_opt_cndsTable21CovidDatavsEconomicIndicatorsTop10ScoresFullPeriod.png)
+<img width="471" height="405" alt="econ_anlys_fnd_opt_cndsTable21CovidDatavsEconomicIndicatorsTop10ScoresFullPeriod" src="https://github.com/user-attachments/assets/07cb29b9-c312-41e7-b57d-e1b54dd4fd6f" />
+
+---
 
 *The Full Period percentage-change analysis is led by `covid_deaths` → `exchg_rts` (exchange rates) with a score of 51.81. `exchg_rts` dominates the Y side with 8 of 10 top positions, while `metals` appears in the remaining 2. This is the most distinctive result of the full-period analysis: exchange rate returns maintained the most persistent short-run relationship with COVID mortality percentage changes across the entire 966-day window, outperforming equities, commodities, and interest rates on the full-period metric.*
 
@@ -173,7 +177,7 @@ The percentage-change analysis strips out shared trending behavior and tests whe
 
 #### Initial Shock — Percentage Changes Top 10
 
-<img width="471" height="405" alt="econ_anlys_fnd_opt_cndsTable21CovidDatavsEconomicIndicatorsTop10ScoresFullPeriod" src="https://github.com/user-attachments/assets/07cb29b9-c312-41e7-b57d-e1b54dd4fd6f" />
+<img width="453" height="405" alt="econ_anlys_fnd_opt_cndsTable22CovidDatavsEconomicIndicatorsTop10ScoresInitialShock" src="https://github.com/user-attachments/assets/43ee4cfe-673e-4004-8155-1182447f06c9" />
 
 ---
 
