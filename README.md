@@ -147,7 +147,7 @@ The levels analysis tests whether COVID data levels (or their cumulative and rol
 
 ---
 
-*The Adaptation Phase's scores decline from the Initial Shock peak with a top score of 54.75 for `covid_deaths` → `intrt_rts`. The dominant x-variable shifts from `covid_c&d` to `covid_deaths`, a meaningful change reflecting the market's informational pivot from tracking the breadth of infection to tracking severity as vaccines changed the risk calculus. The appearance of interest rates in the highest scoring category is consistent with pandemic developments driving central bank accommodation expectations through the vaccine rollout and Delta wave periods.*
+*The Adaptation Phase's scores decline from the Initial Shock peak with a top score of 54.75 for rolling `covid_deaths` → `intrt_rts`. The dominant x-variable shifts from `covid_c&d` to `covid_deaths`, a meaningful change reflecting the market's informational pivot from tracking the breadth of infection to tracking severity as vaccines changed the risk calculus. The appearance of interest rates in the highest scoring category is consistent with pandemic developments driving central bank accommodation expectations through the vaccine rollout and Delta wave periods.*
 
 ---
 
