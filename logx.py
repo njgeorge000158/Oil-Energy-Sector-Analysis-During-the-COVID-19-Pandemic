@@ -12,10 +12,23 @@
  #      The Python script, logx.py, contains generic Python functions for writing 
  #      information to log files.  Here is the list:
  #
+ #  get_logs_config_dict
+ #  get_log_mode
+ #  get_image_mode
+ #  get_program_designation
+ #  get_logs_directory_path
+ #  set_logs_config_dict
+ #  get_images_directory_path
+ #  get_resources_directory_path
+ #  get_sql_directory_path
+ #  get_visualization_directory_path
+ #  get_models_directory_path
+ #  get_backups_directory_path
+ #  get_base_log_file_name
+ #
  #  set_log_mode
  #  set_image_mode
  #  set_program_designation
- #
  #  set_logs_directory_path
  #  set_images_directory_path
  #  set_resources_directory_path
@@ -23,45 +36,49 @@
  #  set_visualization_directory_path
  #  set_models_directory_path
  #  set_backups_directory_path
- #
  #  set_base_log_file_name
- # 
- #  current_date_as_string
- #  current_timestamp_as_string
- #  current_timepoint_with_message
  #
- #  get_image_file_path
+ #  curr_img_file_path
+ #  curr_analysis_file_path
+ #  curr_date_as_txt
+ #  curr_timestp_as_txt
+ #  curr_timept_with_msg
  #
- #  return_styler_save_png
+ #  sv_png_rtn_styler
+ #  rtn_delta
  #
  #  begin_program
  #  end_program
  #
- #  log_write_object
+ #  log_write_obj
  #  create_directory
  #  open_log_file
  #  print_and_log_text
+ #  write_to_folder
  #
- #  save_plot_image
- #  save_hvplot_image_to_html
+ #  save_matplotlib_image
+ #  save_hvplot_map_image
  #  save_plotly_image
+ #  save_folium_map_image
+ #  save_map_image
  #
  #
- #  Date            Description                             Programmer
- #  ----------      ------------------------------------    ------------------
- #  04/11/2024      Initial Development                     Nicholas J. George
+ #  Date                Description                                 Programmer
+ #  ---------------     ------------------------------------        ------------------
+ #  04/11/2024          Initial Development                         Nicholas J. George
+ #  02/18/2026          Upgraded Module                             Nicholas J. George
  #
  #******************************************************************************************/
 
-import dataframe_image
 import os
 import copy
+import folium
 
+import dataframe_image   as dfi
+import datetime          as dt
 import matplotlib.pyplot as plt
-import hvplot.pandas
 
-from datetime import date
-from datetime import datetime
+import hvplot.pandas
 
 
 # In[2]:
@@ -73,33 +90,25 @@ CONSTANT_LOCAL_FILE_NAME = 'logx.py'
 # In[3]:
 
 
-LOG_FLAG = False
-
-IMAGE_FLAG = False
-
-PROGRAM_DESIGNATION = ''
-
-
-LOGS_DIRECTORY_PATH = './logs'
-
-IMAGES_DIRECTORY_PATH = './images'
-
-RESOURCES_DIRECTORY_PATH = './resources'
-
-SQL_DIRECTORY_PATH = './sql'
-
-VISUALIZATION_PATH = './visualization'
-
-MODELS_DIRECTORY_PATH = './models'
-
-BACKUPS_DIRECTORY_PATH = './backups'
-
-
-BASE_LOG_FILE_NAME = '_log.txt'
-
-LOG_FILE_PATH = ''
-
-LOG_TXT_FILE = None
+logs_config_dict \
+    = {'logs_folder': './logs',
+       'images_folder': './images',
+       'resources_folder': './resources',
+       'analysis_folder': './analysis',
+       'sql_folder': './sql',
+       'visual_folder': './visualization',
+       'models_folder': './models',
+       'backups_folder': './backups',
+       'base_log_name': '_log.txt',
+       'log_folder': '',
+       'log_txt_file': None,
+       'prgrm_dsgn': '',
+       'bbox_inches': 'tight',
+       'start': None,
+       'end': None,
+       'ts_fmt': '%Y/%m/%d %H:%M:%S',
+       'log_mode': False,
+       'img_mode': False}
 
 
 # In[4]:
@@ -107,34 +116,50 @@ LOG_TXT_FILE = None
 
 #*******************************************************************************************
  #
- #  Function Name:  set_log_mode
+ #  Function Name:  get_logs_config_dict
+ #                  get_log_mode
+ #                  get_image_mode
+ #                  get_program_designation
+ #                  get_logs_directory_path
+ #                  get_images_directory_path
+ #                  get_resources_directory_path
+ #                  get_visualzation_directory_path
+ #                  get_models_directory_path
+ #                  get_backups_directory_path
+ #                  get_base_log_file_name
  #
  #  Function Description:
- #      The function sets the value for the global log flag (True/False).
+ #      The function returns the values from the configuration dictionary.
  #
  #
- #  Return Type: n/a
+ #  Return Type: varies
  #
  #
  #  Function Parameters:
  #
- #  Type    Name            Description
- #  -----   -------------   ----------------------------------------------
- #  boolean mode_boolean    The parameter is the desired Boolean value for the global 
- #                          log flag.
+ #  Type           Name             Description
+ #  ------------   --------------   --------------------------------------------------
+ #  n/a            n/a              n/a
  #
  #
  #  Date                Description                                 Programmer
  #  ---------------     ------------------------------------        ------------------
- #  04/11/2024          Initial Development                         Nicholas J. George
+ #  02/18/2026          Initial Development                         Nicholas J. George
  #
  #******************************************************************************************/
 
-def set_log_mode(mode_boolean = True):
-
-    global LOG_FLAG
-
-    LOG_FLAG = mode_boolean
+def get_logs_config_dict() -> dict:           return copy.deepcopy(logs_config_dict)
+def get_log_mode() -> str:                    return logs_config_dict['log_mode']
+def get_image_mode() -> str:                  return logs_config_dict['img_mode']
+def get_program_designation() -> str:         return logs_config_dict['prgrm_dsgn']
+def get_logs_directory_path() -> str:         return logs_config_dict['logs_folder']
+def get_images_directory_path() -> str:       return logs_config_dict['images_folder']
+def get_resources_directory_path() -> str:    return logs_config_dict['resources_folder']
+def get_sql_directory_path() -> str:          return logs_config_dict['sql_folder']
+def get_visualzation_directory_path() -> str: return logs_config_dict['visual_folder']
+def get_models_directory_path() -> str:       return logs_config_dict['models_folder']
+def get_backups_directory_path() -> str:      return logs_config_dict['backups_folder']
+def get_base_log_file_name() -> str:          return logs_config_dict['base_log_name']
 
 
 # In[5]:
@@ -142,10 +167,10 @@ def set_log_mode(mode_boolean = True):
 
 #*******************************************************************************************
  #
- #  Function Name:  set_image_mode
+ #  Function Name:  set_logs_config_dict
  #
  #  Function Description:
- #      The function sets the value for the global image flag (True/False).
+ #      The function sets the configuration dictionary.
  #
  #
  #  Return Type: n/a
@@ -153,26 +178,93 @@ def set_log_mode(mode_boolean = True):
  #
  #  Function Parameters:
  #
- #  Type    Name            Description
- #  -----   -------------   ----------------------------------------------
- #  boolean mode_boolean    The parameter is the desired Boolean value for the global 
- #                          image flag.
+ #  Type           Name             Description
+ #  ------------   --------------   --------------------------------------------------
+ #  dictionary     config_dict      The parameter is the new configuration dictionary.
  #
  #
  #  Date                Description                                 Programmer
  #  ---------------     ------------------------------------        ------------------
- #  04/11/2024          Initial Development                         Nicholas J. George
+ #  02/18/2026          Initial Development                         Nicholas J. George
  #
  #******************************************************************************************/
 
-def set_image_mode(mode_boolean = True):
+def set_logs_config_dict(config_dict: dict):
 
-    global IMAGE_FLAG
+    global logs_config_dict
 
-    IMAGE_FLAG = mode_boolean
+    logs_config_dict = copy.deepcopy(config_dict)
 
 
 # In[6]:
+
+
+#*******************************************************************************************
+ #
+ #  Function Name:  set_log_mode
+ #
+ #  Function Description:
+ #      The function sets the global log mode.
+ #
+ #
+ #  Return Type: n/a
+ #
+ #
+ #  Function Parameters:
+ #
+ #  Type           Name             Description
+ #  ------------   --------------   --------------------------------------------------
+ #  boolean        mode_bool        The parameter is the new log mode.
+ #
+ #
+ #  Date                Description                                 Programmer
+ #  ---------------     ------------------------------------        ------------------
+ #  02/18/2026          Initial Development                         Nicholas J. George
+ #
+ #******************************************************************************************/
+
+def set_log_mode(mode_bool: bool):
+
+    global logs_config_dict
+
+    logs_config_dict['log_mode'] = mode_bool
+
+
+# In[7]:
+
+
+#*******************************************************************************************
+ #
+ #  Function Name:  set_image_mode
+ #
+ #  Function Description:
+ #      The function sets the global image mode.
+ #
+ #
+ #  Return Type: n/a
+ #
+ #
+ #  Function Parameters:
+ #
+ #  Type           Name             Description
+ #  ------------   --------------   --------------------------------------------------
+ #  boolean        mode_bool        The parameter is the new image mode.
+ #
+ #
+ #  Date                Description                                 Programmer
+ #  ---------------     ------------------------------------        ------------------
+ #  02/18/2026          Initial Development                         Nicholas J. George
+ #
+ #******************************************************************************************/
+
+def set_image_mode(mode_bool: bool):
+
+    global logs_config_dict
+
+    logs_config_dict['img_mode'] = mode_bool
+
+
+# In[8]:
 
 
 #*******************************************************************************************
@@ -188,26 +280,26 @@ def set_image_mode(mode_boolean = True):
  #
  #  Function Parameters:
  #
- #  Type    Name            Description
- #  -----   -------------   ----------------------------------------------
- #  string  program_designation_string
- #                          The parameter is the text for the global program designation.
+ #  Type           Name             Description
+ #  ------------   --------------   --------------------------------------------------
+ #  string         prgrm_desig      The parameter is the text for the global program 
+ #                                  designation.
  #
  #
  #  Date                Description                                 Programmer
  #  ---------------     ------------------------------------        ------------------
- #  04/11/2024          Initial Development                         Nicholas J. George
+ #  02/18/2026          Initial Development                         Nicholas J. George
  #
  #******************************************************************************************/
 
-def set_program_designation(program_designation_string = ''):
+def set_program_designation(prgrm_desig: str = ''):
 
-    global PROGRAM_DESIGNATION
+    global logs_config_dict
 
-    PROGRAM_DESIGNATION = program_designation_string
+    logs_config_dict['prgrm_dsgn'] = prgrm_desig
 
 
-# In[7]:
+# In[9]:
 
 
 #*******************************************************************************************
@@ -223,26 +315,25 @@ def set_program_designation(program_designation_string = ''):
  #
  #  Function Parameters:
  #
- #  Type    Name            Description
- #  -----   -------------   ----------------------------------------------
- #  string  directory_path_string
- #                          The parameter is the new directory path.
+ #  Type           Name             Description
+ #  ------------   --------------   --------------------------------------------------
+ #  string         upd_dir_path     The parameter is the updated logs directory path.
  #
  #
  #  Date                Description                                 Programmer
  #  ---------------     ------------------------------------        ------------------
- #  04/11/2024          Initial Development                         Nicholas J. George
+ #  02/18/2026          Initial Development                         Nicholas J. George
  #
  #******************************************************************************************/
 
-def set_logs_directory_path(directory_path_string):
+def set_logs_directory_path(upd_dir_path: str):
 
-    global LOGS_DIRECTORY_PATH
+    global logs_config_dict
 
-    LOGS_DIRECTORY_PATH = directory_path_string
+    logs_config_dict['logs_folder'] = upd_dir_path
 
 
-# In[8]:
+# In[10]:
 
 
 #*******************************************************************************************
@@ -258,26 +349,25 @@ def set_logs_directory_path(directory_path_string):
  #
  #  Function Parameters:
  #
- #  Type    Name            Description
- #  -----   -------------   ----------------------------------------------
- #  string  directory_path_string
- #                          The parameter is the new directory path.
+ #  Type           Name             Description
+ #  ------------   --------------   --------------------------------------------------
+ #  string         upd_dir_path     The parameter is the updated images directory path.
  #
  #
  #  Date                Description                                 Programmer
  #  ---------------     ------------------------------------        ------------------
- #  04/11/2024          Initial Development                         Nicholas J. George
+ #  02/18/2026          Initial Development                         Nicholas J. George
  #
  #******************************************************************************************/
 
-def set_images_directory_path(directory_path_string):
+def set_images_directory_path(upd_dir_path: str):
 
-    global IMAGES_DIRECTORY_PATH
+    global logs_config_dict
 
-    IMAGES_DIRECTORY_PATH = directory_path_string
+    logs_config_dict['images_folder'] = upd_dir_path
 
 
-# In[9]:
+# In[11]:
 
 
 #*******************************************************************************************
@@ -293,26 +383,25 @@ def set_images_directory_path(directory_path_string):
  #
  #  Function Parameters:
  #
- #  Type    Name            Description
- #  -----   -------------   ----------------------------------------------
- #  string  directory_path_string
- #                          The parameter is the new directory path.
+ #  Type           Name             Description
+ #  ------------   --------------   --------------------------------------------------
+ #  string         upd_dir_path     The parameter is the updated resources directory path.
  #
  #
  #  Date                Description                                 Programmer
  #  ---------------     ------------------------------------        ------------------
- #  04/11/2024          Initial Development                         Nicholas J. George
+ #  02/18/2026          Initial Development                         Nicholas J. George
  #
  #******************************************************************************************/
 
-def set_resources_directory_path(directory_path_string):
+def set_resources_directory_path(upd_dir_path: str):
 
-    global RESOURCES_DIRECTORY_PATH
+    global logs_config_dict
 
-    RESOURCES_DIRECTORY_PATH = directory_path_string
+    logs_config_dict['resources_folder'] = upd_dir_path
 
 
-# In[10]:
+# In[12]:
 
 
 #*******************************************************************************************
@@ -328,26 +417,25 @@ def set_resources_directory_path(directory_path_string):
  #
  #  Function Parameters:
  #
- #  Type    Name            Description
- #  -----   -------------   ----------------------------------------------
- #  string  directory_path_string
- #                          The parameter is the new directory path.
+ #  Type           Name             Description
+ #  ------------   --------------   --------------------------------------------------
+ #  string         upd_dir_path     The parameter is the updated sql directory path.
  #
  #
  #  Date                Description                                 Programmer
  #  ---------------     ------------------------------------        ------------------
- #  04/11/2024          Initial Development                         Nicholas J. George
+ #  02/18/2026          Initial Development                         Nicholas J. George
  #
  #******************************************************************************************/
 
-def set_sql_directory_path(directory_path_string):
+def set_sql_directory_path(upd_dir_path: str):
 
-    global SQL_DIRECTORY_PATH
+    global logs_config_dict
 
-    SQL_DIRECTORY_PATH = directory_path_string
+    logs_config_dict['sql_folder'] = upd_dir_path
 
 
-# In[11]:
+# In[13]:
 
 
 #*******************************************************************************************
@@ -363,26 +451,26 @@ def set_sql_directory_path(directory_path_string):
  #
  #  Function Parameters:
  #
- #  Type    Name            Description
- #  -----   -------------   ----------------------------------------------
- #  string  directory_path_string
- #                          The parameter is the new directory path.
+ #  Type           Name             Description
+ #  ------------   --------------   --------------------------------------------------
+ #  string         upd_dir_path     The parameter is the updated visualization directory
+ #                                  path.
  #
  #
  #  Date                Description                                 Programmer
  #  ---------------     ------------------------------------        ------------------
- #  04/11/2024          Initial Development                         Nicholas J. George
+ #  02/18/2026          Initial Development                         Nicholas J. George
  #
  #******************************************************************************************/
 
-def set_visualzation_directory_path(directory_path_string):
+def set_visualzation_directory_path(upd_dir_path: str):
 
-    global VISUALIZATION_DIRECTORY_PATH
+    global logs_config_dict
 
-    VISUALIZATION_DIRECTORY_PATH = directory_path_string
+    logs_config_dict['visual_folder'] = upd_dir_path
 
 
-# In[12]:
+# In[14]:
 
 
 #*******************************************************************************************
@@ -398,26 +486,25 @@ def set_visualzation_directory_path(directory_path_string):
  #
  #  Function Parameters:
  #
- #  Type    Name            Description
- #  -----   -------------   ----------------------------------------------
- #  string  directory_path_string
- #                          The parameter is the new directory path.
+ #  Type           Name             Description
+ #  ------------   --------------   --------------------------------------------------
+ #  string         upd_dir_path     The parameter is the updated models directory path.
  #
  #
  #  Date                Description                                 Programmer
  #  ---------------     ------------------------------------        ------------------
- #  04/11/2024          Initial Development                         Nicholas J. George
+ #  02/18/2026          Initial Development                         Nicholas J. George
  #
  #******************************************************************************************/
 
-def set_models_directory_path(directory_path_string):
+def set_models_directory_path(upd_dir_path: str):
 
-    global MODELS_DIRECTORY_PATH
+    global logs_config_dict
 
-    MODELS_DIRECTORY_PATH = directory_path_string
+    logs_config_dict['models_folder'] = upd_dir_path
 
 
-# In[13]:
+# In[15]:
 
 
 #*******************************************************************************************
@@ -433,26 +520,25 @@ def set_models_directory_path(directory_path_string):
  #
  #  Function Parameters:
  #
- #  Type    Name            Description
- #  -----   -------------   ----------------------------------------------
- #  string  directory_path_string
- #                          The parameter is the new directory path.
+ #  Type           Name             Description
+ #  ------------   --------------   --------------------------------------------------
+ #  string         upd_dir_path     The parameter is the updated backups directory path.
  #
  #
  #  Date                Description                                 Programmer
  #  ---------------     ------------------------------------        ------------------
- #  04/11/2024          Initial Development                         Nicholas J. George
+ #  02/18/2026          Initial Development                         Nicholas J. George
  #
  #******************************************************************************************/
 
-def set_backups_directory_path(directory_path_string):
+def set_backups_directory_path(upd_dir_path: str):
 
-    global BACKUPS_DIRECTORY_PATH
+    global logs_config_dict
 
-    BACKUPS_DIRECTORY_PATH = directory_path_string
+    logs_config_dict['backups_folder'] = upd_dir_path
 
 
-# In[14]:
+# In[16]:
 
 
 #*******************************************************************************************
@@ -468,31 +554,118 @@ def set_backups_directory_path(directory_path_string):
  #
  #  Function Parameters:
  #
- #  Type    Name            Description
- #  -----   -------------   ----------------------------------------------
- #  string  base_file_path_string
- #                          The parameter is the base file name.
+ #  Type           Name             Description
+ #  ------------   --------------   --------------------------------------------------
+ #  string         base_file_path   The parameter is the updated base file name.
  #
  #
  #  Date                Description                                 Programmer
  #  ---------------     ------------------------------------        ------------------
- #  04/11/2024          Initial Development                         Nicholas J. George
+ #  02/18/2026          Initial Development                         Nicholas J. George
  #
  #******************************************************************************************/
 
-def set_base_log_file_name(base_file_path_string):
+def set_base_log_file_name(upd_file_name: str):
 
-    global BASE_LOG_FILE_NAME
+    global logs_config_dict
 
-    BASE_LOG_FILE_NAME = base_file_path_string
+    logs_config_dict['base_log_name'] = upd_file_name
 
 
-# In[15]:
+# In[17]:
 
 
 #*******************************************************************************************
  #
- #  Function Name:  current_date_as_string
+ #  Function Name:  curr_img_file_path
+ #
+ #  Function Description:
+ #      The function uses a plot's caption to determine the image file path.
+ #
+ #
+ #  Return Type: string
+ #
+ #
+ #  Function Parameters:
+ #
+ #  Type           Name             Description
+ #  ------------   --------------   --------------------------------------------------
+ #  string         caption          The parameter is the plot title.
+ #  string         img_fmt          The parameter is the image format file suffix.    
+ #
+ #
+ #  Date                Description                                 Programmer
+ #  ---------------     ------------------------------------        ------------------
+ #  02/18/2026          Initial Development                         Nicholas J. George
+ #
+ #******************************************************************************************/
+
+def curr_img_file_path \
+        (caption: str = 'test', 
+         img_fmt: str = '') \
+-> str:
+
+    img_file_path \
+        = logs_config_dict['images_folder'] \
+            + '/' + logs_config_dict['prgrm_dsgn'] \
+            + ''.join(filter(str.isalnum, caption))
+
+    if img_fmt != '': img_file_path += '.' + img_fmt
+
+
+    return img_file_path
+
+
+# In[18]:
+
+
+#*******************************************************************************************
+ #
+ #  Function Name:  curr_analysis_file_path
+ #
+ #  Function Description:
+ #      The function uses the title to determine the file path.
+ #
+ #
+ #  Return Type: string
+ #
+ #
+ #  Function Parameters:
+ #
+ #  Type           Name             Description
+ #  ------------   --------------   --------------------------------------------------
+ #  string         title            The parameter is the analysis title.
+ #  string         img_fmt          The parameter is the file format suffix.    
+ #
+ #
+ #  Date                Description                                 Programmer
+ #  ---------------     ------------------------------------        ------------------
+ #  02/18/2026          Initial Development                         Nicholas J. George
+ #
+ #******************************************************************************************/
+
+def curr_analysis_file_path \
+        (title: str, 
+         fmt:   str = 'txt') \
+-> str:
+
+    file_path \
+        = logs_config_dict['analysis_folder'] + '/' \
+            + logs_config_dict['prgrm_dsgn'] \
+            + ''.join(filter(str.isalnum, title))
+
+    file_path += '.' + fmt
+
+
+    return file_path
+
+
+# In[19]:
+
+
+#*******************************************************************************************
+ #
+ #  Function Name:  curr_date_as_txt
  #
  #  Function Description:
  #      The function returns the current date as a formatted string for the names
@@ -504,30 +677,29 @@ def set_base_log_file_name(base_file_path_string):
  #
  #  Function Parameters:
  #
- #  Type    Name            Description
- #  -----   -------------   ----------------------------------------------
- #  string  format_string   The parameter is optional and specifies the date format.
+ #  Type           Name             Description
+ #  ------------   --------------   --------------------------------------------------
+ #  string         fmt              The parameter is optional and specifies the date 
+ #                                  format.
  #
  #
  #  Date                Description                                 Programmer
  #  ---------------     ------------------------------------        ------------------
- #  04/11/2024          Initial Development                         Nicholas J. George
+ #  02/18/2026          Initial Development                         Nicholas J. George
  #
  #******************************************************************************************/
 
-def current_date_as_string(format_string = '%Y%m%d'):
+def curr_date_as_txt(fmt: str = '%Y%m%d') -> str: 
 
-    todays_date = date.today()
-
-    return todays_date.strftime(format_string)
+    return dt.date.today().strftime(fmt)
 
 
-# In[16]:
+# In[20]:
 
 
 #*******************************************************************************************
  #
- #  Function Name:  current_timestamp_as_string
+ #  Function Name:  curr_timestp_as_txt
  #
  #  Function Description:
  #      The function returns the current date and time as a formatted string
@@ -539,30 +711,29 @@ def current_date_as_string(format_string = '%Y%m%d'):
  #
  #  Function Parameters:
  #
- #  Type    Name            Description
- #  -----   -------------   ----------------------------------------------
- #  string  format_string   The parameter is optional and specifies the datetime format.
+ #  Type           Name             Description
+ #  ------------   --------------   --------------------------------------------------
+ #  string         fmt              The parameter is optional and specifies the datetime 
+ #                                  format.
  #
  #
  #  Date                Description                                 Programmer
  #  ---------------     ------------------------------------        ------------------
- #  04/11/2024          Initial Development                         Nicholas J. George
+ #  02/18/2026          Initial Development                         Nicholas J. George
  #
  #******************************************************************************************/
 
-def current_timestamp_as_string(format_string = '%Y/%m/%d %H:%M:%S'):
+def curr_timestp_as_txt(fmt: str = logs_config_dict['ts_fmt']) -> str: 
 
-    current_datetime = datetime.now()
-
-    return current_datetime.strftime(format_string)
+    return dt.datetime.now().strftime(fmt)
 
 
-# In[17]:
+# In[21]:
 
 
 #*******************************************************************************************
  #
- #  Function Name:  current_timepoint_with_message
+ #  Function Name:  curr_timept_with_msg
  #
  #  Function Description:
  #      The function takes a message, formats it with a timestamp, and returns it 
@@ -574,35 +745,70 @@ def current_timestamp_as_string(format_string = '%Y/%m/%d %H:%M:%S'):
  #
  #  Function Parameters:
  #
- #  Type    Name            Description
- #  -----   -------------   ----------------------------------------------
- #  string  message_string  The parameter is the optional message with the timepoint.
+ #  Type           Name             Description
+ #  ------------   --------------   --------------------------------------------------
+ #  string         msg              The parameter is the optional message with the 
+ #                                  timepoint.
  #
  #
  #  Date                Description                                 Programmer
  #  ---------------     ------------------------------------        ------------------
- #  04/11/2024          Initial Development                         Nicholas J. George
+ #  02/18/2026          Initial Development                         Nicholas J. George
  #
  #******************************************************************************************/
 
-def current_timepoint_with_message(message_string = ''):
+def curr_timept_with_msg(msg: str = '') -> str: 
 
-    current_timestamp_string = current_timestamp_as_string()
-
-    timepoint_string = f'\nTimepoint: {current_timestamp_string}\n' + message_string + '\n\n'
-
-    return timepoint_string
+    return f'\nTimepoint: {curr_timestp_as_txt()}\n' + msg + '\n\n'
 
 
-# In[18]:
+# In[22]:
 
 
 #*******************************************************************************************
  #
- #  Function Name:  get_image_file_path
+ #  Function Name:  sv_png_rtn_styler
  #
  #  Function Description:
- #      The function uses a plot's caption to determine the image file path.
+ #      The function saves the styler object as a png image file then returns it.
+ #
+ #
+ #  Return Type: styler
+ #
+ #
+ #  Function Parameters:
+ #
+ #  Type           Name             Description
+ #  ------------   --------------   --------------------------------------------------
+ #  styler         input_styler     The parameter is the input styler object.
+ #  string         caption          The parameter is the styler caption.
+ #
+ #
+ #  Date                Description                                 Programmer
+ #  ---------------     ------------------------------------        ------------------
+ #  02/18/2026          Initial Development                         Nicholas J. George
+ #
+ #******************************************************************************************/
+
+def sv_png_rtn_styler(input_styler, caption: str):
+
+    if logs_config_dict['img_mode'] == True:
+
+        dfi.export(input_styler, curr_img_file_path(caption, 'png'))
+
+    return input_styler
+
+
+# In[23]:
+
+
+#*******************************************************************************************
+ #
+ #  Function Name:  rtn_delta
+ #
+ #  Function Description:
+ #      The function returns the elapsed time based on a beginning and ending timestamp 
+ #      strings.
  #
  #
  #  Return Type: string
@@ -610,78 +816,44 @@ def current_timepoint_with_message(message_string = ''):
  #
  #  Function Parameters:
  #
- #  Type    Name            Description
- #  -----   -------------   ----------------------------------------------
- #  string  caption_string  The parameter is the plot title.
- #  string  image_format_string
- #                          The parameter is the image format file suffix.    
+ #  Type           Name             Description
+ #  ------------   --------------   --------------------------------------------------
+ #  string         start            The parameter is the start timestamp string.
+ #  string         end              The parameter is the end timestamp string.
+ #  string         fmt              The parameter is the timestamp format.
  #
  #
  #  Date                Description                                 Programmer
  #  ---------------     ------------------------------------        ------------------
- #  04/11/2024          Initial Development                         Nicholas J. George
+ #  02/18/2026          Initial Development                         Nicholas J. George
  #
  #******************************************************************************************/
 
-def get_image_file_path \
-        (caption_string = 'test',
-         image_format_string = ''):
+def rtn_delta(start: str, end: str, fmt: str) -> str:
 
-    temp_string = ''.join(filter(str.isalnum, caption_string))
+    start_ts = dt.datetime.strptime(start, fmt)
 
-    image_file_path \
-        = IMAGES_DIRECTORY_PATH + '/' + PROGRAM_DESIGNATION + temp_string
-
-    if image_format_string != '':
-
-        image_file_path += '.' + image_format_string
-
-    return image_file_path
+    end_ts = dt.datetime.strptime(end, fmt)
 
 
-# In[19]:
+    delta_ts = end_ts - start_ts
 
 
-#*******************************************************************************************
- #
- #  Function Name:  save_png_return_styler
- #
- #  Function Description:
- #      The function saves the styler object as a png image file then returns it.
- #
- #
- #  Return Type: n/a
- #
- #
- #  Function Parameters:
- #
- #  Type    Name            Description
- #  -----   -------------   ----------------------------------------------
- #  styler  input_styler    The parameter is the input styler object.
- #  string  caption_string  The parameter is the styler caption.
- #
- #
- #  Date                Description                                 Programmer
- #  ---------------     ------------------------------------        ------------------
- #  04/11/2024          Initial Development                         Nicholas J. George
- #
- #******************************************************************************************/
+    total_seconds_int = int(delta_ts.total_seconds())
 
-def save_png_return_styler \
-        (input_styler,
-         caption_string):
+    hours_int = total_seconds_int // 3600
 
-    if IMAGE_FLAG == True:
+    minutes_int = (total_seconds_int % 3600) // 60
 
-        image_file_path_string = get_image_file_path(caption_string, 'png')
-
-        dataframe_image.export(input_styler, image_file_path_string)
+    seconds_int = total_seconds_int % 60    
 
 
-    return input_styler
+    delta = f'{hours_int:02}:{minutes_int:02}:{seconds_int:02}'
+
+    return delta
 
 
-# In[20]:
+# In[24]:
 
 
 #*******************************************************************************************
@@ -698,38 +870,40 @@ def save_png_return_styler \
  #
  #  Function Parameters:
  #
- #  Type    Name            Description
- #  -----   -------------   ----------------------------------------------
- #  string  program_designation_string
- #                          The parameter is the program designation.
+ #  Type           Name             Description
+ #  ------------   --------------   --------------------------------------------------
+ #  string         prgrm_desig      The parameter is the program designation.
  #
  #
  #  Date                Description                                 Programmer
  #  ---------------     ------------------------------------        ------------------
- #  04/11/2024          Initial Development                         Nicholas J. George
+ #  02/18/2026          Initial Development                         Nicholas J. George
  #
  #******************************************************************************************/
 
-def begin_program(program_designation_string = ''):
+def begin_program(prgrm_desig: str = ''):
 
-    create_directory(LOGS_DIRECTORY_PATH)
+    global logs_config_dict
 
-    create_directory(IMAGES_DIRECTORY_PATH)
 
-    set_program_designation(program_designation_string)
+    create_directory(logs_config_dict['logs_folder'])
 
+    create_directory(logs_config_dict['images_folder'])
+
+
+    set_program_designation(prgrm_desig)
 
     open_log_file()
 
 
-    message_string = 'Program execution begins...\n'
+    if logs_config_dict['log_mode'] == True:
 
-    if LOG_FLAG == True:
+        logs_config_dict['start'] = curr_timestp_as_txt()
 
-        print_and_log_text(message_string) 
+        print_and_log_text(f"Program execution has begun...\n")
 
 
-# In[21]:
+# In[25]:
 
 
 #*******************************************************************************************
@@ -746,36 +920,53 @@ def begin_program(program_designation_string = ''):
  #
  #  Function Parameters:
  #
- #  Type    Name            Description
- #  -----   -------------   ----------------------------------------------
- #  n/a     n/a             n/a
+ #  Type           Name             Description
+ #  ------------   --------------   --------------------------------------------------
+ #  n/a            n/a              n/a
  #
  #
  #  Date                Description                                 Programmer
  #  ---------------     ------------------------------------        ------------------
- #  04/11/2024          Initial Development                         Nicholas J. George
+ #  02/18/2026          Initial Development                         Nicholas J. George
  #
  #******************************************************************************************/
 
 def end_program():
 
-    current_timestamp_string = current_timestamp_as_string()
-
-    message_string = f'Program execution ends at {current_timestamp_string}.\n\n\n\n'
-
-    if LOG_FLAG == True:
-
-        print_and_log_text(message_string)
-
-        LOG_TXT_FILE.close() 
+    global logs_config_dict
 
 
-# In[22]:
+    if logs_config_dict['log_mode'] == True:
+
+        logs_config_dict['end'] = curr_timestp_as_txt()
+
+
+        delta \
+            = rtn_delta \
+                (start = logs_config_dict['start'], 
+                 end = logs_config_dict['end'], 
+                 fmt = logs_config_dict['ts_fmt'])
+
+
+        print_and_log_text \
+            (f"Program execution begins at {logs_config_dict['start']}.")
+
+        print_and_log_text \
+            (f"Program execution ends at {logs_config_dict['end']}.\n")
+
+        print_and_log_text \
+            ('Program execution ran for ' + delta + '.\n')
+
+
+        logs_config_dict['log_txt_file'].close() 
+
+
+# In[26]:
 
 
 #*******************************************************************************************
  #
- #  Function Name:  log_write_object
+ #  Function Name:  log_write_obj
  #
  #  Function Description:
  #      The function takes an object as a parameter, and, if the global debug flag is true, 
@@ -787,27 +978,26 @@ def end_program():
  #
  #  Function Parameters:
  #
- #  Type    Name            Description
- #  -----   -------------   ----------------------------------------------
- #  object  input_object    The parameter is the object to be written to the log file.
+ #  Type           Name             Description
+ #  ------------   --------------   --------------------------------------------------
+ #  object         input_obj        The parameter is the object to be written to the 
+ #                                  log file.
  #
  #
  #  Date                Description                                 Programmer
  #  ---------------     ------------------------------------        ------------------
- #  04/11/2024          Initial Development                         Nicholas J. George
+ #  02/18/2026          Initial Development                         Nicholas J. George
  #
  #******************************************************************************************/
 
-def log_write_object(input_object):
+def log_write_obj(input_obj: object):
 
-    message_string = f'\n\n' + str(input_object) + f'\n\n'
+    if logs_config_dict['log_mode'] == True:
 
-    if LOG_FLAG == True:
-
-        LOG_TXT_FILE.write(message_string)
+        logs_config_dict['log_txt_file'].write(f'\n\n' + str(input_obj) + f'\n\n')
 
 
-# In[23]:
+# In[27]:
 
 
 #*******************************************************************************************
@@ -823,30 +1013,29 @@ def log_write_object(input_object):
  #
  #  Function Parameters:
  #
- #  Type    Name            Description
- #  -----   -------------   ----------------------------------------------
- #  string  directory_string
- #                          The parameter is the directory name.
+ #  Type           Name             Description
+ #  ------------   --------------   --------------------------------------------------
+ #  string         dir_path         The parameter is the directory name.
  #
  #
  #  Date                Description                                 Programmer
  #  ---------------     ------------------------------------        ------------------
- #  04/11/2024          Initial Development                         Nicholas J. George
+ #  02/18/2026          Initial Development                         Nicholas J. George
  #
  #******************************************************************************************/
 
-def create_directory(directory_string):
+def create_directory(dir_path: str):
 
-    exist_boolean = os.path.exists(directory_string)
+    exist_bool = os.path.exists(dir_path)
 
-    if exist_boolean == False:
+    if exist_bool == False:
 
-        os.makedirs(directory_string)
+        os.makedirs(dir_path)
 
-        print(f'The script created directory, {directory_string}.\n')
+        print(f'The script created directory, {dir_path}.\n')
 
 
-# In[24]:
+# In[28]:
 
 
 #*******************************************************************************************
@@ -863,39 +1052,33 @@ def create_directory(directory_string):
  #
  #  Function Parameters:
  #
- #  Type    Name            Description
- #  -----   -------------   ----------------------------------------------
- #  n/a     n/a             n/a
+ #  Type           Name             Description
+ #  ------------   --------------   --------------------------------------------------
+ #  n/a            n/a              n/a
  #
  #
  #  Date                Description                                 Programmer
  #  ---------------     ------------------------------------        ------------------
- #  04/11/2024          Initial Development                         Nicholas J. George
+ #  02/18/2026          Initial Development                         Nicholas J. George
  #
  #******************************************************************************************/
 
 def open_log_file():
 
-    global LOG_FILE_PATH
+    global logs_config_dict
 
-    global LOG_TXT_FILE
+    logs_config_dict['log_folder'] \
+        = logs_config_dict['logs_folder'] \
+            + '/' + curr_date_as_txt() \
+            + logs_config_dict['prgrm_dsgn'] \
+            + logs_config_dict['base_log_name']
 
+    if logs_config_dict['log_mode'] == True:
 
-    current_date_string = current_date_as_string()
-
-    program_designation_string = PROGRAM_DESIGNATION
-
-
-    LOG_FILE_PATH \
-        = LOGS_DIRECTORY_PATH + '/' + current_date_string \
-          + program_designation_string + BASE_LOG_FILE_NAME
-
-    if LOG_FLAG == True:
-
-        LOG_TXT_FILE = open(LOG_FILE_PATH, 'a')
+        logs_config_dict['log_txt_file'] = open(logs_config_dict['log_folder'], 'a')
 
 
-# In[25]:
+# In[29]:
 
 
 #*******************************************************************************************
@@ -911,34 +1094,86 @@ def open_log_file():
  #
  #  Function Parameters:
  #
- #  Type    Name            Description
- #  -----   -------------   ----------------------------------------------
- #  string  message_string  The parameter is the input message text string.
+ #  Type           Name             Description
+ #  ------------   --------------   --------------------------------------------------
+ #  string         msg              The parameter is the input message text.
  #
  #
  #  Date                Description                                 Programmer
  #  ---------------     ------------------------------------        ------------------
- #  04/11/2024          Initial Development                         Nicholas J. George
+ #  02/18/2026          Initial Development                         Nicholas J. George
  #
  #******************************************************************************************/
 
-def print_and_log_text(message_string = ''):
+def print_and_log_text(msg: str = ''):
 
-    print(message_string)
+    print(msg)
 
-    timepoint_message_string = current_timepoint_with_message(message_string)
+    if logs_config_dict['log_mode'] == True:
 
-    if LOG_FLAG == True:
-
-        LOG_TXT_FILE.write(timepoint_message_string)    
+        logs_config_dict['log_txt_file'].write(curr_timept_with_msg(msg))    
 
 
-# In[26]:
+# In[30]:
 
 
 #*******************************************************************************************
  #
- #  Function Name:  save_plot_image
+ #  Function Name:  write_to_folder
+ #
+ #  Function Description:
+ #      The function writes the message to the analysis file.
+ #
+ #
+ #  Return Type: n/a
+ #
+ #
+ #  Function Parameters:
+ #
+ #  Type           Name             Description
+ #  ------------   --------------   --------------------------------------------------
+ #  string         msg              The parameter is the input message text.
+ #  string         title            The parameter is the analysis title.
+ #  string         mode             The parameter is the file mode ('w' or 'a').
+ #  
+ #
+ #
+ #  Date                Description                                 Programmer
+ #  ---------------     ------------------------------------        ------------------
+ #  02/18/2026          Initial Development                         Nicholas J. George
+ #
+ #******************************************************************************************/
+
+def write_to_folder(msg: str, title: str, mode: str = 'w'):
+
+    if not os.path.isdir(logs_config_dict['analysis_folder']):
+
+        try:
+
+            os.mkdir(logs_config_dict['analysis_folder'])
+
+        except FileExistsError: 
+
+            print_and_log_text \
+                (f"\n\nThe script failed to create folder {logs_config_dict['analysis_folder']}.\n\n")
+
+
+    file_path = curr_analysis_file_path(title)
+
+    with open(file_path, mode) as file: file.write(msg)
+
+
+    if logs_config_dict['log_mode'] == True:
+
+        logs_config_dict['log_txt_file'].write(curr_timept_with_msg(msg))    
+
+
+# In[31]:
+
+
+#*******************************************************************************************
+ #
+ #  Function Name:  save_matplotlib_image
  #
  #  Function Description:
  #      The function saves the image of a matplotlib plot to a file.
@@ -949,88 +1184,36 @@ def print_and_log_text(message_string = ''):
  #
  #  Function Parameters:
  #
- #  Type    Name            Description
- #  -----   -------------   ----------------------------------------------
- #  string  caption_string  The parameter is the plot title.
- #  integer dpi_integer     The parameter is the dots per square inch for the image.
- #  float   pad_inches_float
- #                          The parameter is the buffer around the plot in inches.
- #  string  image_format_string
- #                          The parameter is the image format (png, html, etc.).
+ #  Type           Name             Description
+ #  ------------   --------------   --------------------------------------------------
+ #  string         caption         The parameter is the plot title.
+ #  integer        dpi             The parameter is the dots per square inch for the image.
+ #  float          pad_inch        The parameter is the buffer around the plot in inches.
+ #  string         img_fmt         The parameter is the image format (png, html, etc.).
  #
  #
  #  Date                Description                                 Programmer
  #  ---------------     ------------------------------------        ------------------
- #  04/11/2024          Initial Development                         Nicholas J. George
+ #  02/18/2026          Initial Development                         Nicholas J. George
  #
  #******************************************************************************************/
 
-def save_plot_image \
-        (caption_string = '',
-         dpi_integer = 300,
-         pad_inches_float = 0.5,
-         image_format_string = 'png'):
+def save_matplotlib_image \
+        (caption:  str   = '',
+         dpi:      int   = 300,
+         pad_inch: float = 0.5,
+         img_fmt:  str   = 'png'):
 
-    if IMAGE_FLAG == True:
-
-        image_file_path_string \
-            = get_image_file_path(caption_string, image_format_string)
+    if logs_config_dict['img_mode'] == True:
 
         plt.savefig \
-            (image_file_path_string, 
-             dpi = dpi_integer, 
-             bbox_inches = 'tight', 
-             pad_inches = pad_inches_float)
+            (curr_img_file_path(caption, img_fmt), 
+             dpi = dpi, 
+             bbox_inches = logs_config_dict['bbox_inches'], 
+             pad_inches = pad_inch)
 
 
-# In[27]:
-
-
-#*******************************************************************************************
- #
- #  Function Name:  save_hvplot_image_to_html
- #
- #  Function Description:
- #      The function saves an hvplot to an html file.
- #
- #
- #  Return Type: n/a
- #
- #
- #  Function Parameters:
- #
- #  Type    Name            Description
- #  -----   -------------   ----------------------------------------------
- #  object  hvplot_overlay  The parameter is the input hvplot overlay object.
- #  string  caption_string  The parameter is the plot title.
- #  integer height_integer  The parameter is the plot's height.
- #  integer width_integer   The parameter is the plot's width.
- #
- #
- #  Date                Description                                 Programmer
- #  ---------------     ------------------------------------        ------------------
- #  04/11/2024          Initial Development                         Nicholas J. George
- #
- #******************************************************************************************/
-
-def save_hvplot_image_to_html \
-        (hvplot_overlay,
-         caption_string = '',
-         height_integer = 550,
-         width_integer = 1100):
-
-    if IMAGE_FLAG == True:
-
-        temp_overlay = copy.copy(hvplot_overlay)
-
-        temp_overlay.opts(width = width_integer, height = height_integer)
-
-        image_file_path_string = get_image_file_path(caption_string, 'html')
-
-        hvplot.save(temp_overlay, image_file_path_string)
-
-
-# In[28]:
+# In[32]:
 
 
 #*******************************************************************************************
@@ -1046,28 +1229,148 @@ def save_hvplot_image_to_html \
  #
  #  Function Parameters:
  #
- #  Type    Name            Description
- #  -----   -------------   ----------------------------------------------
- #  object  plotly_figure   The parameter is the Plotly Figure Object.
- #  string  figure_title_string
- #                          The parameter is the figure title.
+ #  Type           Name             Description
+ #  ------------   --------------   --------------------------------------------------
+ #  object         plotly_fig       The parameter is the plotly figure object.
+ #  string         title            The parameter is the figure title.
  #
  #
  #  Date                Description                                 Programmer
  #  ---------------     ------------------------------------        ------------------
- #  04/11/2024          Initial Development                         Nicholas J. George
+ #  02/18/2026          Initial Development                         Nicholas J. George
  #
  #******************************************************************************************/
 
-def save_plotly_image \
-        (plotly_figure,
-         caption_string):
+def save_plotly_image(plotly_fig, title: str):
 
-    if IMAGE_FLAG == True:
+    if logs_config_dict['img_mode'] == True: 
 
-        image_file_path_string = get_image_file_path(caption_string, 'png')
+        plotly_fig.write_image(curr_img_file_path(title, 'png'))
 
-        plotly_figure.write_image(image_file_path_string)
+
+# In[33]:
+
+
+#*******************************************************************************************
+ #
+ #  Function Name:  save_folium_map_image
+ #
+ #  Function Description:
+ #      The function saves a folium map to an html file.
+ #
+ #
+ #  Return Type: n/a
+ #
+ #
+ #  Function Parameters:
+ #
+ #  Type           Name             Description
+ #  ------------   --------------   --------------------------------------------------
+ #  object         folium_map       The parameter is the input folium map object.
+ #  string         title            The parameter is the plot title.
+ #
+ #
+ #  Date                Description                                 Programmer
+ #  ---------------     ------------------------------------        ------------------
+ #  02/18/2026          Initial Development                         Nicholas J. George
+ #
+ #******************************************************************************************/
+
+def save_folium_map_image(folium_map: object, title: str):
+
+    if logs_config_dict['img_mode'] == True: 
+
+        folium_map.save(curr_img_file_path(title, 'html'))
+
+
+# In[34]:
+
+
+#*******************************************************************************************
+ #
+ #  Function Name:  save_hvplot_map_image
+ #
+ #  Function Description:
+ #      The function saves an hvplot to an html file.
+ #
+ #
+ #  Return Type: n/a
+ #
+ #
+ #  Function Parameters:
+ #
+ #  Type           Name             Description
+ #  ------------   --------------   --------------------------------------------------
+ #  object         hvplot_ovl       The parameter is the input hvplot overlay object.
+ #  string         title            The parameter is the plot title.
+ #  integer        height           The parameter is the plot's height.
+ #  integer        width            The parameter is the plot's width.
+ #
+ #
+ #  Date                Description                                 Programmer
+ #  ---------------     ------------------------------------        ------------------
+ #  02/18/2026          Initial Development                         Nicholas J. George
+ #
+ #******************************************************************************************/
+
+def save_hvplot_map_image \
+        (hvplot_ovl: object,
+         title:      str,
+         height:     int,
+         width:      int):
+
+    if logs_config_dict['img_mode'] == True:
+
+        tmp_ovl = copy.deepcopy(hvplot_ovl)
+
+        tmp_ovl.opts(width = width, height = height)
+
+
+        hvplot.save(tmp_ovl, curr_img_file_path(title, 'html'))
+
+
+# In[35]:
+
+
+#*******************************************************************************************
+ #
+ #  Function Name:  save_map_image
+ #
+ #  Function Description:
+ #      The function saves a map image to an html file.
+ #
+ #
+ #  Return Type: n/a
+ #
+ #
+ #  Function Parameters:
+ #
+ #  Type           Name             Description
+ #  ------------   --------------   --------------------------------------------------
+ #  object         input_obj        The parameter is the input map object.
+ #  string         title            The parameter is the plot title.
+ #  integer        height           The parameter is the plot's height.
+ #  integer        width            The parameter is the plot's width.
+ #
+ #
+ #  Date                Description                                 Programmer
+ #  ---------------     ------------------------------------        ------------------
+ #  02/18/2026          Initial Development                         Nicholas J. George
+ #
+ #******************************************************************************************/
+
+def save_map_image \
+        (input_obj:  object,
+         title:      str = '',
+         input_type: str = 'folium',
+         height:     int = 550,
+         width:      int = 1100):
+
+    if logs_config_dict['img_mode'] == True:
+
+        if  input_type == 'folium': save_folium_map_image(input_obj, title)
+
+        elif input_type == 'hvplot': save_hvplot_map_image(input_obj, title, height, width)
 
 
 # In[ ]:

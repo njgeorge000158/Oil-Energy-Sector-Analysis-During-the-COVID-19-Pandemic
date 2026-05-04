@@ -1,0 +1,722 @@
+
+Timepoint: 2026/05/03 16:01:30
+Program execution has begun...
+
+
+
+
+            covid_cases  covid_deaths  covid_c&d  cml_covid_cases  \
+2020-01-22            4             0          4                4   
+2020-01-23            2             0          2                6   
+2020-01-24            1             0          1                7   
+2020-01-27            0             0          0                8   
+2020-01-28            0             0          0                8   
+...                 ...           ...        ...              ...   
+2022-09-08        87686           425      88111         92123625   
+2022-09-09        81861           544      82405         92205486   
+2022-09-12        60728           213      60941         92302671   
+2022-09-13        54413           460      54873         92357092   
+2022-09-14        83403           705      84108         92440495   
+
+            cml_covid_deaths  cml_covid_c&d  
+2020-01-22                 0              4  
+2020-01-23                 0              6  
+2020-01-24                 0              7  
+2020-01-27                 0              8  
+2020-01-28                 0              8  
+...                      ...            ...  
+2022-09-08           1003171       93126796  
+2022-09-09           1003715       93209201  
+2022-09-12           1003989       93306660  
+2022-09-13           1004449       93361541  
+2022-09-14           1005195       93445690  
+
+[668 rows x 6 columns]
+
+
+
+2020-01-23      0.00
+2020-01-24      0.00
+2020-01-27      0.00
+2020-01-28      0.00
+2020-01-29      0.00
+               ...  
+2022-09-08    -33.70
+2022-09-09     28.00
+2022-09-12    -60.85
+2022-09-13    115.96
+2022-09-14     53.26
+Name: covid_deaths, Length: 667, dtype: float64
+
+
+
+             eur   aud   cad   sgd   bitcoin
+2020-01-22  1.11  0.68  0.76  0.74   8680.88
+2020-01-23  1.11  0.68  0.76  0.74   8406.52
+2020-01-24  1.11  0.68  0.76  0.74   8445.43
+2020-01-27  1.10  0.68  0.76  0.74   8909.82
+2020-01-28  1.10  0.68  0.76  0.74   9358.59
+...          ...   ...   ...   ...       ...
+2022-09-08  1.00  0.68  0.76  0.71  19329.83
+2022-09-09  1.00  0.68  0.76  0.71  21381.15
+2022-09-12  1.01  0.68  0.77  0.72  22370.45
+2022-09-13  1.01  0.69  0.77  0.72  20296.71
+2022-09-14  1.00  0.67  0.76  0.71  20241.09
+
+[691 rows x 5 columns]
+
+
+
+2020-01-23    0.00
+2020-01-24    0.00
+2020-01-27   -0.90
+2020-01-28    0.00
+2020-01-29    0.00
+              ... 
+2022-09-08    1.01
+2022-09-09    0.00
+2022-09-12    1.00
+2022-09-13    0.00
+2022-09-14   -0.99
+Name: eur, Length: 690, dtype: float64
+
+
+
+2020-01-23    0.00
+2020-01-24    0.00
+2020-01-27    0.00
+2020-01-28    0.00
+2020-01-29    0.00
+              ... 
+2022-09-08    1.49
+2022-09-09    0.00
+2022-09-12    0.00
+2022-09-13    1.47
+2022-09-14   -2.90
+Name: aud, Length: 690, dtype: float64
+
+
+
+2020-01-23    0.00
+2020-01-24    0.00
+2020-01-27    0.00
+2020-01-28    0.00
+2020-01-29    0.00
+              ... 
+2022-09-08    0.00
+2022-09-09    0.00
+2022-09-12    1.32
+2022-09-13    0.00
+2022-09-14   -1.30
+Name: cad, Length: 690, dtype: float64
+
+
+
+2020-01-23    0.00
+2020-01-24    0.00
+2020-01-27    0.00
+2020-01-28    0.00
+2020-01-29    0.00
+              ... 
+2022-09-08    0.00
+2022-09-09    0.00
+2022-09-12    1.41
+2022-09-13    0.00
+2022-09-14   -1.39
+Name: sgd, Length: 690, dtype: float64
+
+
+
+2020-01-23    -3.16
+2020-01-24     0.46
+2020-01-27     5.50
+2020-01-28     5.04
+2020-01-29    -0.45
+              ...  
+2022-09-08     0.20
+2022-09-09    10.61
+2022-09-12     4.63
+2022-09-13    -9.27
+2022-09-14    -0.27
+Name: bitcoin, Length: 690, dtype: float64
+
+
+Timepoint: 2026/05/03 16:01:58
+[1mSTATIONARY TIME SERIES DETECTED: covid_deaths%.
+
+[0m
+
+
+Timepoint: 2026/05/03 16:01:58
+[1mSTATIONARY TIME SERIES DETECTED: eur%.
+
+[0m
+
+
+Timepoint: 2026/05/03 16:01:58
+[1mSTATIONARY TIME SERIES DETECTED: aud%.
+
+[0m
+
+
+Timepoint: 2026/05/03 16:01:58
+[1mSTATIONARY TIME SERIES DETECTED: cad%.
+
+[0m
+
+
+Timepoint: 2026/05/03 16:01:58
+[1mSTATIONARY TIME SERIES DETECTED: sgd%.
+
+[0m
+
+
+Timepoint: 2026/05/03 16:01:59
+[1mSTATIONARY TIME SERIES DETECTED: bitcoin%.
+
+[0m
+
+
+
+            covid_deaths%   eur
+series                         
+2020-01-23           0.00  0.00
+2020-01-24           0.00  0.00
+2020-01-27           0.00 -0.90
+2020-01-28           0.00  0.00
+2020-01-29           0.00  0.00
+...                   ...   ...
+2022-09-08         -33.70  1.01
+2022-09-09          28.00  0.00
+2022-09-12         -60.85  1.00
+2022-09-13         115.96  0.00
+2022-09-14          53.26 -0.99
+
+[667 rows x 2 columns]
+
+
+Timepoint: 2026/05/03 16:02:29
+r-value (pearson):	-0.082
+
+
+Timepoint: 2026/05/03 16:02:29
+r-value (spearman):	-0.055
+
+
+Timepoint: 2026/05/03 16:02:29
+tau (kendall):		-0.042
+
+
+
+Timepoint: 2026/05/03 16:02:29
+p-value (pearson):	0.034
+
+
+Timepoint: 2026/05/03 16:02:29
+p-value (spearman):	0.153
+
+
+Timepoint: 2026/05/03 16:02:29
+p-value (kendall):	0.150
+
+
+Timepoint: 2026/05/03 16:02:29
+
+
+
+
+Timepoint: 2026/05/03 16:02:37
+[1mCOVID_DEATHS% VS. EUR% ANALYSIS
+
+Model selected: VAR.
+
+Series 'x' is stationary (ADF = -5.106945, p = 0.000014).
+
+Series 'y' is stationary (ADF = -29.601738, p = 0.000000).
+
+Trace and max-eigenvalue tests agree. Both series appear stationary at levels — VAR on levels is appropriate.
+
+Recommended lag (BIC): 6.
+AIC = 13, BIC = 6, HQIC = 6, FPE = 13.
+
+VAR(6) fitted.
+AIC = 5.716342, BIC = 5.893101.
+Stability: UNSTABLE — roots outside unit circle; interpret with caution.
+
+IRF (VAR, 30 periods):
+A one-SD shock to x produces a mixed net response in y.
+Peak x→y effect at lag 3 (magnitude: -0.001527).
+Cumulative x→y response: -0.002623.
+
+FEVD (VAR, horizon = 31):
+x shocks explain 1.755720% of y's forecast variance (minimal influence).
+y's own shocks explain 98.244280% of its own variance.
+[0m
+
+
+Timepoint: 2026/05/03 16:02:37
+COVID_DEATHS% VS. EUR% ANALYSIS
+
+Model selected: VAR.
+
+Series 'x' is stationary (ADF = -5.106945, p = 0.000014).
+
+Series 'y' is stationary (ADF = -29.601738, p = 0.000000).
+
+Trace and max-eigenvalue tests agree. Both series appear stationary at levels — VAR on levels is appropriate.
+
+Recommended lag (BIC): 6.
+AIC = 13, BIC = 6, HQIC = 6, FPE = 13.
+
+VAR(6) fitted.
+AIC = 5.716342, BIC = 5.893101.
+Stability: UNSTABLE — roots outside unit circle; interpret with caution.
+
+IRF (VAR, 30 periods):
+A one-SD shock to x produces a mixed net response in y.
+Peak x→y effect at lag 3 (magnitude: -0.001527).
+Cumulative x→y response: -0.002623.
+
+FEVD (VAR, horizon = 31):
+x shocks explain 1.755720% of y's forecast variance (minimal influence).
+y's own shocks explain 98.244280% of its own variance.
+
+
+
+
+            covid_deaths%   aud
+series                         
+2020-01-23           0.00  0.00
+2020-01-24           0.00  0.00
+2020-01-27           0.00  0.00
+2020-01-28           0.00  0.00
+2020-01-29           0.00  0.00
+...                   ...   ...
+2022-09-08         -33.70  1.49
+2022-09-09          28.00  0.00
+2022-09-12         -60.85  0.00
+2022-09-13         115.96  1.47
+2022-09-14          53.26 -2.90
+
+[667 rows x 2 columns]
+
+
+Timepoint: 2026/05/03 16:03:39
+r-value (pearson):	-0.002
+
+
+Timepoint: 2026/05/03 16:03:39
+r-value (spearman):	0.011
+
+
+Timepoint: 2026/05/03 16:03:39
+tau (kendall):		0.008
+
+
+
+Timepoint: 2026/05/03 16:03:39
+p-value (pearson):	0.954
+
+
+Timepoint: 2026/05/03 16:03:39
+p-value (spearman):	0.775
+
+
+Timepoint: 2026/05/03 16:03:39
+p-value (kendall):	0.783
+
+
+Timepoint: 2026/05/03 16:03:39
+
+
+
+
+Timepoint: 2026/05/03 16:03:47
+[1mCOVID_DEATHS% VS. AUD% ANALYSIS
+
+Model selected: VAR.
+
+Series 'x' is stationary (ADF = -5.106945, p = 0.000014).
+
+Series 'y' is stationary (ADF = -30.701559, p = 0.000000).
+
+Trace and max-eigenvalue tests agree. Both series appear stationary at levels — VAR on levels is appropriate.
+
+Recommended lag (BIC): 5.
+AIC = 14, BIC = 5, HQIC = 10, FPE = 14.
+
+VAR(5) fitted.
+AIC = 6.700486, BIC = 6.849876.
+Stability: UNSTABLE — roots outside unit circle; interpret with caution.
+
+IRF (VAR, 30 periods):
+A one-SD shock to x produces a mixed net response in y.
+Peak x→y effect at lag 1 (magnitude: -0.002430).
+Cumulative x→y response: -0.006890.
+
+FEVD (VAR, horizon = 31):
+x shocks explain 1.777826% of y's forecast variance (minimal influence).
+y's own shocks explain 98.222174% of its own variance.
+[0m
+
+
+Timepoint: 2026/05/03 16:03:47
+COVID_DEATHS% VS. AUD% ANALYSIS
+
+Model selected: VAR.
+
+Series 'x' is stationary (ADF = -5.106945, p = 0.000014).
+
+Series 'y' is stationary (ADF = -30.701559, p = 0.000000).
+
+Trace and max-eigenvalue tests agree. Both series appear stationary at levels — VAR on levels is appropriate.
+
+Recommended lag (BIC): 5.
+AIC = 14, BIC = 5, HQIC = 10, FPE = 14.
+
+VAR(5) fitted.
+AIC = 6.700486, BIC = 6.849876.
+Stability: UNSTABLE — roots outside unit circle; interpret with caution.
+
+IRF (VAR, 30 periods):
+A one-SD shock to x produces a mixed net response in y.
+Peak x→y effect at lag 1 (magnitude: -0.002430).
+Cumulative x→y response: -0.006890.
+
+FEVD (VAR, horizon = 31):
+x shocks explain 1.777826% of y's forecast variance (minimal influence).
+y's own shocks explain 98.222174% of its own variance.
+
+
+
+
+            covid_deaths%   cad
+series                         
+2020-01-23           0.00  0.00
+2020-01-24           0.00  0.00
+2020-01-27           0.00  0.00
+2020-01-28           0.00  0.00
+2020-01-29           0.00  0.00
+...                   ...   ...
+2022-09-08         -33.70  0.00
+2022-09-09          28.00  0.00
+2022-09-12         -60.85  1.32
+2022-09-13         115.96  0.00
+2022-09-14          53.26 -1.30
+
+[667 rows x 2 columns]
+
+
+Timepoint: 2026/05/03 16:04:49
+r-value (pearson):	-0.031
+
+
+Timepoint: 2026/05/03 16:04:49
+r-value (spearman):	-0.027
+
+
+Timepoint: 2026/05/03 16:04:49
+tau (kendall):		-0.021
+
+
+
+Timepoint: 2026/05/03 16:04:49
+p-value (pearson):	0.426
+
+
+Timepoint: 2026/05/03 16:04:49
+p-value (spearman):	0.482
+
+
+Timepoint: 2026/05/03 16:04:49
+p-value (kendall):	0.480
+
+
+Timepoint: 2026/05/03 16:04:49
+
+
+
+
+Timepoint: 2026/05/03 16:04:57
+[1mCOVID_DEATHS% VS. CAD% ANALYSIS
+
+Model selected: VAR.
+
+Series 'x' is stationary (ADF = -5.106945, p = 0.000014).
+
+Series 'y' is stationary (ADF = -31.686112, p = 0.000000).
+
+Trace and max-eigenvalue tests agree. Both series appear stationary at levels — VAR on levels is appropriate.
+
+Recommended lag (BIC): 5.
+AIC = 10, BIC = 5, HQIC = 10, FPE = 10.
+
+VAR(5) fitted.
+AIC = 6.034620, BIC = 6.184010.
+Stability: UNSTABLE — roots outside unit circle; interpret with caution.
+
+IRF (VAR, 30 periods):
+A one-SD shock to x produces a mixed net response in y.
+Peak x→y effect at lag 2 (magnitude: -0.001833).
+Cumulative x→y response: -0.004042.
+
+FEVD (VAR, horizon = 31):
+x shocks explain 1.300536% of y's forecast variance (minimal influence).
+y's own shocks explain 98.699464% of its own variance.
+[0m
+
+
+Timepoint: 2026/05/03 16:04:57
+COVID_DEATHS% VS. CAD% ANALYSIS
+
+Model selected: VAR.
+
+Series 'x' is stationary (ADF = -5.106945, p = 0.000014).
+
+Series 'y' is stationary (ADF = -31.686112, p = 0.000000).
+
+Trace and max-eigenvalue tests agree. Both series appear stationary at levels — VAR on levels is appropriate.
+
+Recommended lag (BIC): 5.
+AIC = 10, BIC = 5, HQIC = 10, FPE = 10.
+
+VAR(5) fitted.
+AIC = 6.034620, BIC = 6.184010.
+Stability: UNSTABLE — roots outside unit circle; interpret with caution.
+
+IRF (VAR, 30 periods):
+A one-SD shock to x produces a mixed net response in y.
+Peak x→y effect at lag 2 (magnitude: -0.001833).
+Cumulative x→y response: -0.004042.
+
+FEVD (VAR, horizon = 31):
+x shocks explain 1.300536% of y's forecast variance (minimal influence).
+y's own shocks explain 98.699464% of its own variance.
+
+
+
+
+            covid_deaths%   sgd
+series                         
+2020-01-23           0.00  0.00
+2020-01-24           0.00  0.00
+2020-01-27           0.00  0.00
+2020-01-28           0.00  0.00
+2020-01-29           0.00  0.00
+...                   ...   ...
+2022-09-08         -33.70  0.00
+2022-09-09          28.00  0.00
+2022-09-12         -60.85  1.41
+2022-09-13         115.96  0.00
+2022-09-14          53.26 -1.39
+
+[667 rows x 2 columns]
+
+
+Timepoint: 2026/05/03 16:06:01
+r-value (pearson):	0.000
+
+
+Timepoint: 2026/05/03 16:06:01
+r-value (spearman):	-0.029
+
+
+Timepoint: 2026/05/03 16:06:01
+tau (kendall):		-0.024
+
+
+
+Timepoint: 2026/05/03 16:06:01
+p-value (pearson):	0.996
+
+
+Timepoint: 2026/05/03 16:06:01
+p-value (spearman):	0.452
+
+
+Timepoint: 2026/05/03 16:06:01
+p-value (kendall):	0.437
+
+
+Timepoint: 2026/05/03 16:06:01
+
+
+
+
+Timepoint: 2026/05/03 16:06:10
+[1mCOVID_DEATHS% VS. SGD% ANALYSIS
+
+Model selected: VAR.
+
+Series 'x' is stationary (ADF = -5.106945, p = 0.000014).
+
+Series 'y' is stationary (ADF = -9.344618, p = 0.000000).
+
+Trace and max-eigenvalue tests agree. Both series appear stationary at levels — VAR on levels is appropriate.
+
+Recommended lag (BIC): 6.
+AIC = 10, BIC = 6, HQIC = 6, FPE = 10.
+
+VAR(6) fitted.
+AIC = 5.566529, BIC = 5.743288.
+Stability: UNSTABLE — roots outside unit circle; interpret with caution.
+
+IRF (VAR, 30 periods):
+A one-SD shock to x produces a mixed net response in y.
+Peak x→y effect at lag 3 (magnitude: -0.001130).
+Cumulative x→y response: -0.002670.
+
+FEVD (VAR, horizon = 31):
+x shocks explain 1.468335% of y's forecast variance (minimal influence).
+y's own shocks explain 98.531665% of its own variance.
+[0m
+
+
+Timepoint: 2026/05/03 16:06:10
+COVID_DEATHS% VS. SGD% ANALYSIS
+
+Model selected: VAR.
+
+Series 'x' is stationary (ADF = -5.106945, p = 0.000014).
+
+Series 'y' is stationary (ADF = -9.344618, p = 0.000000).
+
+Trace and max-eigenvalue tests agree. Both series appear stationary at levels — VAR on levels is appropriate.
+
+Recommended lag (BIC): 6.
+AIC = 10, BIC = 6, HQIC = 6, FPE = 10.
+
+VAR(6) fitted.
+AIC = 5.566529, BIC = 5.743288.
+Stability: UNSTABLE — roots outside unit circle; interpret with caution.
+
+IRF (VAR, 30 periods):
+A one-SD shock to x produces a mixed net response in y.
+Peak x→y effect at lag 3 (magnitude: -0.001130).
+Cumulative x→y response: -0.002670.
+
+FEVD (VAR, horizon = 31):
+x shocks explain 1.468335% of y's forecast variance (minimal influence).
+y's own shocks explain 98.531665% of its own variance.
+
+
+
+
+            covid_deaths%  bitcoin
+series                            
+2020-01-23           0.00    -3.16
+2020-01-24           0.00     0.46
+2020-01-27           0.00     5.50
+2020-01-28           0.00     5.04
+2020-01-29           0.00    -0.45
+...                   ...      ...
+2022-09-08         -33.70     0.20
+2022-09-09          28.00    10.61
+2022-09-12         -60.85     4.63
+2022-09-13         115.96    -9.27
+2022-09-14          53.26    -0.27
+
+[667 rows x 2 columns]
+
+
+Timepoint: 2026/05/03 16:07:18
+r-value (pearson):	-0.003
+
+
+Timepoint: 2026/05/03 16:07:18
+r-value (spearman):	-0.018
+
+
+Timepoint: 2026/05/03 16:07:18
+tau (kendall):		-0.012
+
+
+
+Timepoint: 2026/05/03 16:07:18
+p-value (pearson):	0.934
+
+
+Timepoint: 2026/05/03 16:07:18
+p-value (spearman):	0.635
+
+
+Timepoint: 2026/05/03 16:07:18
+p-value (kendall):	0.638
+
+
+Timepoint: 2026/05/03 16:07:18
+
+
+
+
+Timepoint: 2026/05/03 16:07:26
+[1mCOVID_DEATHS% VS. BITCOIN% ANALYSIS
+
+Model selected: VAR.
+
+Series 'x' is stationary (ADF = -5.106945, p = 0.000014).
+
+Series 'y' is stationary (ADF = -6.437851, p = 0.000000).
+
+Trace and max-eigenvalue tests agree. Both series appear stationary at levels — VAR on levels is appropriate.
+
+Recommended lag (BIC): 5.
+AIC = 11, BIC = 5, HQIC = 11, FPE = 11.
+
+VAR(5) fitted.
+AIC = 9.945342, BIC = 10.094731.
+Stability: UNSTABLE — roots outside unit circle; interpret with caution.
+
+IRF (VAR, 30 periods):
+A one-SD shock to x produces a negative net response in y.
+Peak x→y effect at lag 4 (magnitude: -0.014938).
+Cumulative x→y response: -0.040992.
+
+FEVD (VAR, horizon = 31):
+x shocks explain 1.694624% of y's forecast variance (minimal influence).
+y's own shocks explain 98.305376% of its own variance.
+[0m
+
+
+Timepoint: 2026/05/03 16:07:26
+COVID_DEATHS% VS. BITCOIN% ANALYSIS
+
+Model selected: VAR.
+
+Series 'x' is stationary (ADF = -5.106945, p = 0.000014).
+
+Series 'y' is stationary (ADF = -6.437851, p = 0.000000).
+
+Trace and max-eigenvalue tests agree. Both series appear stationary at levels — VAR on levels is appropriate.
+
+Recommended lag (BIC): 5.
+AIC = 11, BIC = 5, HQIC = 11, FPE = 11.
+
+VAR(5) fitted.
+AIC = 9.945342, BIC = 10.094731.
+Stability: UNSTABLE — roots outside unit circle; interpret with caution.
+
+IRF (VAR, 30 periods):
+A one-SD shock to x produces a negative net response in y.
+Peak x→y effect at lag 4 (magnitude: -0.014938).
+Cumulative x→y response: -0.040992.
+
+FEVD (VAR, horizon = 31):
+x shocks explain 1.694624% of y's forecast variance (minimal influence).
+y's own shocks explain 98.305376% of its own variance.
+
+
+
+Timepoint: 2026/05/03 16:12:17
+Program execution begins at 2026/05/03 16:01:30.
+
+
+Timepoint: 2026/05/03 16:12:17
+Program execution ends at 2026/05/03 16:12:17.
+
+
+
+Timepoint: 2026/05/03 16:12:17
+Program execution ran for 00:10:47.
+
+

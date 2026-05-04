@@ -1,0 +1,1968 @@
+
+Timepoint: 2026/04/27 19:26:04
+Program execution has begun...
+
+
+
+
+industry
+oil & gas drilling                 6
+oil & gas e&p                     86
+oil & gas equipment & services    38
+oil & gas integrated              24
+oil & gas midstream               47
+oil & gas refining & marketing    17
+Name: symbol, dtype: int64
+
+
+
+1444320518847.6199
+
+
+
+7062641764918.54
+
+
+
+industry
+oil & gas drilling                1.169135e+10
+oil & gas e&p                     3.918316e+11
+oil & gas equipment & services    1.354494e+11
+oil & gas integrated              2.077632e+12
+oil & gas midstream               5.862471e+11
+oil & gas refining & marketing    1.405939e+11
+Name: mean_market_cap, dtype: float64
+
+
+
+industry
+oil & gas drilling                8.671440e+09
+oil & gas e&p                     3.619810e+11
+oil & gas equipment & services    1.339979e+11
+oil & gas integrated              1.772521e+12
+oil & gas midstream               5.488967e+11
+oil & gas refining & marketing    1.416740e+11
+Name: median_market_cap, dtype: float64
+
+
+
+industry
+oil & gas drilling                1.297901e+10
+oil & gas e&p                     1.943004e+11
+oil & gas equipment & services    4.483329e+10
+oil & gas integrated              7.702009e+11
+oil & gas midstream               2.588343e+11
+oil & gas refining & marketing    3.784733e+10
+Name: std_market_cap, dtype: float64
+
+
+
+industry
+oil & gas drilling                5.021730e+08
+oil & gas e&p                     7.517707e+09
+oil & gas equipment & services    1.734652e+09
+oil & gas integrated              2.979997e+10
+oil & gas midstream               1.001460e+10
+oil & gas refining & marketing    1.464357e+09
+Name: sem_market_cap, dtype: float64
+
+
+
+                                Count  Market Cap (Minimum)  \
+industry                                                      
+oil & gas drilling                6.0          2.462611e+09   
+oil & gas e&p                    86.0          1.025265e+11   
+oil & gas equipment & services   38.0          5.023792e+10   
+oil & gas integrated             24.0          9.673064e+11   
+oil & gas midstream              47.0          2.624659e+11   
+oil & gas refining & marketing   17.0          5.932122e+10   
+total                           218.0          1.444321e+12   
+
+                                Market Cap (Maximum)  Market Cap (Mean)  \
+industry                                                                  
+oil & gas drilling                      7.125245e+10       1.169135e+10   
+oil & gas e&p                           8.948165e+11       3.918316e+11   
+oil & gas equipment & services          2.514610e+11       1.354494e+11   
+oil & gas integrated                    4.135032e+12       2.077632e+12   
+oil & gas midstream                     1.461177e+12       5.862471e+11   
+oil & gas refining & marketing          2.489026e+11       1.405939e+11   
+total                                   7.062642e+12       3.343445e+12   
+
+                                Market Cap (Median)  Market Cap (STD)  \
+industry                                                                
+oil & gas drilling                     8.671440e+09      1.297901e+10   
+oil & gas e&p                          3.619810e+11      1.943004e+11   
+oil & gas equipment & services         1.339979e+11      4.483329e+10   
+oil & gas integrated                   1.772521e+12      7.702009e+11   
+oil & gas midstream                    5.488967e+11      2.588343e+11   
+oil & gas refining & marketing         1.416740e+11      3.784733e+10   
+total                                  2.967742e+12      1.318995e+12   
+
+                                Market Cap (SEM)  
+industry                                          
+oil & gas drilling                  5.021730e+08  
+oil & gas e&p                       7.517707e+09  
+oil & gas equipment & services      1.734652e+09  
+oil & gas integrated                2.979997e+10  
+oil & gas midstream                 1.001460e+10  
+oil & gas refining & marketing      1.464357e+09  
+total                               5.103346e+10  
+
+
+
+                         industry  lower_quartile  upper_quartile  \
+0              oil & gas drilling    1.637581e+09    2.551869e+09   
+1                   oil & gas e&p    6.664732e+07    2.627340e+09   
+2  oil & gas equipment & services    1.742161e+08    1.675232e+09   
+3            oil & gas integrated    1.976447e+10    1.215022e+11   
+4             oil & gas midstream    5.749713e+08    2.092635e+10   
+5  oil & gas refining & marketing    1.344047e+09    5.532627e+09   
+
+      iqr_range  lower_boundary  upper_boundary          mean        median  \
+0  9.142886e+08    2.661478e+08    3.009014e+09  1.948558e+09  1.854526e+09   
+1  2.560693e+09   -3.774392e+09    3.907686e+09  4.556181e+09  5.185785e+08   
+2  1.501016e+09   -2.077307e+09    2.425739e+09  3.564457e+09  6.634251e+08   
+3  1.017378e+11   -1.328422e+11    1.723711e+11  8.656798e+10  7.157614e+10   
+4  2.035138e+10   -2.995210e+10    3.110204e+10  1.247334e+10  1.653354e+09   
+5  4.188580e+09   -4.938823e+09    7.626918e+09  8.270232e+09  2.165604e+09   
+
+   company_count  outliers_count  
+0              6               1  
+1             86              16  
+2             38               7  
+3             24               4  
+4             47               7  
+5             17               4  
+
+
+
+                         industry  lower_quartile  upper_quartile  \
+0              oil & gas drilling    7.628942e+08    2.004167e+09   
+1                   oil & gas e&p    6.038041e+07    2.544367e+09   
+2  oil & gas equipment & services    1.178885e+08    1.663843e+09   
+3            oil & gas integrated    1.359516e+10    9.585202e+10   
+4             oil & gas midstream    5.498389e+08    1.854338e+10   
+5  oil & gas refining & marketing    1.397922e+09    5.246947e+09   
+
+      iqr_range  lower_boundary  upper_boundary          mean        median  \
+0  1.241273e+09   -1.099015e+09    2.624804e+09  1.445240e+09  1.141313e+09   
+1  2.483987e+09   -3.665600e+09    3.786361e+09  4.209081e+09  4.496927e+08   
+2  1.545955e+09   -2.201043e+09    2.436820e+09  3.526260e+09  6.221631e+08   
+3  8.225686e+10   -1.097901e+11    1.369805e+11  7.385505e+10  5.468486e+10   
+4  1.799354e+10   -2.644048e+10    2.754015e+10  1.167865e+10  1.253869e+09   
+5  3.849025e+09   -4.375616e+09    7.171460e+09  8.333767e+09  1.963371e+09   
+
+   company_count  outliers_count  
+0              6               1  
+1             86              14  
+2             38               7  
+3             24               4  
+4             47               8  
+5             17               4  
+
+
+
+    symbol                  company_name                        industry  \
+0     ALTX        altex industries, inc.                   oil & gas e&p   
+1       AM  antero midstream corporation             oil & gas midstream   
+2     AMPY          amplify energy corp.                   oil & gas e&p   
+3      APA               apa corporation                   oil & gas e&p   
+4       AR  antero resources corporation                   oil & gas e&p   
+..     ...                           ...                             ...   
+213   WTTR  select water solutions, inc.  oil & gas equipment & services   
+214    XOM       exxon mobil corporation            oil & gas integrated   
+215   XPRO     expro group holdings n.v.  oil & gas equipment & services   
+216    YPF          ypf sociedad anónima            oil & gas integrated   
+217   ZNOG          zion oil & gas, inc.                   oil & gas e&p   
+
+                                               address   longitude   latitude  \
+0    700 colorado boulevard, denver, co 80206-4084,... -104.940498  39.727500   
+1    1615 wynkoop street, denver, co 80202, united ... -105.001076  39.752461   
+2    500 dallas street, houston, tx 77002, united s...  -95.370574  29.757652   
+3    2000 w. sam houston pkwy. s., houston, tx 7704...  -95.559654  29.745835   
+4    1615 wynkoop street, denver, co 80202, united ... -105.001076  39.752461   
+..                                                 ...         ...        ...   
+213  1820 north i-35, gainesville, tx 76240, united...  -97.136641  33.632177   
+214  22777 springwoods village parkway, spring, tx ...  -95.446152  30.103242   
+215  1311 broadfield boulevard, houston, tx 77084, ...  -95.659914  29.788715   
+216  macacha gueemes 515, buenos aires, c1106bkk, a...  -58.362218 -34.605469   
+217  12222 merit drive, dallas, tx 75251, united st...  -96.772373  32.914027   
+
+     marker_size  
+0       0.001097  
+1       4.383487  
+2       0.123529  
+3       7.737609  
+4       3.737865  
+..           ...  
+213     0.614771  
+214   246.909979  
+215     1.718981  
+216     1.912278  
+217     0.080378  
+
+[218 rows x 7 columns]
+
+
+Timepoint: 2026/04/27 19:26:20
+BEGIN CALCULATING MARKET INDEX...
+
+
+
+Timepoint: 2026/04/27 19:26:21
+
+SUCCESSFULLY PROCESSED SYMBOL ALTX FOR THE SHARE INDEX...
+
+
+
+Timepoint: 2026/04/27 19:26:21
+
+SUCCESSFULLY PROCESSED SYMBOL AM FOR THE SHARE INDEX...
+
+
+
+Timepoint: 2026/04/27 19:26:22
+
+SUCCESSFULLY PROCESSED SYMBOL AMPY FOR THE SHARE INDEX...
+
+
+
+Timepoint: 2026/04/27 19:26:22
+
+SUCCESSFULLY PROCESSED SYMBOL APA FOR THE SHARE INDEX...
+
+
+
+Timepoint: 2026/04/27 19:26:22
+
+SUCCESSFULLY PROCESSED SYMBOL AR FOR THE SHARE INDEX...
+
+
+
+Timepoint: 2026/04/27 19:26:23
+
+SUCCESSFULLY PROCESSED SYMBOL AROC FOR THE SHARE INDEX...
+
+
+
+Timepoint: 2026/04/27 19:26:23
+
+SUCCESSFULLY PROCESSED SYMBOL BATL FOR THE SHARE INDEX...
+
+
+
+Timepoint: 2026/04/27 19:26:23
+
+SUCCESSFULLY PROCESSED SYMBOL BDCO FOR THE SHARE INDEX...
+
+
+
+Timepoint: 2026/04/27 19:26:24
+
+SUCCESSFULLY PROCESSED SYMBOL BIREF FOR THE SHARE INDEX...
+
+
+
+Timepoint: 2026/04/27 19:26:24
+
+SUCCESSFULLY PROCESSED SYMBOL BKR FOR THE SHARE INDEX...
+
+
+
+Timepoint: 2026/04/27 19:26:24
+
+SUCCESSFULLY PROCESSED SYMBOL BORR FOR THE SHARE INDEX...
+
+
+
+Timepoint: 2026/04/27 19:26:25
+
+SUCCESSFULLY PROCESSED SYMBOL BP FOR THE SHARE INDEX...
+
+
+
+Timepoint: 2026/04/27 19:26:25
+
+SUCCESSFULLY PROCESSED SYMBOL BPAQF FOR THE SHARE INDEX...
+
+
+
+Timepoint: 2026/04/27 19:26:26
+
+SUCCESSFULLY PROCESSED SYMBOL BRN FOR THE SHARE INDEX...
+
+
+
+Timepoint: 2026/04/27 19:26:26
+
+SUCCESSFULLY PROCESSED SYMBOL BSM FOR THE SHARE INDEX...
+
+
+
+Timepoint: 2026/04/27 19:26:26
+
+SUCCESSFULLY PROCESSED SYMBOL BTE FOR THE SHARE INDEX...
+
+
+
+Timepoint: 2026/04/27 19:26:27
+
+SUCCESSFULLY PROCESSED SYMBOL CAPL FOR THE SHARE INDEX...
+
+
+
+Timepoint: 2026/04/27 19:26:27
+
+SUCCESSFULLY PROCESSED SYMBOL CHRD FOR THE SHARE INDEX...
+
+
+
+Timepoint: 2026/04/27 19:26:27
+
+SUCCESSFULLY PROCESSED SYMBOL CKX FOR THE SHARE INDEX...
+
+
+
+Timepoint: 2026/04/27 19:26:28
+
+SUCCESSFULLY PROCESSED SYMBOL CLB FOR THE SHARE INDEX...
+
+
+
+Timepoint: 2026/04/27 19:26:28
+
+SUCCESSFULLY PROCESSED SYMBOL CLNE FOR THE SHARE INDEX...
+
+
+
+Timepoint: 2026/04/27 19:26:29
+
+SUCCESSFULLY PROCESSED SYMBOL CNQ FOR THE SHARE INDEX...
+
+
+
+Timepoint: 2026/04/27 19:26:29
+
+SUCCESSFULLY PROCESSED SYMBOL CNX FOR THE SHARE INDEX...
+
+
+
+Timepoint: 2026/04/27 19:26:29
+
+SUCCESSFULLY PROCESSED SYMBOL COP FOR THE SHARE INDEX...
+
+
+
+Timepoint: 2026/04/27 19:26:30
+
+SUCCESSFULLY PROCESSED SYMBOL CQP FOR THE SHARE INDEX...
+
+
+
+Timepoint: 2026/04/27 19:26:30
+
+SUCCESSFULLY PROCESSED SYMBOL CRK FOR THE SHARE INDEX...
+
+
+
+Timepoint: 2026/04/27 19:26:30
+
+SUCCESSFULLY PROCESSED SYMBOL CRT FOR THE SHARE INDEX...
+
+
+
+Timepoint: 2026/04/27 19:26:31
+
+SUCCESSFULLY PROCESSED SYMBOL CTRA FOR THE SHARE INDEX...
+
+
+
+Timepoint: 2026/04/27 19:26:31
+
+SUCCESSFULLY PROCESSED SYMBOL CVE FOR THE SHARE INDEX...
+
+
+
+Timepoint: 2026/04/27 19:26:32
+
+SUCCESSFULLY PROCESSED SYMBOL CVI FOR THE SHARE INDEX...
+
+
+
+Timepoint: 2026/04/27 19:26:32
+
+SUCCESSFULLY PROCESSED SYMBOL CVX FOR THE SHARE INDEX...
+
+
+
+Timepoint: 2026/04/27 19:26:32
+
+SUCCESSFULLY PROCESSED SYMBOL DHT FOR THE SHARE INDEX...
+
+
+
+Timepoint: 2026/04/27 19:26:33
+
+SUCCESSFULLY PROCESSED SYMBOL DINO FOR THE SHARE INDEX...
+
+
+
+Timepoint: 2026/04/27 19:26:36
+
+SUCCESSFULLY PROCESSED SYMBOL DK FOR THE SHARE INDEX...
+
+
+
+Timepoint: 2026/04/27 19:26:37
+
+SUCCESSFULLY PROCESSED SYMBOL DKL FOR THE SHARE INDEX...
+
+
+
+Timepoint: 2026/04/27 19:26:37
+
+SUCCESSFULLY PROCESSED SYMBOL DLNG FOR THE SHARE INDEX...
+
+
+
+Timepoint: 2026/04/27 19:26:37
+
+SUCCESSFULLY PROCESSED SYMBOL DMLP FOR THE SHARE INDEX...
+
+
+
+Timepoint: 2026/04/27 19:26:38
+
+SUCCESSFULLY PROCESSED SYMBOL DVN FOR THE SHARE INDEX...
+
+
+
+Timepoint: 2026/04/27 19:26:38
+
+SUCCESSFULLY PROCESSED SYMBOL DWSN FOR THE SHARE INDEX...
+
+
+
+Timepoint: 2026/04/27 19:26:39
+
+SUCCESSFULLY PROCESSED SYMBOL E FOR THE SHARE INDEX...
+
+
+
+Timepoint: 2026/04/27 19:26:39
+
+SUCCESSFULLY PROCESSED SYMBOL EC FOR THE SHARE INDEX...
+
+
+
+Timepoint: 2026/04/27 19:26:39
+
+SUCCESSFULLY PROCESSED SYMBOL ECTM FOR THE SHARE INDEX...
+
+
+
+Timepoint: 2026/04/27 19:26:40
+
+SUCCESSFULLY PROCESSED SYMBOL EGY FOR THE SHARE INDEX...
+
+
+
+Timepoint: 2026/04/27 19:26:40
+
+SUCCESSFULLY PROCESSED SYMBOL EIPAF FOR THE SHARE INDEX...
+
+
+
+Timepoint: 2026/04/27 19:26:40
+
+SUCCESSFULLY PROCESSED SYMBOL EMBYF FOR THE SHARE INDEX...
+
+
+
+Timepoint: 2026/04/27 19:26:41
+
+SUCCESSFULLY PROCESSED SYMBOL ENB FOR THE SHARE INDEX...
+
+
+
+Timepoint: 2026/04/27 19:26:41
+
+SUCCESSFULLY PROCESSED SYMBOL EOG FOR THE SHARE INDEX...
+
+
+
+Timepoint: 2026/04/27 19:26:41
+
+SUCCESSFULLY PROCESSED SYMBOL EP FOR THE SHARE INDEX...
+
+
+
+Timepoint: 2026/04/27 19:26:42
+
+SUCCESSFULLY PROCESSED SYMBOL EPD FOR THE SHARE INDEX...
+
+
+
+Timepoint: 2026/04/27 19:26:42
+
+SUCCESSFULLY PROCESSED SYMBOL EPM FOR THE SHARE INDEX...
+
+
+
+Timepoint: 2026/04/27 19:26:42
+
+SUCCESSFULLY PROCESSED SYMBOL EPSN FOR THE SHARE INDEX...
+
+
+
+Timepoint: 2026/04/27 19:26:43
+
+SUCCESSFULLY PROCESSED SYMBOL EQNR FOR THE SHARE INDEX...
+
+
+
+Timepoint: 2026/04/27 19:26:43
+
+SUCCESSFULLY PROCESSED SYMBOL EQT FOR THE SHARE INDEX...
+
+
+
+Timepoint: 2026/04/27 19:26:43
+
+SUCCESSFULLY PROCESSED SYMBOL ET FOR THE SHARE INDEX...
+
+
+
+Timepoint: 2026/04/27 19:26:44
+
+SUCCESSFULLY PROCESSED SYMBOL FANG FOR THE SHARE INDEX...
+
+
+
+Timepoint: 2026/04/27 19:26:44
+
+SUCCESSFULLY PROCESSED SYMBOL FECOF FOR THE SHARE INDEX...
+
+
+
+Timepoint: 2026/04/27 19:26:44
+
+SUCCESSFULLY PROCESSED SYMBOL FET FOR THE SHARE INDEX...
+
+
+
+Timepoint: 2026/04/27 19:26:45
+
+SUCCESSFULLY PROCESSED SYMBOL FLNG FOR THE SHARE INDEX...
+
+
+
+Timepoint: 2026/04/27 19:26:45
+
+SUCCESSFULLY PROCESSED SYMBOL FRO FOR THE SHARE INDEX...
+
+
+
+Timepoint: 2026/04/27 19:26:45
+
+SUCCESSFULLY PROCESSED SYMBOL FTI FOR THE SHARE INDEX...
+
+
+
+Timepoint: 2026/04/27 19:26:46
+
+SUCCESSFULLY PROCESSED SYMBOL FTK FOR THE SHARE INDEX...
+
+
+
+Timepoint: 2026/04/27 19:26:46
+
+SUCCESSFULLY PROCESSED SYMBOL GBNXF FOR THE SHARE INDEX...
+
+
+
+Timepoint: 2026/04/27 19:26:46
+
+SUCCESSFULLY PROCESSED SYMBOL GEL FOR THE SHARE INDEX...
+
+
+
+Timepoint: 2026/04/27 19:26:47
+
+SUCCESSFULLY PROCESSED SYMBOL GEOS FOR THE SHARE INDEX...
+
+
+
+Timepoint: 2026/04/27 19:26:47
+
+SUCCESSFULLY PROCESSED SYMBOL GLNG FOR THE SHARE INDEX...
+
+
+
+Timepoint: 2026/04/27 19:26:48
+
+SUCCESSFULLY PROCESSED SYMBOL GLP FOR THE SHARE INDEX...
+
+
+
+Timepoint: 2026/04/27 19:26:48
+
+SUCCESSFULLY PROCESSED SYMBOL GNOLF FOR THE SHARE INDEX...
+
+
+
+Timepoint: 2026/04/27 19:26:48
+
+SUCCESSFULLY PROCESSED SYMBOL GPRK FOR THE SHARE INDEX...
+
+
+
+Timepoint: 2026/04/27 19:26:48
+
+SUCCESSFULLY PROCESSED SYMBOL GRVE FOR THE SHARE INDEX...
+
+
+
+Timepoint: 2026/04/27 19:26:49
+
+SUCCESSFULLY PROCESSED SYMBOL GTE FOR THE SHARE INDEX...
+
+
+
+Timepoint: 2026/04/27 19:26:49
+
+SUCCESSFULLY PROCESSED SYMBOL GULTU FOR THE SHARE INDEX...
+
+
+
+Timepoint: 2026/04/27 19:26:49
+
+SUCCESSFULLY PROCESSED SYMBOL GWTI FOR THE SHARE INDEX...
+
+
+
+Timepoint: 2026/04/27 19:26:50
+
+SUCCESSFULLY PROCESSED SYMBOL HAL FOR THE SHARE INDEX...
+
+
+
+Timepoint: 2026/04/27 19:26:50
+
+SUCCESSFULLY PROCESSED SYMBOL HESM FOR THE SHARE INDEX...
+
+
+
+Timepoint: 2026/04/27 19:26:50
+
+SUCCESSFULLY PROCESSED SYMBOL HGTXU FOR THE SHARE INDEX...
+
+
+
+Timepoint: 2026/04/27 19:26:51
+
+SUCCESSFULLY PROCESSED SYMBOL HLX FOR THE SHARE INDEX...
+
+
+
+Timepoint: 2026/04/27 19:26:51
+
+SUCCESSFULLY PROCESSED SYMBOL HP FOR THE SHARE INDEX...
+
+
+
+Timepoint: 2026/04/27 19:26:51
+
+SUCCESSFULLY PROCESSED SYMBOL HPK FOR THE SHARE INDEX...
+
+
+
+Timepoint: 2026/04/27 19:26:52
+
+SUCCESSFULLY PROCESSED SYMBOL IEP FOR THE SHARE INDEX...
+
+
+
+Timepoint: 2026/04/27 19:26:52
+
+SUCCESSFULLY PROCESSED SYMBOL IMO FOR THE SHARE INDEX...
+
+
+
+Timepoint: 2026/04/27 19:26:52
+
+SUCCESSFULLY PROCESSED SYMBOL INDO FOR THE SHARE INDEX...
+
+
+
+Timepoint: 2026/04/27 19:26:53
+
+SUCCESSFULLY PROCESSED SYMBOL INSW FOR THE SHARE INDEX...
+
+
+
+Timepoint: 2026/04/27 19:26:53
+
+SUCCESSFULLY PROCESSED SYMBOL KLXE FOR THE SHARE INDEX...
+
+
+
+Timepoint: 2026/04/27 19:26:54
+
+SUCCESSFULLY PROCESSED SYMBOL KMI FOR THE SHARE INDEX...
+
+
+
+Timepoint: 2026/04/27 19:26:54
+
+SUCCESSFULLY PROCESSED SYMBOL KNOP FOR THE SHARE INDEX...
+
+
+
+Timepoint: 2026/04/27 19:26:54
+
+SUCCESSFULLY PROCESSED SYMBOL KNTK FOR THE SHARE INDEX...
+
+
+
+Timepoint: 2026/04/27 19:26:55
+
+SUCCESSFULLY PROCESSED SYMBOL KOS FOR THE SHARE INDEX...
+
+
+
+Timepoint: 2026/04/27 19:26:55
+
+SUCCESSFULLY PROCESSED SYMBOL KRNGF FOR THE SHARE INDEX...
+
+
+
+Timepoint: 2026/04/27 19:26:55
+
+SUCCESSFULLY PROCESSED SYMBOL KRNGY FOR THE SHARE INDEX...
+
+
+
+Timepoint: 2026/04/27 19:26:55
+
+SUCCESSFULLY PROCESSED SYMBOL KRP FOR THE SHARE INDEX...
+
+
+
+Timepoint: 2026/04/27 19:26:56
+
+SUCCESSFULLY PROCESSED SYMBOL LBRT FOR THE SHARE INDEX...
+
+
+
+Timepoint: 2026/04/27 19:26:56
+
+SUCCESSFULLY PROCESSED SYMBOL LNG FOR THE SHARE INDEX...
+
+
+
+Timepoint: 2026/04/27 19:26:57
+
+SUCCESSFULLY PROCESSED SYMBOL LPG FOR THE SHARE INDEX...
+
+
+
+Timepoint: 2026/04/27 19:26:57
+
+SUCCESSFULLY PROCESSED SYMBOL LRDC FOR THE SHARE INDEX...
+
+
+
+Timepoint: 2026/04/27 19:26:57
+
+SUCCESSFULLY PROCESSED SYMBOL MARPS FOR THE SHARE INDEX...
+
+
+
+Timepoint: 2026/04/27 19:26:58
+
+SUCCESSFULLY PROCESSED SYMBOL MGY FOR THE SHARE INDEX...
+
+
+
+Timepoint: 2026/04/27 19:26:58
+
+SUCCESSFULLY PROCESSED SYMBOL MMLP FOR THE SHARE INDEX...
+
+
+
+Timepoint: 2026/04/27 19:26:58
+
+SUCCESSFULLY PROCESSED SYMBOL MPC FOR THE SHARE INDEX...
+
+
+
+Timepoint: 2026/04/27 19:26:59
+
+SUCCESSFULLY PROCESSED SYMBOL MPLX FOR THE SHARE INDEX...
+
+
+
+Timepoint: 2026/04/27 19:26:59
+
+SUCCESSFULLY PROCESSED SYMBOL MTDR FOR THE SHARE INDEX...
+
+
+
+Timepoint: 2026/04/27 19:27:00
+
+SUCCESSFULLY PROCESSED SYMBOL MTR FOR THE SHARE INDEX...
+
+
+
+Timepoint: 2026/04/27 19:27:00
+
+SUCCESSFULLY PROCESSED SYMBOL MUR FOR THE SHARE INDEX...
+
+
+
+Timepoint: 2026/04/27 19:27:00
+
+SUCCESSFULLY PROCESSED SYMBOL MVO FOR THE SHARE INDEX...
+
+
+
+Timepoint: 2026/04/27 19:27:01
+
+SUCCESSFULLY PROCESSED SYMBOL MXC FOR THE SHARE INDEX...
+
+
+
+Timepoint: 2026/04/27 19:27:01
+
+SUCCESSFULLY PROCESSED SYMBOL NAT FOR THE SHARE INDEX...
+
+
+
+Timepoint: 2026/04/27 19:27:01
+
+SUCCESSFULLY PROCESSED SYMBOL NBR FOR THE SHARE INDEX...
+
+
+
+Timepoint: 2026/04/27 19:27:02
+
+SUCCESSFULLY PROCESSED SYMBOL NCSM FOR THE SHARE INDEX...
+
+
+
+Timepoint: 2026/04/27 19:27:02
+
+SUCCESSFULLY PROCESSED SYMBOL NEXT FOR THE SHARE INDEX...
+
+
+
+Timepoint: 2026/04/27 19:27:02
+
+SUCCESSFULLY PROCESSED SYMBOL NFE FOR THE SHARE INDEX...
+
+
+
+Timepoint: 2026/04/27 19:27:03
+
+SUCCESSFULLY PROCESSED SYMBOL NFG FOR THE SHARE INDEX...
+
+
+
+Timepoint: 2026/04/27 19:27:03
+
+SUCCESSFULLY PROCESSED SYMBOL NGL FOR THE SHARE INDEX...
+
+
+
+Timepoint: 2026/04/27 19:27:03
+
+SUCCESSFULLY PROCESSED SYMBOL NGS FOR THE SHARE INDEX...
+
+
+
+Timepoint: 2026/04/27 19:27:04
+
+SUCCESSFULLY PROCESSED SYMBOL NOA FOR THE SHARE INDEX...
+
+
+
+Timepoint: 2026/04/27 19:27:04
+
+SUCCESSFULLY PROCESSED SYMBOL NOG FOR THE SHARE INDEX...
+
+
+
+Timepoint: 2026/04/27 19:27:04
+
+SUCCESSFULLY PROCESSED SYMBOL NOV FOR THE SHARE INDEX...
+
+
+
+Timepoint: 2026/04/27 19:27:05
+
+SUCCESSFULLY PROCESSED SYMBOL NRIS FOR THE SHARE INDEX...
+
+
+
+Timepoint: 2026/04/27 19:27:05
+
+SUCCESSFULLY PROCESSED SYMBOL NRT FOR THE SHARE INDEX...
+
+
+
+Timepoint: 2026/04/27 19:27:05
+
+SUCCESSFULLY PROCESSED SYMBOL NSFDF FOR THE SHARE INDEX...
+
+
+
+Timepoint: 2026/04/27 19:27:06
+
+SUCCESSFULLY PROCESSED SYMBOL NVGS FOR THE SHARE INDEX...
+
+
+
+Timepoint: 2026/04/27 19:27:06
+
+SUCCESSFULLY PROCESSED SYMBOL NZEOF FOR THE SHARE INDEX...
+
+
+
+Timepoint: 2026/04/27 19:27:06
+
+SUCCESSFULLY PROCESSED SYMBOL NZERF FOR THE SHARE INDEX...
+
+
+
+Timepoint: 2026/04/27 19:27:07
+
+SUCCESSFULLY PROCESSED SYMBOL OBE FOR THE SHARE INDEX...
+
+
+
+Timepoint: 2026/04/27 19:27:07
+
+SUCCESSFULLY PROCESSED SYMBOL OII FOR THE SHARE INDEX...
+
+
+
+Timepoint: 2026/04/27 19:27:07
+
+SUCCESSFULLY PROCESSED SYMBOL OIS FOR THE SHARE INDEX...
+
+
+
+Timepoint: 2026/04/27 19:27:08
+
+SUCCESSFULLY PROCESSED SYMBOL OKE FOR THE SHARE INDEX...
+
+
+
+Timepoint: 2026/04/27 19:27:08
+
+SUCCESSFULLY PROCESSED SYMBOL OVV FOR THE SHARE INDEX...
+
+
+
+Timepoint: 2026/04/27 19:27:09
+
+SUCCESSFULLY PROCESSED SYMBOL OXY FOR THE SHARE INDEX...
+
+
+
+Timepoint: 2026/04/27 19:27:09
+
+SUCCESSFULLY PROCESSED SYMBOL PAA FOR THE SHARE INDEX...
+
+
+
+Timepoint: 2026/04/27 19:27:09
+
+SUCCESSFULLY PROCESSED SYMBOL PAGP FOR THE SHARE INDEX...
+
+
+
+Timepoint: 2026/04/27 19:27:10
+
+SUCCESSFULLY PROCESSED SYMBOL PARR FOR THE SHARE INDEX...
+
+
+
+Timepoint: 2026/04/27 19:27:10
+
+SUCCESSFULLY PROCESSED SYMBOL PARXF FOR THE SHARE INDEX...
+
+
+
+Timepoint: 2026/04/27 19:27:10
+
+SUCCESSFULLY PROCESSED SYMBOL PBA FOR THE SHARE INDEX...
+
+
+
+Timepoint: 2026/04/27 19:27:11
+
+SUCCESSFULLY PROCESSED SYMBOL PBF FOR THE SHARE INDEX...
+
+
+
+Timepoint: 2026/04/27 19:27:11
+
+SUCCESSFULLY PROCESSED SYMBOL PBR FOR THE SHARE INDEX...
+
+
+
+Timepoint: 2026/04/27 19:27:11
+
+SUCCESSFULLY PROCESSED SYMBOL PBT FOR THE SHARE INDEX...
+
+
+
+Timepoint: 2026/04/27 19:27:12
+
+SUCCESSFULLY PROCESSED SYMBOL PCCYF FOR THE SHARE INDEX...
+
+
+
+Timepoint: 2026/04/27 19:27:12
+
+SUCCESSFULLY PROCESSED SYMBOL PDS FOR THE SHARE INDEX...
+
+
+
+Timepoint: 2026/04/27 19:27:12
+
+SUCCESSFULLY PROCESSED SYMBOL PED FOR THE SHARE INDEX...
+
+
+
+Timepoint: 2026/04/27 19:27:13
+
+SUCCESSFULLY PROCESSED SYMBOL PNRG FOR THE SHARE INDEX...
+
+
+
+Timepoint: 2026/04/27 19:27:13
+
+SUCCESSFULLY PROCESSED SYMBOL PR FOR THE SHARE INDEX...
+
+
+
+Timepoint: 2026/04/27 19:27:13
+
+SUCCESSFULLY PROCESSED SYMBOL PREKF FOR THE SHARE INDEX...
+
+
+
+Timepoint: 2026/04/27 19:27:14
+
+SUCCESSFULLY PROCESSED SYMBOL PROP FOR THE SHARE INDEX...
+
+
+
+Timepoint: 2026/04/27 19:27:14
+
+SUCCESSFULLY PROCESSED SYMBOL PRT FOR THE SHARE INDEX...
+
+
+
+Timepoint: 2026/04/27 19:27:14
+
+SUCCESSFULLY PROCESSED SYMBOL PSX FOR THE SHARE INDEX...
+
+
+
+Timepoint: 2026/04/27 19:27:15
+
+SUCCESSFULLY PROCESSED SYMBOL PTEN FOR THE SHARE INDEX...
+
+
+
+Timepoint: 2026/04/27 19:27:15
+
+SUCCESSFULLY PROCESSED SYMBOL PTHRF FOR THE SHARE INDEX...
+
+
+
+Timepoint: 2026/04/27 19:27:15
+
+SUCCESSFULLY PROCESSED SYMBOL PUMP FOR THE SHARE INDEX...
+
+
+
+Timepoint: 2026/04/27 19:27:16
+
+SUCCESSFULLY PROCESSED SYMBOL PVL FOR THE SHARE INDEX...
+
+
+
+Timepoint: 2026/04/27 19:27:16
+
+SUCCESSFULLY PROCESSED SYMBOL PXS FOR THE SHARE INDEX...
+
+
+
+Timepoint: 2026/04/27 19:27:16
+
+SUCCESSFULLY PROCESSED SYMBOL QSEP FOR THE SHARE INDEX...
+
+
+
+Timepoint: 2026/04/27 19:27:17
+
+SUCCESSFULLY PROCESSED SYMBOL RCON FOR THE SHARE INDEX...
+
+
+
+Timepoint: 2026/04/27 19:27:17
+
+SUCCESSFULLY PROCESSED SYMBOL REI FOR THE SHARE INDEX...
+
+
+
+Timepoint: 2026/04/27 19:27:17
+
+SUCCESSFULLY PROCESSED SYMBOL REOS FOR THE SHARE INDEX...
+
+
+
+Timepoint: 2026/04/27 19:27:18
+
+SUCCESSFULLY PROCESSED SYMBOL REPX FOR THE SHARE INDEX...
+
+
+
+Timepoint: 2026/04/27 19:27:18
+
+SUCCESSFULLY PROCESSED SYMBOL RES FOR THE SHARE INDEX...
+
+
+
+Timepoint: 2026/04/27 19:27:18
+
+SUCCESSFULLY PROCESSED SYMBOL RIG FOR THE SHARE INDEX...
+
+
+
+Timepoint: 2026/04/27 19:27:19
+
+SUCCESSFULLY PROCESSED SYMBOL RNGR FOR THE SHARE INDEX...
+
+
+
+Timepoint: 2026/04/27 19:27:19
+
+SUCCESSFULLY PROCESSED SYMBOL ROYL FOR THE SHARE INDEX...
+
+
+
+Timepoint: 2026/04/27 19:27:19
+
+SUCCESSFULLY PROCESSED SYMBOL RRC FOR THE SHARE INDEX...
+
+
+
+Timepoint: 2026/04/27 19:27:20
+
+SUCCESSFULLY PROCESSED SYMBOL RSRV FOR THE SHARE INDEX...
+
+
+
+Timepoint: 2026/04/27 19:27:20
+
+SUCCESSFULLY PROCESSED SYMBOL RYDAF FOR THE SHARE INDEX...
+
+
+
+Timepoint: 2026/04/27 19:27:20
+
+SUCCESSFULLY PROCESSED SYMBOL SBOEF FOR THE SHARE INDEX...
+
+
+
+Timepoint: 2026/04/27 19:27:21
+
+SUCCESSFULLY PROCESSED SYMBOL SBR FOR THE SHARE INDEX...
+
+
+
+Timepoint: 2026/04/27 19:27:21
+
+SUCCESSFULLY PROCESSED SYMBOL SD FOR THE SHARE INDEX...
+
+
+
+Timepoint: 2026/04/27 19:27:22
+
+SUCCESSFULLY PROCESSED SYMBOL SGU FOR THE SHARE INDEX...
+
+
+
+Timepoint: 2026/04/27 19:27:22
+
+SUCCESSFULLY PROCESSED SYMBOL SHEL FOR THE SHARE INDEX...
+
+
+
+Timepoint: 2026/04/27 19:27:22
+
+SUCCESSFULLY PROCESSED SYMBOL SJT FOR THE SHARE INDEX...
+
+
+
+Timepoint: 2026/04/27 19:27:23
+
+SUCCESSFULLY PROCESSED SYMBOL SLB FOR THE SHARE INDEX...
+
+
+
+Timepoint: 2026/04/27 19:27:23
+
+SUCCESSFULLY PROCESSED SYMBOL SLNG FOR THE SHARE INDEX...
+
+
+
+Timepoint: 2026/04/27 19:27:23
+
+SUCCESSFULLY PROCESSED SYMBOL SM FOR THE SHARE INDEX...
+
+
+
+Timepoint: 2026/04/27 19:27:24
+
+SUCCESSFULLY PROCESSED SYMBOL SND FOR THE SHARE INDEX...
+
+
+
+Timepoint: 2026/04/27 19:27:24
+
+SUCCESSFULLY PROCESSED SYMBOL SNPMF FOR THE SHARE INDEX...
+
+
+
+Timepoint: 2026/04/27 19:27:24
+
+SUCCESSFULLY PROCESSED SYMBOL SPND FOR THE SHARE INDEX...
+
+
+
+Timepoint: 2026/04/27 19:27:25
+
+SUCCESSFULLY PROCESSED SYMBOL SPOWF FOR THE SHARE INDEX...
+
+
+
+Timepoint: 2026/04/27 19:27:25
+
+SUCCESSFULLY PROCESSED SYMBOL SPTJF FOR THE SHARE INDEX...
+
+
+
+Timepoint: 2026/04/27 19:27:25
+
+SUCCESSFULLY PROCESSED SYMBOL STNG FOR THE SHARE INDEX...
+
+
+
+Timepoint: 2026/04/27 19:27:26
+
+SUCCESSFULLY PROCESSED SYMBOL STOHF FOR THE SHARE INDEX...
+
+
+
+Timepoint: 2026/04/27 19:27:26
+
+SUCCESSFULLY PROCESSED SYMBOL SU FOR THE SHARE INDEX...
+
+
+
+Timepoint: 2026/04/27 19:27:26
+
+SUCCESSFULLY PROCESSED SYMBOL SUN FOR THE SHARE INDEX...
+
+
+
+Timepoint: 2026/04/27 19:27:27
+
+SUCCESSFULLY PROCESSED SYMBOL TALO FOR THE SHARE INDEX...
+
+
+
+Timepoint: 2026/04/27 19:27:27
+
+SUCCESSFULLY PROCESSED SYMBOL TCANF FOR THE SHARE INDEX...
+
+
+
+Timepoint: 2026/04/27 19:27:27
+
+SUCCESSFULLY PROCESSED SYMBOL TDW FOR THE SHARE INDEX...
+
+
+
+Timepoint: 2026/04/27 19:27:28
+
+SUCCESSFULLY PROCESSED SYMBOL TEN FOR THE SHARE INDEX...
+
+
+
+Timepoint: 2026/04/27 19:27:28
+
+SUCCESSFULLY PROCESSED SYMBOL TGS FOR THE SHARE INDEX...
+
+
+
+Timepoint: 2026/04/27 19:27:28
+
+SUCCESSFULLY PROCESSED SYMBOL TK FOR THE SHARE INDEX...
+
+
+
+Timepoint: 2026/04/27 19:27:29
+
+SUCCESSFULLY PROCESSED SYMBOL TNCAF FOR THE SHARE INDEX...
+
+
+
+Timepoint: 2026/04/27 19:27:29
+
+SUCCESSFULLY PROCESSED SYMBOL TNEYF FOR THE SHARE INDEX...
+
+
+
+Timepoint: 2026/04/27 19:27:29
+
+SUCCESSFULLY PROCESSED SYMBOL TNK FOR THE SHARE INDEX...
+
+
+
+Timepoint: 2026/04/27 19:27:30
+
+SUCCESSFULLY PROCESSED SYMBOL TNRSF FOR THE SHARE INDEX...
+
+
+
+Timepoint: 2026/04/27 19:27:30
+
+SUCCESSFULLY PROCESSED SYMBOL TOPS FOR THE SHARE INDEX...
+
+
+
+Timepoint: 2026/04/27 19:27:30
+
+SUCCESSFULLY PROCESSED SYMBOL TPL FOR THE SHARE INDEX...
+
+
+
+Timepoint: 2026/04/27 19:27:31
+
+SUCCESSFULLY PROCESSED SYMBOL TRGP FOR THE SHARE INDEX...
+
+
+
+Timepoint: 2026/04/27 19:27:31
+
+SUCCESSFULLY PROCESSED SYMBOL TRMD FOR THE SHARE INDEX...
+
+
+
+Timepoint: 2026/04/27 19:27:31
+
+SUCCESSFULLY PROCESSED SYMBOL TRMLF FOR THE SHARE INDEX...
+
+
+
+Timepoint: 2026/04/27 19:27:32
+
+SUCCESSFULLY PROCESSED SYMBOL TRP FOR THE SHARE INDEX...
+
+
+
+Timepoint: 2026/04/27 19:27:32
+
+SUCCESSFULLY PROCESSED SYMBOL TS FOR THE SHARE INDEX...
+
+
+
+Timepoint: 2026/04/27 19:27:33
+
+SUCCESSFULLY PROCESSED SYMBOL TTE FOR THE SHARE INDEX...
+
+
+
+Timepoint: 2026/04/27 19:27:33
+
+SUCCESSFULLY PROCESSED SYMBOL UGP FOR THE SHARE INDEX...
+
+
+
+Timepoint: 2026/04/27 19:27:33
+
+SUCCESSFULLY PROCESSED SYMBOL USAC FOR THE SHARE INDEX...
+
+
+
+Timepoint: 2026/04/27 19:27:34
+
+SUCCESSFULLY PROCESSED SYMBOL USEG FOR THE SHARE INDEX...
+
+
+
+Timepoint: 2026/04/27 19:27:34
+
+SUCCESSFULLY PROCESSED SYMBOL VET FOR THE SHARE INDEX...
+
+
+
+Timepoint: 2026/04/27 19:27:34
+
+SUCCESSFULLY PROCESSED SYMBOL VIST FOR THE SHARE INDEX...
+
+
+
+Timepoint: 2026/04/27 19:27:35
+
+SUCCESSFULLY PROCESSED SYMBOL VIVK FOR THE SHARE INDEX...
+
+
+
+Timepoint: 2026/04/27 19:27:35
+
+SUCCESSFULLY PROCESSED SYMBOL VLO FOR THE SHARE INDEX...
+
+
+
+Timepoint: 2026/04/27 19:27:35
+
+SUCCESSFULLY PROCESSED SYMBOL VNOM FOR THE SHARE INDEX...
+
+
+
+Timepoint: 2026/04/27 19:27:36
+
+SUCCESSFULLY PROCESSED SYMBOL VOC FOR THE SHARE INDEX...
+
+
+
+Timepoint: 2026/04/27 19:27:36
+
+SUCCESSFULLY PROCESSED SYMBOL VTOL FOR THE SHARE INDEX...
+
+
+
+Timepoint: 2026/04/27 19:27:36
+
+SUCCESSFULLY PROCESSED SYMBOL WDS FOR THE SHARE INDEX...
+
+
+
+Timepoint: 2026/04/27 19:27:37
+
+SUCCESSFULLY PROCESSED SYMBOL WES FOR THE SHARE INDEX...
+
+
+
+Timepoint: 2026/04/27 19:27:37
+
+SUCCESSFULLY PROCESSED SYMBOL WHD FOR THE SHARE INDEX...
+
+
+
+Timepoint: 2026/04/27 19:27:38
+
+SUCCESSFULLY PROCESSED SYMBOL WMB FOR THE SHARE INDEX...
+
+
+
+Timepoint: 2026/04/27 19:27:38
+
+SUCCESSFULLY PROCESSED SYMBOL WOPEF FOR THE SHARE INDEX...
+
+
+
+Timepoint: 2026/04/27 19:27:38
+
+SUCCESSFULLY PROCESSED SYMBOL WTI FOR THE SHARE INDEX...
+
+
+
+Timepoint: 2026/04/27 19:27:39
+
+SUCCESSFULLY PROCESSED SYMBOL WTTR FOR THE SHARE INDEX...
+
+
+
+Timepoint: 2026/04/27 19:27:39
+
+SUCCESSFULLY PROCESSED SYMBOL XOM FOR THE SHARE INDEX...
+
+
+
+Timepoint: 2026/04/27 19:27:39
+
+SUCCESSFULLY PROCESSED SYMBOL XPRO FOR THE SHARE INDEX...
+
+
+
+Timepoint: 2026/04/27 19:27:40
+
+SUCCESSFULLY PROCESSED SYMBOL YPF FOR THE SHARE INDEX...
+
+
+
+Timepoint: 2026/04/27 19:27:40
+
+SUCCESSFULLY PROCESSED SYMBOL ZNOG FOR THE SHARE INDEX...
+
+
+
+Timepoint: 2026/04/27 19:27:40
+
+THE CALCULATION OF THE MARKET INDEX IS COMPLETE.
+
+
+
+
+2020-01-22    63.982160
+2020-01-23    62.374788
+2020-01-24    60.250397
+2020-01-27    59.150709
+2020-01-28    59.324399
+                ...    
+2022-09-08    51.479149
+2022-09-09    52.634567
+2022-09-12    53.330174
+2022-09-13    52.314916
+2022-09-14    53.502634
+Name: prices, Length: 668, dtype: float64
+
+
+
+2020-01-23   -2.51
+2020-01-24   -3.41
+2020-01-27   -1.83
+2020-01-28    0.29
+2020-01-29    1.03
+              ... 
+2022-09-08    0.32
+2022-09-09    2.24
+2022-09-12    1.32
+2022-09-13   -1.90
+2022-09-14    2.27
+Name: prices, Length: 667, dtype: float64
+
+
+
+industry
+oil & gas drilling                3.008912e+09
+oil & gas e&p                     7.444593e+10
+oil & gas equipment & services    4.037267e+10
+oil & gas integrated              2.769693e+11
+oil & gas midstream               7.838142e+10
+oil & gas refining & marketing    3.721811e+10
+Name: median_market_cap, dtype: float64
+
+
+
+  symbol                    company_name                        industry  \
+0    COP                  conocophillips                   oil & gas e&p   
+1    ENB                   enbridge inc.             oil & gas midstream   
+2     HP         helmerich & payne, inc.              oil & gas drilling   
+3    MPC  marathon petroleum corporation  oil & gas refining & marketing   
+4   SHEL                       shell plc            oil & gas integrated   
+5    SLB                        slb n.v.  oil & gas equipment & services   
+
+                                             address   longitude   latitude  \
+0  925 north eldridge parkway, houston, tx 77079-...  -95.617771  29.783221   
+1  200, fifth avenue place, calgary, ab t2p 3l8, ... -114.066108  51.045748   
+2  222 north detroit avenue, tulsa, ok 74120, uni...  -95.990400  36.159788   
+3  539 south main street, findlay, oh 45840-3229,...  -83.650163  41.036497   
+4      shell centre, london, se1 7na, united kingdom   -0.116779  51.503840   
+5  5599 san felipe, houston, tx 77056, united states  -95.474340  29.749961   
+
+   min_market_cap  max_market_cap  mean_market_cap  median_market_cap  \
+0    2.441242e+10    1.600641e+11     7.857175e+10       7.444593e+10   
+1    4.791658e+10    9.631384e+10     7.593197e+10       7.838142e+10   
+2    1.411430e+09    5.818388e+09     3.157893e+09       3.008912e+09   
+3    1.080734e+10    6.148408e+10     3.494040e+10       3.721811e+10   
+4    1.653937e+11    4.394177e+11     2.727730e+11       2.769693e+11   
+5    1.573573e+10    7.009198e+10     4.020861e+10       4.037267e+10   
+
+   std_market_cap  sem_market_cap  
+0    3.469602e+10    1.342429e+09  
+1    1.107909e+10    4.286630e+08  
+2    1.055584e+09    4.084178e+07  
+3    1.054463e+10    4.079841e+08  
+4    6.045599e+10    2.339112e+09  
+5    1.253864e+10    4.851346e+08  
+
+
+
+  symbol                    company_name                        industry  \
+0    COP                  conocophillips                   oil & gas e&p   
+1    ENB                   enbridge inc.             oil & gas midstream   
+2     HP         helmerich & payne, inc.              oil & gas drilling   
+3    MPC  marathon petroleum corporation  oil & gas refining & marketing   
+4   SHEL                       shell plc            oil & gas integrated   
+5    SLB                        slb n.v.  oil & gas equipment & services   
+
+                                             address   longitude   latitude  \
+0  925 north eldridge parkway, houston, tx 77079-...  -95.617771  29.783221   
+1  200, fifth avenue place, calgary, ab t2p 3l8, ... -114.066108  51.045748   
+2  222 north detroit avenue, tulsa, ok 74120, uni...  -95.990400  36.159788   
+3  539 south main street, findlay, oh 45840-3229,...  -83.650163  41.036497   
+4      shell centre, london, se1 7na, united kingdom   -0.116779  51.503840   
+5  5599 san felipe, houston, tx 77056, united states  -95.474340  29.749961   
+
+   marker_size  
+0    74.445926  
+1    78.381415  
+2     3.008912  
+3    37.218114  
+4   276.969339  
+5    40.372673  
+
+
+Timepoint: 2026/04/27 19:27:51
+BEGIN CALCULATING MARKET INDEX...
+
+
+
+Timepoint: 2026/04/27 19:27:52
+
+SUCCESSFULLY PROCESSED SYMBOL COP FOR THE SHARE INDEX...
+
+
+
+Timepoint: 2026/04/27 19:27:52
+
+SUCCESSFULLY PROCESSED SYMBOL ENB FOR THE SHARE INDEX...
+
+
+
+Timepoint: 2026/04/27 19:27:53
+
+SUCCESSFULLY PROCESSED SYMBOL HP FOR THE SHARE INDEX...
+
+
+
+Timepoint: 2026/04/27 19:27:53
+
+SUCCESSFULLY PROCESSED SYMBOL MPC FOR THE SHARE INDEX...
+
+
+
+Timepoint: 2026/04/27 19:27:53
+
+SUCCESSFULLY PROCESSED SYMBOL SHEL FOR THE SHARE INDEX...
+
+
+
+Timepoint: 2026/04/27 19:27:54
+
+SUCCESSFULLY PROCESSED SYMBOL SLB FOR THE SHARE INDEX...
+
+
+
+Timepoint: 2026/04/27 19:27:54
+
+THE CALCULATION OF THE MARKET INDEX IS COMPLETE.
+
+
+
+
+2020-01-22    53.868493
+2020-01-23    53.822225
+2020-01-24    53.513134
+2020-01-27    52.378396
+2020-01-28    52.364620
+                ...    
+2022-09-08    60.871240
+2022-09-09    62.561644
+2022-09-12    63.304264
+2022-09-13    62.111582
+2022-09-14    63.693043
+Name: prices, Length: 668, dtype: float64
+
+
+
+2020-01-23   -0.09
+2020-01-24   -0.57
+2020-01-27   -2.12
+2020-01-28   -0.03
+2020-01-29   -0.33
+              ... 
+2022-09-08    0.50
+2022-09-09    2.78
+2022-09-12    1.19
+2022-09-13   -1.88
+2022-09-14    2.55
+Name: prices, Length: 667, dtype: float64
+
+
+
+            oes_top_index  oes_all_index
+2020-01-22      53.868493      63.982160
+2020-01-23      53.822225      62.374788
+2020-01-24      53.513134      60.250397
+2020-01-27      52.378396      59.150709
+2020-01-28      52.364620      59.324399
+...                   ...            ...
+2022-09-08      60.871240      51.479149
+2022-09-09      62.561644      52.634567
+2022-09-12      63.304264      53.330174
+2022-09-13      62.111582      52.314916
+2022-09-14      63.693043      53.502634
+
+[668 rows x 2 columns]
+
+
+Timepoint: 2026/04/27 19:28:06
+[1mTREND-STATIONARY TIME SERIES DETECTED: oes_top_index.
+[0m
+
+
+Timepoint: 2026/04/27 19:28:06
+[1mDetrending (optimal polynomial degree) time series oes_top_index...
+[0m
+
+
+Timepoint: 2026/04/27 19:28:08
+
+
+
+
+Timepoint: 2026/04/27 19:28:08
+[1mTREND-STATIONARY TIME SERIES DETECTED: oes_all_index.
+[0m
+
+
+Timepoint: 2026/04/27 19:28:08
+[1mDetrending (optimal polynomial degree) time series oes_all_index...
+[0m
+
+
+Timepoint: 2026/04/27 19:28:10
+
+
+
+
+Timepoint: 2026/04/27 19:28:18
+r-value (pearson):	0.907
+
+
+Timepoint: 2026/04/27 19:28:18
+r-value (spearman):	0.901
+
+
+Timepoint: 2026/04/27 19:28:18
+tau (kendall):		0.738
+
+
+
+Timepoint: 2026/04/27 19:28:18
+p-value (pearson):	0.000
+
+
+Timepoint: 2026/04/27 19:28:18
+p-value (spearman):	0.000
+
+
+Timepoint: 2026/04/27 19:28:18
+p-value (kendall):	0.000
+
+
+Timepoint: 2026/04/27 19:28:18
+
+
+
+
+Timepoint: 2026/04/27 19:28:37
+[1mOES_TOP_INDEX VS. OES_ALL_INDEX ANALYSIS
+
+Model selected: VAR.
+
+Series 'x' is stationary (ADF = -6.055461, p = 0.000000).
+
+Series 'y' is stationary (ADF = -7.208123, p = 0.000000).
+
+Trace and max-eigenvalue tests agree. Both series appear stationary at levels — VAR on levels is appropriate.
+
+Recommended lag (BIC): 1.
+AIC = 16, BIC = 1, HQIC = 1, FPE = 16.
+
+VAR(1) fitted.
+AIC = -0.818109, BIC = -0.777605.
+Stability: UNSTABLE — roots outside unit circle; interpret with caution.
+
+IRF (VAR, 30 periods):
+A one-SD shock to x produces a positive net response in y.
+Peak x→y effect at lag 9 (magnitude: 0.235499).
+Cumulative x→y response: 4.993053.
+
+FEVD (VAR, horizon = 20):
+x shocks explain 78.20185% of y's forecast variance (substantial influence).
+y's own shocks explain 21.79815% of its own variance.
+[0m
+
+
+Timepoint: 2026/04/27 19:28:37
+OES_TOP_INDEX VS. OES_ALL_INDEX ANALYSIS
+
+Model selected: VAR.
+
+Series 'x' is stationary (ADF = -6.055461, p = 0.000000).
+
+Series 'y' is stationary (ADF = -7.208123, p = 0.000000).
+
+Trace and max-eigenvalue tests agree. Both series appear stationary at levels — VAR on levels is appropriate.
+
+Recommended lag (BIC): 1.
+AIC = 16, BIC = 1, HQIC = 1, FPE = 16.
+
+VAR(1) fitted.
+AIC = -0.818109, BIC = -0.777605.
+Stability: UNSTABLE — roots outside unit circle; interpret with caution.
+
+IRF (VAR, 30 periods):
+A one-SD shock to x produces a positive net response in y.
+Peak x→y effect at lag 9 (magnitude: 0.235499).
+Cumulative x→y response: 4.993053.
+
+FEVD (VAR, horizon = 20):
+x shocks explain 78.20185% of y's forecast variance (substantial influence).
+y's own shocks explain 21.79815% of its own variance.
+
+
+
+
+            oes_top_index  oes_all_index
+2020-01-22      53.868493      63.982160
+2020-01-23      53.822225      62.374788
+2020-01-24      53.513134      60.250397
+2020-01-27      52.378396      59.150709
+2020-01-28      52.364620      59.324399
+...                   ...            ...
+2022-09-08      60.871240      51.479149
+2022-09-09      62.561644      52.634567
+2022-09-12      63.304264      53.330174
+2022-09-13      62.111582      52.314916
+2022-09-14      63.693043      53.502634
+
+[668 rows x 2 columns]
+
+
+Timepoint: 2026/04/27 19:30:04
+[1mSTATIONARY TIME SERIES DETECTED: oes_top_index%.
+
+[0m
+
+
+Timepoint: 2026/04/27 19:30:05
+[1mSTATIONARY TIME SERIES DETECTED: oes_all_index%.
+
+[0m
+
+
+Timepoint: 2026/04/27 19:30:12
+r-value (pearson):	0.762
+
+
+Timepoint: 2026/04/27 19:30:12
+r-value (spearman):	0.826
+
+
+Timepoint: 2026/04/27 19:30:12
+tau (kendall):		0.676
+
+
+
+Timepoint: 2026/04/27 19:30:12
+p-value (pearson):	0.000
+
+
+Timepoint: 2026/04/27 19:30:12
+p-value (spearman):	0.000
+
+
+Timepoint: 2026/04/27 19:30:12
+p-value (kendall):	0.000
+
+
+Timepoint: 2026/04/27 19:30:12
+
+
+
+
+Timepoint: 2026/04/27 19:30:29
+[1mOES_TOP_INDEX% VS. OES_ALL_INDEX% ANALYSIS
+
+Model selected: VAR.
+
+Series 'x' is stationary (ADF = -8.513740, p = 0.000000).
+
+Series 'y' is stationary (ADF = -7.052672, p = 0.000000).
+
+Trace and max-eigenvalue tests agree. Both series appear stationary at levels — VAR on levels is appropriate.
+
+Recommended lag (BIC): 4.
+AIC = 15, BIC = 4, HQIC = 7, FPE = 15.
+
+VAR(4) fitted.
+AIC = 3.146827, BIC = 3.268912.
+Stability: UNSTABLE — roots outside unit circle; interpret with caution.
+
+IRF (VAR, 30 periods):
+A one-SD shock to x produces a positive net response in y.
+Peak x→y effect at lag 2 (magnitude: 0.323685).
+Cumulative x→y response: 0.496544.
+
+FEVD (VAR, horizon = 20):
+x shocks explain 59.42263% of y's forecast variance (substantial influence).
+y's own shocks explain 40.57737% of its own variance.
+[0m
+
+
+Timepoint: 2026/04/27 19:30:29
+OES_TOP_INDEX% VS. OES_ALL_INDEX% ANALYSIS
+
+Model selected: VAR.
+
+Series 'x' is stationary (ADF = -8.513740, p = 0.000000).
+
+Series 'y' is stationary (ADF = -7.052672, p = 0.000000).
+
+Trace and max-eigenvalue tests agree. Both series appear stationary at levels — VAR on levels is appropriate.
+
+Recommended lag (BIC): 4.
+AIC = 15, BIC = 4, HQIC = 7, FPE = 15.
+
+VAR(4) fitted.
+AIC = 3.146827, BIC = 3.268912.
+Stability: UNSTABLE — roots outside unit circle; interpret with caution.
+
+IRF (VAR, 30 periods):
+A one-SD shock to x produces a positive net response in y.
+Peak x→y effect at lag 2 (magnitude: 0.323685).
+Cumulative x→y response: 0.496544.
+
+FEVD (VAR, horizon = 20):
+x shocks explain 59.42263% of y's forecast variance (substantial influence).
+y's own shocks explain 40.57737% of its own variance.
+
+
+
+Timepoint: 2026/04/27 19:31:39
+Program execution begins at 2026/04/27 19:26:04.
+
+
+Timepoint: 2026/04/27 19:31:39
+Program execution ends at 2026/04/27 19:31:39.
+
+
+
+Timepoint: 2026/04/27 19:31:39
+Program execution ran for 00:05:35.
+
+
