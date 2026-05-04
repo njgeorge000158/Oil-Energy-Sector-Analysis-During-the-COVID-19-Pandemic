@@ -45,7 +45,7 @@ The analysis proceeds from the recognition that "COVID affected markets" is too 
 
 ### 1.2 Data and Scope
 
-The dataset spans **January 22, 2020 – September 14, 2022** (~966 trading days) and covers three COVID-19 data variants against five categories of economic indicators:
+The dataset spans ~966 trading days from **January 22, 2020 to September 14, 2022** and covers three COVID-19 data variants against five categories of economic indicators:
 
 **COVID-19 Variables (X)**
 
