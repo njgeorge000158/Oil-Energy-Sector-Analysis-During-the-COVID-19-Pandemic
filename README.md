@@ -464,39 +464,6 @@ The decay arc from Initial Shock to Recovery is not a finding about COVID specif
 
 ---
 
-## 6. Repository Structure
-
-```
-.
-├── README.md                                          # This report
-│
-├── econ_anlys_fnd_opt_cnds.ipynb                      # Candidate selection: scoring all
-│                                                      # COVID–indicator combinations
-│
-├── econ_anlys_shk_rll7_cml_cnd_mkt.ipynb             # Initial Shock analysis:
-│                                                      # covid_c&d (7-day rolling avg) →
-│                                                      # stock market indices (levels)
-│
-├── econ_anlys_adp_pct_rll7_cml_dth_mts.ipynb         # Adaptation analysis:
-│                                                      # covid_deaths (7-day rolling avg, %)
-│                                                      # → metal prices (%)
-│
-├── econ_anlys_rec_pct_rll7_cml_cnd_mts.ipynb         # Recovery analysis:
-│                                                      # covid_c&d (7-day rolling avg, %)
-│                                                      # → metal prices (%)
-│
-├── econ_anlys_fll_pct_dth_exr.ipynb                  # Full period analysis:
-│                                                      # covid_deaths (raw daily %)
-│                                                      # → exchange rates (%)
-│
-└── [score table images]                               # Output tables from candidate
-                                                       # selection analysis (Tables 1.1–2.5)
-```
-
-**Dependencies:** `dtypesx`, `econ_anlys_vrb`, `logx`, `mathx`, `matplotlibx`, `pandasx` (custom modules); `numpy`, `pandas`, `statsmodels`, `ruptures`
-
----
-
 *This analysis was conducted as part of a broader project examining the quantitative economic impact of the COVID-19 pandemic across multiple asset classes and time periods. All data sources, transformation parameters, and statistical thresholds are documented within the individual Jupyter notebooks.*
 
 ---
