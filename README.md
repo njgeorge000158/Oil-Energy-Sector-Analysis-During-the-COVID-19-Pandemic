@@ -238,7 +238,7 @@ These four optimal pairings serve as the inputs for the four phase-specific anal
 
 #### Economic Context
 
-The Initial Shock period encompasses the fastest equity bear market in recorded history. From February 19 to March 23, 2020, the S&P 500 fell 34% — a peak-to-trough decline that took 33 days, compared to 274 days for the 2008 financial crisis crash. The period also includes the Federal Reserve's emergency 150 basis point rate cut in March 2020, the passage of the $2.2 trillion CARES Act, and the beginning of the equity recovery through early June 2020. The compression of an extraordinary range of pandemic and policy events into 137 days creates the most information-dense environment of the four phases.
+The Initial Shock period encompasses the fastest equity market decline in recent history. From February 19 to March 23, 2020, the S&P 500 fell 34%, a peak-to-trough decline that took 33 days compared to 274 days for the 2008 financial crisis. This period also includes the Federal Reserve's emergency 150 basis point rate cut, the passage of the $2.2 trillion CARES Act, and the beginning of the equity recovery. The compression of an extraordinary range of pandemic and policy events into 137 days creates the most information-dense environment of the four phases.
 
 #### Stationarity Characteristics
 
