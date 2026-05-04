@@ -1,4 +1,4 @@
-<img width="353" height="218" alt="evans-acosta-economic-impact-covid-june-5" src="https://github.com/user-attachments/assets/b65fd3b0-7a50-4e96-befc-96f6bea9c5b4" />
+<img width="705" height="436" alt="Screenshot 2026-05-03 at 10 50 18 PM" src="https://github.com/user-attachments/assets/05560aa2-a53c-4e53-b66c-640fe23f58e7" />
 
 ---
 
