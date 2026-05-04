@@ -129,9 +129,13 @@ The levels analysis tests whether COVID data levels (or their cumulative and rol
 
 *The Full Period levels analysis is led by `covid_deaths` → `agr1` (score 48.74). Neither the cumulative nor rolling average transformation dominates — both appear as True and False across the top 10 rows — suggesting the raw COVID series carries the primary causal signal at this data frequency across the full 966-day window. `agr1` (an agricultural commodities index) and `petrol_plus` (oil and gas) together account for 9 of the 10 top positions, pointing to commodity markets — not equities — as the most persistently COVID-sensitive indicators in the full-period levels analysis.*
 
+---
+
 #### Initial Shock — Levels Top 10
 
-![Table 1.2: COVID Data vs. Economic Indicators Top 10 Scores (Initial Shock)](econ_anlys_fnd_opt_cndsTable12CovidDatavsEconomicIndicatorsTop10ScoresInitialShock.png)
+<img width="473" height="405" alt="econ_anlys_fnd_opt_cndsTable12CovidDatavsEconomicIndicatorsTop10ScoresInitialShock" src="https://github.com/user-attachments/assets/a0d9a6b2-83e1-4a93-bf1f-e80b8de9b8b6" />
+
+---
 
 *The Initial Shock levels analysis produces the highest scores of any phase: top score 66.06 for `covid_c&d` → `stk_mkt`. All 10 rows have `cuml. x = True` and `roll. x = True`, confirming that the cumulative 7-day rolling average of combined cases and deaths is the strongest COVID signal for equity markets during the crash. Stock market indices (`stk_mkt`) and interest rates (`intrt_rts`) dominate the Y side, with metals (`metals`) appearing later in the ranking — consistent with the acute financial panic of the period driving equity and rate markets more directly than commodities.*
 
