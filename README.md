@@ -149,9 +149,13 @@ The levels analysis tests whether COVID data levels (or their cumulative and rol
 
 *The Adaptation phase scores decline from the Initial Shock peak (top score 54.75 for `covid_deaths` → `intrt_rts`). The dominant X series shifts from `covid_c&d` to `covid_deaths` — a meaningful change reflecting the market's informational pivot from tracking the breadth of infection to tracking severity as vaccines changed the risk calculus. Interest rates (`intrt_rts`) lead the Y side, consistent with pandemic developments driving central bank accommodation expectations through the vaccine rollout and Delta wave periods.*
 
+---
+
 #### Recovery — Levels Top 10
 
-![Table 1.4: COVID Data vs. Economic Indicators Top 10 Scores (Recovery)](econ_anlys_fnd_opt_cndsTable14CovidDatavsEconomicIndicatorsTop10ScoresRecovery.png)
+<img width="459" height="405" alt="econ_anlys_fnd_opt_cndsTable14CovidDatavsEconomicIndicatorsTop10ScoresRecovery" src="https://github.com/user-attachments/assets/320a231f-9985-4d8c-bfca-aabc1f7d55af" />
+
+---
 
 *The Recovery phase scores remain meaningfully elevated (top score 51.99), with `metals` dominating the Y side — appearing in 7 of the top 10 positions. This is the most striking shift from prior phases and reflects the commodity supercycle dynamics of 2022: `covid_deaths` and `covid_c&d` predicting metal prices during a period shaped by supply chain disruption, China zero-COVID lockdowns, and the Russia-Ukraine conflict's commodity implications. The COVID → metals channel in the Recovery period operates primarily through supply disruption rather than investor sentiment.*
 
