@@ -191,7 +191,7 @@ The percentage-change analysis strips out shared trending behavior and tests whe
 
 ---
 
-*The Adaptation percentage-change analysis is led by cumulative, rolling `covid_deaths%` → `metals%` with a score of 56.60. The y-variable `metals` dominates the Y side with 7 of the 10 top positions, while `petrol_plus` and `exchg_rts` account for the remainder. The consistent appearance of `covid_deaths` (rather than `covid_cases` or `covid_c&d`) as the x-variable confirms the informational shift toward fatality data as the key COVID signal during the Adaptation period.*
+*The Adaptation percentage-change analysis is led by cumulative, rolling `covid_deaths%` → `metals%` with a score of 56.60. The y-variable `metals` dominates the Y side with 7 of the 10 top positions, while `petrol_plus` and `exchg_rts` account for the remainder. The consistent appearance of `covid_deaths` (rather than `covid_cases` or `covid_c&d`) as the x-variable confirms the informational shift toward fatality data as the key COVID signal.*
 
 ---
 
