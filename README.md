@@ -181,11 +181,15 @@ The percentage-change analysis strips out shared trending behavior and tests whe
 
 ---
 
-*The Initial Shock percentage-change analysis produces the second-highest scores of any phase (top score 60.98 for `covid_c&d` → `stk_mkt`). The top-ranked result exactly mirrors the levels analysis leader for this phase, confirming that the COVID → equity channel during the crash was robust to both the trend-level and short-run specifications. The y-variables `stk_mkt` and `metals` split the Y side in the top ten, with equity indices leading with scores.*
+*The Initial Shock percentage-change analysis produces the second-highest scores of any phase (top score 60.98 for `covid_c&d` → `stk_mkt`). The top-ranked result exactly mirrors the levels analysis leader for this phase, confirming that the COVID → equity channel during the crash was robust to both the trend-level and short-run specifications. The y-variables `stk_mkt` and `metals` split the Y side in the top ten, with equity indices scores in the lead.*
+
+---
 
 #### Adaptation — Percentage Changes Top 10
 
-![Table 2.3: COVID Data (%) vs. Economic Indicators (%) Top 10 Scores (Adaptation)](econ_anlys_fnd_opt_cndsTable23CovidDatavsEconomicIndicatorsTop10ScoresAdaptation.png)
+<img width="479" height="405" alt="econ_anlys_fnd_opt_cndsTable23CovidDatavsEconomicIndicatorsTop10ScoresAdaptation" src="https://github.com/user-attachments/assets/34539893-43e8-45ec-b1e2-cd833b2f9609" />
+
+---
 
 *The Adaptation percentage-change analysis is led by `covid_deaths` → `metals` (score 56.60). `metals` dominates the Y side with 7 of 10 top positions, while `petrol_plus` and `exchg_rts` account for the remainder. The consistent appearance of `covid_deaths` (rather than `covid_cases` or `covid_c&d`) as the X series confirms the informational shift toward fatality data as the key COVID signal during the Adaptation period.*
 
