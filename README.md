@@ -137,7 +137,7 @@ The levels analysis tests whether COVID data levels (or their cumulative and rol
 
 ---
 
-*The Initial Shock levels analysis produces the highest scores of any phase with a top score of 66.06 for cumulative, rolling `covid_c&d` → `stk_mkt`. All 10 rows have cumulative x-variables and eight have rolling average transformations, confirming that the cumulative 7-day rolling average of combined cases and deaths is the strongest COVID signal for equity markets during the early onset of the pandemic. Stock market indices and interest rates dominate the top of the score rankings with metal prices appearing next, which is consistent with the acute financial panic of the period driving equity and rate markets more directly than commodities.*
+*The Initial Shock levels analysis produces the highest scores of any phase with a top score of 66.06 for rolling, cumulative `covid_c&d` → `stk_mkt`. All 10 rows have cumulative x-variables and eight have rolling average transformations, confirming that the 7-day rolling average of cumulative total cases and deaths is the strongest COVID signal for equity markets during the early onset of the pandemic. Stock market indices and interest rates dominate the top of the score rankings with metal prices appearing next, which is consistent with the acute financial panic of the period driving equity and rate markets more directly than commodities.*
 
 ---
 
@@ -181,7 +181,7 @@ The percentage-change analysis strips out shared trending behavior and tests whe
 
 ---
 
-*The Initial Shock percentage-change analysis produces the second-highest scores of any phase with a top score of 60.98 for cumulative, rolling `covid_c&d%` → `stk_mkt%`. The y-variables `stk_mkt` and `metals` dominate the top rankings with equity indices in the lead. Notably, the top category exactly mirrors the levels analysis leader for this phase, confirming that the COVID → equity channel at this time was meaningful for both the trend-level and short-run changes.*
+*The Initial Shock percentage-change analysis produces the second-highest scores of any phase with a top score of 60.98 for rolling, cumulative `covid_c&d%` → `stk_mkt%`. The y-variables `stk_mkt` and `metals` dominate the top rankings with equity indices in the lead. Notably, the top category exactly mirrors the levels analysis leader for this phase, confirming that the COVID → equity channel at this time was meaningful for both the trend-level and short-run changes.*
 
 ---
 
@@ -191,7 +191,7 @@ The percentage-change analysis strips out shared trending behavior and tests whe
 
 ---
 
-*The Adaptation percentage-change analysis is led by cumulative, rolling `covid_deaths%` → `metals%` with a score of 56.60. The y-variable `metals` dominates the rankings with 7 of the 10 top positions while `petrol_plus` and `exchg_rts` account for the remainder. The consistent appearance of `covid_deaths` (rather than `covid_cases` or `covid_c&d`) as the x-variable confirms the informational shift toward fatality data as the key COVID signal.*
+*The Adaptation percentage-change analysis is led by rolling, cumulative `covid_deaths%` → `metals%` with a score of 56.60. The y-variable `metals` dominates the rankings with 7 of the 10 top positions while `petrol_plus` and `exchg_rts` account for the remainder. The consistent appearance of `covid_deaths` (rather than `covid_cases` or `covid_c&d`) as the x-variable confirms the informational shift toward fatality data as the key COVID signal.*
 
 ---
 
@@ -201,7 +201,7 @@ The percentage-change analysis strips out shared trending behavior and tests whe
 
 ---
 
-*The Recovery percentage-change analysis is led by cumulative, rolling `covid_c&d%` → `metals%` with a score of 55.67. The return of the combined `covid_c&d` metric as the dominant x-variable, replacing `covid_deaths`, reflects the Omicron wave's distinctive epidemiology where cases surged to all-time highs while fatality rates remained lower than prior waves.*
+*The Recovery percentage-change analysis is led by rolling, cumulative `covid_c&d%` → `metals%` with a score of 55.67. The return of the combined `covid_c&d` metric as the dominant x-variable, replacing `covid_deaths`, reflects the Omicron wave's distinctive epidemiology where cases surged to all-time highs while fatality rates remained lower than prior waves.*
 
 ### 2.3 Optimal Candidates by Phase
 
