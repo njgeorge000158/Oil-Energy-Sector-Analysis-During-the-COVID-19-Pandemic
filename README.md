@@ -64,7 +64,7 @@ Each COVID variable is tested in raw form and with optional transformations: a 7
 | `stk_mkt` | Stock market indices (5 indices) |
 | `metals` | Metal commodity prices — industrial and precious (5 metals) |
 | `exchg_rts` | Exchange rates — major currency/USD pairs (5 rates) |
-| `agr1` / `agr2` | Agricultural commodity indices (5 indices / 5 indices) |
+| `agr1` / `agr2` | Agricultural commodity price indices (5 indices / 5 indices) |
 | `intrt_rts` | Interest rate instruments (5 instruments) |
 | `petrol_plus` | Oil, gas, and energy sector indices (5 indices) |
 
