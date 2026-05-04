@@ -89,7 +89,7 @@ Every COVID–indicator pairing is analyzed through a standardized six-component
 
 3. **Granger Causality Testing:** Bidirectional tests (X→Y and Y→X) using the optimal Granger method (F-test or chi-squared) and optimal lag selected by information criteria. The asymmetry between directions — whether COVID data predicts economic indicators more reliably than economic indicators predict COVID data — is the primary causal test.
 
-4. **VAR/VECM Dynamic Modeling:** `mathx.fit_var_or_vecm()` automatically selects between a Vector Autoregression in differences and a Vector Error Correction Model depending on cointegration status. Impulse Response Functions (IRF) quantify the magnitude and persistence of COVID shocks on economic indicators; Forecast Error Variance Decomposition (FEVD) measures what fraction of each indicator's forecast error variance is attributable to the COVID signal.
+4. **VAR/VECM Dynamic Modeling:** The function `mathx.fit_var_or_vecm()` automatically selects between a Vector Autoregression in differences and a Vector Error Correction Model depending on cointegration status. Impulse Response Functions (IRF) quantify the magnitude and persistence of COVID shocks on economic indicators; Forecast Error Variance Decomposition (FEVD) measures what fraction of each indicator's forecast error variance is attributable to the COVID signal.
 
 5. **Rolling Correlation Analysis:** Optimal rolling window and minimum period selection with stability and cross-validation scoring, enabling time-varying analysis of the COVID–indicator relationship within and across phases.
 
