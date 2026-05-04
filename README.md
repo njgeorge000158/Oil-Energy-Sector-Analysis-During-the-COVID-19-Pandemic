@@ -157,7 +157,7 @@ The levels analysis tests whether COVID data levels (or their cumulative and rol
 
 ---
 
-*The Recovery Phase's scores remain meaningfully elevated with a top score of 51.99. The y-variable `metals` dominates the top rankings by appearing in 7 of the top 10 positions. This situation is the most striking shift from prior phases and reflects the commodity supercycle dynamics of 2022 where the x-variables `covid_deaths` and `covid_c&d` predict metal prices during a period shaped by supply chain disruption, China zero-COVID lockdowns, and the Russia-Ukraine conflict's commodity implications. The significant COVID → `metals` scores in the Recovery period operate primarily through supply disruption rather than investor sentiment.*
+*The Recovery Phase's scores remain meaningfully elevated with a top score of 51.99. The y-variable `metals` dominates the top rankings by appearing in 7 of the top 10 positions. This situation is the most striking shift from prior phases and reflects the commodity supercycle dynamics of 2022 in a period shaped by supply chain disruption, China zero-COVID lockdowns, and the Russia-Ukraine conflict's commodity implications. Consequently, the prevalence of high COVID → `metals` scores in this period most likely operate through supply disruption rather than investor sentiment.*
 
 ### 2.2: Percentage-Change Analysis
 
