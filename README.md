@@ -91,7 +91,7 @@ Every COVID–indicator pairing is analyzed through a standardized six-component
 
 4. **VAR/VECM Dynamic Modeling:** The function `mathx.fit_var_or_vecm()` automatically selects between a Vector Autoregression in differences and a Vector Error Correction Model depending on cointegration status. Impulse Response Functions (IRF) quantify the magnitude and persistence of COVID shocks on economic indicators; Forecast Error Variance Decomposition (FEVD) measures what fraction of each indicator's forecast error variance is attributable to the COVID signal.
 
-5. **Rolling Correlation Analysis:** Optimal rolling window and minimum period selection with stability and cross-validation scoring, enabling time-varying analysis of the COVID–indicator relationship within and across phases.
+5. **Rolling Correlation Analysis:** Optimal rolling window and minimum period selection with stability and cross-validation scoring enables time-varying analysis of the COVID–indicator relationship within and across phases.
 
 6. **Lag Correlation Analysis:** Bonferroni-corrected peak lag identification, quantifying the delay between COVID data changes and economic indicator responses and confirming the directional (X-leads-Y) character of the relationship.
 
