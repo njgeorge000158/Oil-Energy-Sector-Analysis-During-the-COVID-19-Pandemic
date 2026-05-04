@@ -169,9 +169,13 @@ The percentage-change analysis strips out shared trending behavior and tests whe
 
 *The Full Period percentage-change analysis is led by `covid_deaths` → `exchg_rts` (exchange rates) with a score of 51.81. `exchg_rts` dominates the Y side with 8 of 10 top positions, while `metals` appears in the remaining 2. This is the most distinctive result of the full-period analysis: exchange rate returns maintained the most persistent short-run relationship with COVID mortality percentage changes across the entire 966-day window, outperforming equities, commodities, and interest rates on the full-period metric.*
 
+---
+
 #### Initial Shock — Percentage Changes Top 10
 
-![Table 2.2: COVID Data (%) vs. Economic Indicators (%) Top 10 Scores (Initial Shock)](econ_anlys_fnd_opt_cndsTable22CovidDatavsEconomicIndicatorsTop10ScoresInitialShock.png)
+<img width="471" height="405" alt="econ_anlys_fnd_opt_cndsTable21CovidDatavsEconomicIndicatorsTop10ScoresFullPeriod" src="https://github.com/user-attachments/assets/07cb29b9-c312-41e7-b57d-e1b54dd4fd6f" />
+
+---
 
 *The Initial Shock percentage-change analysis produces the second-highest scores of any phase (top score 60.98 for `covid_c&d` → `stk_mkt`). The top-ranked result exactly mirrors the levels analysis leader for this phase, confirming that the COVID → equity channel during the crash was robust to both the trend-level and short-run specifications. `stk_mkt` and `metals` split the Y side, with equity indices leading.*
 
