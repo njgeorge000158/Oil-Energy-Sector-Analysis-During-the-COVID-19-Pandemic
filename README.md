@@ -230,10 +230,10 @@ These four optimal pairings serve as the inputs for the four phase-specific anal
 
 ### 3.1 Initial Shock: COVID Cases and Deaths vs. Stock Market Indices
 
-**Notebook:** `econ_anlys_shk_rll7_cml_cnd_mkt.ipynb`  
-**X Variable:** `covid_c&d` — 7-day rolling average of cumulative cases and deaths (levels)  
-**Y Variables:** Five stock market indices (S&P 500, DJIA, NASDAQ Composite, NYSE Composite, Russell 2000)
-**Period:** January 22, 2020 – June 7, 2020 (137 days)  
+**Notebook:**        `econ_anlys_shk_rll7_cml_cnd_mkt.ipynb`  
+**X Variable:**      `covid_c&d` — 7-day rolling average of cumulative cases and deaths (levels)  
+**Y Variables:**     Five stock market indices (S&P 500, DJIA, NASDAQ Composite, NYSE Composite, Russell 2000)
+**Period:**          January 22, 2020 – June 7, 2020 (137 days)  
 **Composite Score:** 66.06 — the highest of all four phase analyses
 
 #### Economic Context
