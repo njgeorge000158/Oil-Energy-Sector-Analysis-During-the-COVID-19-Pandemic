@@ -266,9 +266,9 @@ The results partially met this expectation. The S&P 500 produced a striking FEVD
 
 Two features of the VECM dynamics temper the interpretation of these X-shares. First, all five models returned infinite error correction half-lives, meaning the cointegrating relationships do not produce mean reversion within the 30-period IRF horizon. Second, the S&P 500 IRF x→y response continues growing in magnitude through period 30 (reaching −2,683 with no sign of decay), as does the DJIA (−3,220 at period 30) and NYSE (−1,645 at period 30). These non-dissipating shock responses suggest that the FEVD X-shares partly reflect a persistent, non-reverting COVID shock rather than a transient causal signal that cleanly separates from the index's own momentum. The result is nonetheless consistent with the Initial Shock phase being the period of greatest COVID influence on equity markets in the project, even if the mechanism is one of sustained shock persistence rather than rapid causal transmission.
 
-**Lag Correlation.** A positive peak lag (X leads Y) would confirm that the 7-day rolling average COVID series anticipated equity market movements rather than merely co-moving with them contemporaneously. Given the 7-day rolling average transformation applied to the X series, a peak lag in the 1–7 day range is consistent with investors processing case count information over a weekly cycle aligned with the rolling window.
-
 **Rolling Correlation.** The rolling correlation across the 137-day Initial Shock window is expected to be persistently signed (negative) throughout, with the magnitude potentially strengthening during the crash phase and stabilizing during the recovery. This persistence across the full Initial Shock window — unlike the episodic, phase-switching patterns of later periods — is what drives the high composite score for this phase.
+
+**Lag Correlation.** A positive peak lag (X leads Y) would confirm that the 7-day rolling average COVID series anticipated equity market movements rather than merely co-moving with them contemporaneously. Given the 7-day rolling average transformation applied to the X series, a peak lag in the 1–7 day range is consistent with investors processing case count information over a weekly cycle aligned with the rolling window.
 
 #### Significance of the Initial Shock Finding
 
