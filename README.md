@@ -181,7 +181,7 @@ The percentage-change analysis strips out shared trending behavior and tests whe
 
 ---
 
-*The Initial Shock percentage-change analysis produces the second-highest scores of any phase (top score 60.98 for `covid_c&d` → `stk_mkt`). The top-ranked result exactly mirrors the levels analysis leader for this phase, confirming that the COVID → equity channel during the crash was robust to both the trend-level and short-run specifications. The y-variables `stk_mkt` and `metals` split the Y side in the top ten, with equity indices scores in the lead.*
+*The Initial Shock percentage-change analysis produces the second-highest scores of any phase (top score 60.98 for `covid_c&d` → `stk_mkt`). The top-ranked result exactly mirrors the levels analysis leader for this phase, confirming that the COVID → equity channel during the crash was robust to both the trend-level and short-run specifications. The y-variables `stk_mkt` and `metals` split the Y side, with equity indices scores in the lead.*
 
 ---
 
@@ -191,11 +191,15 @@ The percentage-change analysis strips out shared trending behavior and tests whe
 
 ---
 
-*The Adaptation percentage-change analysis is led by `covid_deaths` → `metals` (score 56.60). `metals` dominates the Y side with 7 of 10 top positions, while `petrol_plus` and `exchg_rts` account for the remainder. The consistent appearance of `covid_deaths` (rather than `covid_cases` or `covid_c&d`) as the X series confirms the informational shift toward fatality data as the key COVID signal during the Adaptation period.*
+*The Adaptation percentage-change analysis is led by cumulative, 7-day rolling average `covid_deaths` → `metals` (score 56.60). The y-variable `metals` dominates the Y side with 7 of the 10 top positions, while `petrol_plus` and `exchg_rts` account for the remainder. The consistent appearance of `covid_deaths` (rather than `covid_cases` or `covid_c&d`) as the x-variable confirms the informational shift toward fatality data as the key COVID signal during the Adaptation period.*
+
+---
 
 #### Recovery — Percentage Changes Top 10
 
-![Table 2.4: COVID Data (%) vs. Economic Indicators (%) Top 10 Scores (Recovery)](econ_anlys_fnd_opt_cndsTable24CovidDatavsEconomicIndicatorsTop10ScoresRecovery.png)
+<img width="453" height="405" alt="econ_anlys_fnd_opt_cndsTable24CovidDatavsEconomicIndicatorsTop10ScoresRecovery" src="https://github.com/user-attachments/assets/00c4af8d-8b95-42a7-8471-409d5fedf6d2" />
+
+---
 
 *The Recovery percentage-change analysis is led by `covid_c&d` → `metals` (score 55.67). The return of the combined `covid_c&d` metric as the dominant X series — replacing `covid_deaths` that led in Adaptation — reflects the Omicron wave's distinctive epidemiology: cases surged to all-time highs while fatality rates remained lower than prior waves, making the combined metric a more complete representation of the pandemic's economic footprint during this phase.*
 
