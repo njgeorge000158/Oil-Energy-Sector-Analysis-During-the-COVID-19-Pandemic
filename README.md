@@ -85,7 +85,7 @@ Every COVID–indicator pairing is analyzed through a standardized six-component
 
 1. **Stationarity Testing:** Zivot-Andrews test, Bai-Perron multiple structural break detection, Augmented Dickey-Fuller (ADF), Kwiatkowski-Phillips-Schmidt-Shin (KPSS), and cross-validation synthesis. Structural break dates are identified before transformation to contextualize the stationarity regime within each pandemic phase.
 
-2. **Polynomial Degree Optimization and Correlation:** AIC-minimizing polynomial degree selection with cross-validated R² and overfitting detection, followed by Pearson or Spearman correlation depending on the distributional properties of the pair.
+2. **Polynomial Degree Optimization and Correlation:** AIC-minimizing polynomial degree selection with cross-validated R² and overfitting detection, followed by Pearson or Spearman correlation depending on the distributional properties of the time series pair.
 
 3. **Granger Causality Testing:** Bidirectional tests (X→Y and Y→X) using the optimal Granger method (F-test or chi-squared) and optimal lag selected by information criteria. The asymmetry between directions — whether COVID data predicts economic indicators more reliably than economic indicators predict COVID data — is the primary causal test.
 
