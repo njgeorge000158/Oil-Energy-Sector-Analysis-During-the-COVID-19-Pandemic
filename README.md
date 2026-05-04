@@ -207,7 +207,11 @@ The percentage-change analysis strips out shared trending behavior and tests whe
 
 The final output of the candidate selection analysis is a ranked summary of the single best COVID–indicator pairing for each phase, selected across both levels and percentage-change analyses:
 
-![Table 2.5: Top Candidates by Time Period](econ_anlys_fnd_opt_cndsTable25TopCandidatesbyTimePeriod.png)
+---
+
+<img width="540" height="190" alt="econ_anlys_fnd_opt_cndsTable25TopCandidatesbyTimePeriod" src="https://github.com/user-attachments/assets/0955e18e-e34f-4979-9525-41939dc89a18" />
+
+---
 
 | Phase | COVID Variable | Transformation | Economic Indicator | Score |
 |---|---|---|---|---|
