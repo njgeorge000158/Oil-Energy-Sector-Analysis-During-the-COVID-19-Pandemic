@@ -127,7 +127,7 @@ The levels analysis tests whether COVID data levels (or their cumulative and rol
 
 ---
 
-*The category `covid_deaths` → `agr1` leads the full-period levels analysis with a score of 48.74. Neither the cumulative nor rolling average transformation dominates, suggesting that the raw COVID series carries the primary causal signal at this data frequency across the full 966-day window. The agricultural commodities index `agr1` and the oil and gas index `petrol_plus` together account for 9 of the 10 top positions, pointing to commodity markets, not equities, as the most persistently COVID-sensitive indicators in the full-period levels analysis.*
+*The category `covid_deaths` → `agr1` leads the Full Period levels analysis with a score of 48.74. Neither the cumulative nor rolling average transformation dominates, suggesting that the raw COVID series carries the primary causal signal at this data frequency across the full 966-day window. The agricultural commodities index `agr1` and the oil and gas index `petrol_plus` together account for 9 of the 10 top positions, pointing to commodity markets, not equities, as the most persistently COVID-sensitive indicators.*
 
 ---
 
@@ -171,7 +171,7 @@ The percentage-change analysis strips out shared trending behavior and tests whe
 
 ---
 
-*The category `covid_deaths%` → `exchg_rts%` (exchange rates) leads the full-period percentage-change analysis with a score of 51.81. The y-variable `exchg_rts` dominates its competitors with 8 of the 10 top positions, while `metals` appears in the remaining two. This is the most distinctive result of the full-period analysis: exchange rate returns maintained the most persistent short-run relationship with COVID mortality percentage changes across the entire 966-day window, outperforming equities, commodities, and interest rates.*
+*The category `covid_deaths%` → `exchg_rts%` (exchange rates) leads the Full Period percentage-change analysis with a score of 51.81. The y-variable `exchg_rts` dominates its competitors with 8 of the 10 top positions, while `metals` appears in the remaining two. This is the most distinctive result of the full-period analysis: exchange rate returns maintained the most persistent short-run relationship with COVID mortality percentage changes across the entire 966-day window, outperforming equities, commodities, and interest rates.*
 
 ---
 
