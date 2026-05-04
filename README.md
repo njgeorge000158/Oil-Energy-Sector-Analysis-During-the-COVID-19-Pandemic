@@ -97,7 +97,7 @@ Every COVID–indicator pairing is analyzed through a standardized six-component
 
 ### 1.5 Composite Scoring Framework
 
-To rank COVID–indicator pairings systematically across all combinations of COVID variants, transformations, and economic indicator categories, a weighted composite score aggregates the five analytical components into a single value in the range [0, 100]:
+To rank COVID–indicator pairings systematically across all combinations of COVID variants, transformations, and economic indicator categories, a weighted composite score aggregates the five analytical components into a single value in the range from 0 to 100:
 
 | Component | Weight | What It Captures |
 |---|---|---|
@@ -107,7 +107,7 @@ To rank COVID–indicator pairings systematically across all combinations of COV
 | Lag Correlation | **0.15** | Peak delayed association; X-leads-Y confirmation |
 | Contemporaneous Correlation | **0.10** | Same-day association strength |
 
-Higher scores indicate stronger, more consistent, and more directionally reliable COVID → indicator relationships. The scoring is run separately for levels (Part 1) and percentage changes (Part 2) to distinguish trend-level causal relationships from short-run predictability.
+Higher scores indicate stronger, more consistent, and more directionally reliable COVID to economic indicator relationships. The scoring is run separately for levels (Part 1) and percentage changes (Part 2) to distinguish trend-level causal relationships from short-run predictability.
 
 ---
 
