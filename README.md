@@ -119,9 +119,13 @@ The first notebook in the project analysis, `econ_anlys_fnd_opt_cnds.ipynb`, sys
 
 The levels analysis tests whether COVID data levels (or their cumulative and rolling-average transforms) co-move with and causally precede economic indicator levels. Both series are non-stationary in levels and require stationarity correction, meaning the causal signal detected here reflects the joint trending behavior of the series within each phase — a more relaxed standard than the percentage-change analysis but well-suited for identifying long-run relationships and cointegration.
 
+---
+
 #### Full Period — Levels Top 10
 
 <img width="479" height="405" alt="econ_anlys_fnd_opt_cndsTable11CovidDatavsEconomicIndicatorsTop10ScoresFullPeriod" src="https://github.com/user-attachments/assets/24ecb6eb-c454-4fcf-96fc-f46998021fd6" />
+
+---
 
 *The Full Period levels analysis is led by `covid_deaths` → `agr1` (score 48.74). Neither the cumulative nor rolling average transformation dominates — both appear as True and False across the top 10 rows — suggesting the raw COVID series carries the primary causal signal at this data frequency across the full 966-day window. `agr1` (an agricultural commodities index) and `petrol_plus` (oil and gas) together account for 9 of the 10 top positions, pointing to commodity markets — not equities — as the most persistently COVID-sensitive indicators in the full-period levels analysis.*
 
