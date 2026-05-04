@@ -242,7 +242,7 @@ The Initial Shock period, from February 19 to March 23, 2020, encompasses the fa
 
 #### Stationarity Characteristics
 
-All six series — the cumulative rolling COVID series and the five equity index levels — are non-stationary in levels during this period. The cumulative COVID series follows a monotonically increasing trajectory with a major structural break at the onset of exponential U.S. case growth in mid-March 2020, detected by the Zivot-Andrews and Bai-Perron tests. The equity indices exhibit a sharp downward break in late February / early March followed by a recovery trend — a non-standard V-shaped non-stationary pattern that complicates standard ADF and KPSS testing. The `mathx.crct_stnry_df()` stationarity correction pipeline addresses these diagnostics before all downstream causal testing.
+All six time series — the rolling, cumulative COVID cases and deaths and the five equity indices — are non-stationary. The rolling, cumulative COVID time series follows a monotonically increasing trajectory with a major structural break at the onset of exponential U.S. case growth in mid-March 2020, detected by the Zivot-Andrews and Bai-Perron tests. The equity indices exhibit a sharp downward break in late February and early March followed by a recovery trend, a non-standard V-shaped non-stationary pattern that complicates standard ADF and KPSS testing. The `mathx.crct_stnry_df()` stationarity correction pipeline addresses these diagnostics before all downstream causal testing.
 
 #### Key Analytical Findings
 
