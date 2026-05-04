@@ -246,6 +246,12 @@ All six time series — the rolling, cumulative COVID cases and deaths and the f
 
 #### Key Analytical Findings
 
+---
+
+<img width="1472" height="258" alt="econ_anlys_shk_rll7_cml_cnd_mktTable1182PolynomialDegreesforCorrelationsSummaryCumlCovid19CD7dayRollAvgvsStockMarketIndicesInitialShock" src="https://github.com/user-attachments/assets/0b46c782-ba83-4932-bf9d-bcdd4dc9474b" />
+
+---
+
 **Correlation.** The contemporaneous correlation between rolling, cumulative COVID data and equity indices during the Initial Shock was expected to be strongly negative as rising case and death counts align chronologically with falling prices through March 23, and falling or stabilizing counts align with the subsequent recovery. Because all the time series trend over the 137-day window, a portion of this raw correlation reflects shared trend structure. Moreover, the polynomial degree optimization tests whether the relationship is linear or whether equity markets responded nonlinearly to the COVID data, crashing disproportionately only once case and death counts crossed a visibility threshold and producing a concave or step-function response.
 
 Unfortunately, the results differed significantly from these expectations. Rather than the anticipated strongly negative correlations, the Spearman coefficients between rolling, cumulative COVID data and the five indices were weak and mixed in sign: S&P 500 (+0.35), Nasdaq (+0.04), DJIA (−0.09), NYSE (−0.10), and Russell 2000 (−0.07). Only three indices produced negative correlations, and all five coefficients were small in magnitude. Thus, the expected strongly negative signal was absent during this time period.
@@ -254,11 +260,23 @@ The most likely explanation is phase cancellation. For instance, this 137-day wi
 
 The expectation of nonlinearity was confirmed, though not in the manner anticipated. Every index produced a best-fit polynomial degree well above linear — the S&P 500 (5), the Nasdaq (4), the DJIA (9), the NYSE (9), the Russell 2000 (9) — and all five are marked as adequately linear. However, the cross-validated R² values were catastrophically negative across all indices (ranging from −278 for Nasdaq to approximately −2.88 billion for NYSE), with correspondingly large cv_r²_std values, indicating severe overfitting rather than genuine nonlinear structure. The high-degree polynomials are contorting to fit a small number of outliers rather than capturing a meaningfully underlying relationship. This conclusion is corroborated by the scatter plots, where the fitted curves deviate dramatically from the bulk of the data cloud. The nonlinearity identified is therefore an artifact of the optimization process operating on a noisy, phase-mixed dataset, and should not be interpreted as evidence of a threshold or step-function response to COVID.
 
+---
+
+<img width="1703" height="604" alt="econ_anlys_shk_rll7_cml_cnd_mktTable1184TheGrangerCausalityTestSummaryCumlCovid19CD7dayRollAvgvsStockMarketIndicesInitialShock" src="https://github.com/user-attachments/assets/eac8938c-2b77-4184-b75c-d10b5ccf53e2" />
+
+---
+
 **Granger Causality.** The Granger test in the X→Y direction (COVID data predicts equity markets) was expected to be significantly stronger than the Y→X direction (equity markets predict COVID data). Asymmetric Granger causality from COVID to equities supports the interpretation that pandemic case and death counts were a leading predictor of equity market behavior during the crash, not merely contemporaneously correlated with it. The composite score of 66.06, the highest in the project, reflects that this phase produced the clearest, most statistically powerful directional Granger causality of any COVID–indicator pairing in the dataset.
 
 The results met this expectation, with the directional asymmetry confirmed across all five indices and the reverse direction producing no credible causal signal in any case. In the COVID → equity direction, S&P 500 and Nasdaq achieved significance at lag 1 (F=6.80, p=0.01 and F=9.31, p=0.00, respectively), with all four test statistics in agreement and high-confidence conclusions in both cases. DJIA, NYSE, and Russell 2000 achieved significance at lag 5 (F=3.22, p=0.01; F=3.63, p=0.01; F=2.94, p=0.02), again with full agreement across test statistics and high-confidence conclusions. In the equity → COVID direction, DJIA, NYSE, and Russell 2000 returned high-confidence non-significant results across all lags tested. S&P 500 → COVID produced an inconclusive summary result driven by a lone chi² significant finding at lag 4 that was not corroborated by the F or lrtest statistics. Nasdaq → COVID flagged non-normal residuals or insufficient sample size at lag 5, where partial significance appeared, an edge case that does not constitute reliable evidence of reverse causality.
 
 One finding worth noting is the lag heterogeneity in the COVID → equity direction. The large-cap benchmarks — S&P 500 and Nasdaq — responded to COVID information within a single lag, while the broader indices — DJIA, NYSE, and Russell 2000 — required five lags to produce significant results. This suggests that during the Initial Shock, large-cap equity markets incorporated pandemic signals more rapidly than broader and smaller-cap markets, a pattern consistent with differences in liquidity, institutional participation, and information efficiency across index compositions.
+
+---
+
+<img width="1141" height="255" alt="econ_anlys_shk_rll7_cml_cnd_mktTable1185VARVECMAnalysisSummaryCumlCovid19CD7dayRollAvgvsStockMarketIndicesInitialShock" src="https://github.com/user-attachments/assets/06c6e7b5-1b8b-4d67-9f71-8438d3551b30" />
+
+---
 
 **VAR/VECM Dynamics.** The FEVD X-share across the five equity indices quantifies what fraction of each index's forecast error variance was attributable to COVID shocks during the Initial Shock. Given the period's characteristics — where COVID is the dominant driver of a multi-week market crash — these X-shares were expected to be the highest of any phase analysis in the project, reflecting the COVID pandemic's near-monopoly as a market-moving signal from February to June 2020.
 
