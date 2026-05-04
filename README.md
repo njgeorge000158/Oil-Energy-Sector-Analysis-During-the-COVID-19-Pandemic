@@ -1,3 +1,7 @@
+<img width="353" height="218" alt="evans-acosta-economic-impact-covid-june-5" src="https://github.com/user-attachments/assets/b65fd3b0-7a50-4e96-befc-96f6bea9c5b4" />
+
+---
+
 # The Economic Impact of COVID-19: A Multi-Phase Causal Analysis of Pandemic Mortality Data and Financial Market Indicators
 
 **Author:** Nicholas J. George &nbsp;|&nbsp; **Dataset:** January 22, 2020 – September 14, 2022 &nbsp;|&nbsp; **Last Updated:** April 2026
