@@ -280,7 +280,17 @@ The summary tables confirm this characterization quantitatively. Mean rolling co
 
 The rolling correlation pattern observed here is structurally similar to the episodic behavior attributed to later phases, not the anticipated persistent directionality. The phase's high composite score is therefore driven by other analytical components — particularly, the Granger causality results and the S&P 500 FEVD X-share — rather than by rolling correlation consistency.
 
-**Lag Correlation.** A positive peak lag (X leads Y) would confirm that the 7-day rolling average COVID series anticipated equity market movements rather than merely co-moving with them contemporaneously. Given the 7-day rolling average transformation applied to the X series, a peak lag in the 1–7 day range is consistent with investors processing case count information over a weekly cycle aligned with the rolling window.
+---
+
+<img width="6686" height="2610" alt="econ_anlys_shk_rll7_cml_cnd_mktFigure1182LagCorrelationHeatmapCumlCovid19CD7dayRollAvgvsStockMarketIndicesInitialShock" src="https://github.com/user-attachments/assets/039c365c-96e6-41b4-8233-b5b1a3c82115" />
+
+---
+
+**Lag Correlation.** A positive peak lag (X leads Y) was expected to confirm that the rolling, cumulative COVID time series anticipated equity market movements rather than merely co-moving with them contemporaneously. Given the 7-day rolling average transformation applied to this cumulative x_variable, a peak lag in the 1–7 day range was considered consistent with investors processing death and case count information over a weekly cycle aligned with the rolling window.
+
+The results did not meet this expectation. Four of the five indices produced peak lags that place the equity index in the leading position rather than COVID data. The S&P 500 shows the most pronounced divergence, with a peak lag of −8 (r = +0.439), meaning that the S&P 500 leads the COVID series by eight days, and, uniquely, the entire lag correlation profile remains positive across the full ±15-day window, reflecting the same phase-cancellation dynamic identified in the contemporaneous correlation analysis. Nasdaq produced a peak lag of −5 (r = −0.295), also placing the index in the leading position. The DJIA, NYSE, and Russell 2000 all peak at lag +4, which falls nominally within the expected 1–7 day range and does place COVID in the leading position, but the magnitudes are weak (r = −0.246, −0.251, and −0.271, respectively), and none clearly exceed the ±0.30 significance threshold. The overall profiles for these three indices are noisy and irregular rather than exhibiting the clean leading structure the expectation implied.
+
+The composite heatmap above reinforces this picture. The S&P 500 row is structurally distinct from all others, dominated by positive values across the board with no coherent negative-lag peak. The remaining four indices show scattered positive and negative patches with no consistent directional pattern across the lag range. There is no uniform positive-lag structure across the five indices that would support interpreting the COVID data as a systematic leading predictor in the lag correlation framework. The Granger causality results, which do confirm COVID as a leading predictor for all five indices, rely on a different and more powerful inferential approach that controls for autocorrelation and multivariate dynamics, and should be treated as the primary evidence for COVID's leading role during the Initial Shock phase.
 
 #### Significance of the Initial Shock Finding
 
