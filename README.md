@@ -215,10 +215,10 @@ The final output of the candidate selection analysis is a ranked summary of the 
 
 | Phase | COVID Variable | X-Variable Transformation | Economic Indicator | Y-Variable Transformation | Score |
 |---|---|---|---|---|---|
-| **Full Period** | `covid_deaths` | % change | Exchange Rates (`exchg_rts` %) | % change | **51.81** |
-| **Initial Shock** | `covid_c&d` | cumulative, 7-day rolling avg | Stock Market Indices (`stk_mkt`) | none | **66.06** |
-| **Adaptation** | `covid_deaths` | cumulative, 7-day rolling avg, % change | Metal Prices (`metals` %) | % change | **56.60** |
-| **Recovery** | `covid_c&d` | cumulative, 7-day rolling avg, % change | Metal Prices (`metals` %) | % change | **55.67** |
+| **Full Period** | `covid_deaths` | % change | exchange rates (`exchg_rts`) | % change | **51.81** |
+| **Initial Shock** | `covid_c&d` | cumulative, 7-day rolling avg | stock market indices (`stk_mkt`) | none | **66.06** |
+| **Adaptation** | `covid_deaths` | cumulative, 7-day rolling avg, % change | metal prices (`metals`) | % change | **56.60** |
+| **Recovery** | `covid_c&d` | cumulative, 7-day rolling avg, % change | metal prices (`metals`) | % change | **55.67** |
 
 Two patterns are immediately evident in this table. First, the score progression confirms a systematic causal decay: **66.06 → 56.60 → 55.67 → 51.81** across Initial Shock, Adaptation, Recovery, and Full Period respectively. COVID's causal footprint on economic indicators was strongest during the acute crash and attenuated progressively as the pandemic normalized. Second, the Y-side leadership transitions cleanly through three distinct asset classes — equities during the shock, metals through the middle phases, and exchange rates as the most durable full-period relationship — a finding with direct implications for understanding which market mechanisms transmitted pandemic information to prices at each stage of the crisis.
 
