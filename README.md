@@ -53,7 +53,7 @@ The dataset spans 966 trading days from **January 22, 2020 to September 14, 2022
 |---|---|
 | `covid_cases` | Confirmed COVID-19 cases |
 | `covid_deaths` | Confirmed COVID-19 deaths |
-| `covid_c&d` | Combined cumulative cases and deaths |
+| `covid_c&d` | Total confirmed cases and deaths |
 
 Each COVID variable is tested in raw form and with optional transformations: a 7-day rolling average (`x_roll`), cumulative accumulation (`xcml`), and percentage change (`xpct`).
 
