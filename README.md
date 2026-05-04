@@ -127,7 +127,7 @@ The levels analysis tests whether COVID data levels (or their cumulative and rol
 
 ---
 
-*The Full Period levels analysis is led by `covid_deaths` → `agr1` (score 48.74). Neither the cumulative nor rolling average transformation dominates — both appear as True and False across the top 10 rows — suggesting the raw COVID series carries the primary causal signal at this data frequency across the full 966-day window. `agr1` (an agricultural commodities index) and `petrol_plus` (oil and gas) together account for 9 of the 10 top positions, pointing to commodity markets — not equities — as the most persistently COVID-sensitive indicators in the full-period levels analysis.*
+*The Full Period levels analysis is led by `covid_deaths` → `agr1` (score 48.74). Neither the cumulative nor rolling average transformation dominates — both appear as True and False across the top 10 rows — suggesting the raw COVID series carries the primary causal signal at this data frequency across the full 966-day window. The agricultural commodities index `agr1` and the oil and gas index `petrol_plus` together account for 9 of the 10 top positions, pointing to commodity markets, not equities, as the most persistently COVID-sensitive indicators in the full-period levels analysis.*
 
 ---
 
