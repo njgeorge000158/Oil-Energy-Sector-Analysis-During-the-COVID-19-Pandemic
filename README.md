@@ -113,7 +113,7 @@ Higher scores indicate stronger, more consistent, and more directionally reliabl
 
 ## 2. Candidate Selection: Identifying the Strongest COVID–Economic Pairings
 
-The first notebook in the project — `econ_anlys_fnd_opt_cnds.ipynb` — systematically scores all combinations of COVID variables, transformations, and economic indicator categories across all four time periods. The top 10 pairings for each phase, in both levels and percentage-change form, are tabulated below.
+The first notebook in the project analysis, `econ_anlys_fnd_opt_cnds.ipynb`, systematically scores all combinations of COVID variables, transformations, and economic indicator categories across all four time periods. The top 10 pairings for each phase, in both levels and percentage-change form, are tabulated below.
 
 ### 2.1 Part 1: Levels Analysis
 
