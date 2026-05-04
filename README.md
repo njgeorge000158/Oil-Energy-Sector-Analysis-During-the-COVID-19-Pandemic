@@ -137,7 +137,7 @@ The levels analysis tests whether COVID data levels (or their cumulative and rol
 
 ---
 
-*The Initial Shock levels analysis produces the highest scores of any phase with a top score of 66.06 for `covid_c&d` → `stk_mkt`. All 10 rows have `cuml. x = True` and `roll. x = True`, confirming that the cumulative 7-day rolling average of combined cases and deaths is the strongest COVID signal for equity markets during the early onset of the pandemic. Stock market indices (`stk_mkt`) and interest rates (`intrt_rts`) dominate the Y side, with metals (`metals`) appearing later in the ranking, which is consistent with the acute financial panic of the period driving equity and rate markets more directly than commodities.*
+*The Initial Shock levels analysis produces the highest scores of any phase with a top score of 66.06 for `covid_c&d` → `stk_mkt`. All 10 rows have cumulative x-variables and eight have rolling average transformations, confirming that the cumulative 7-day rolling average of combined cases and deaths is the strongest COVID signal for equity markets during the early onset of the pandemic. Stock market indices (`stk_mkt`) and interest rates (`intrt_rts`) dominate the Y side, with metals (`metals`) appearing later in the ranking, which is consistent with the acute financial panic of the period driving equity and rate markets more directly than commodities.*
 
 ---
 
