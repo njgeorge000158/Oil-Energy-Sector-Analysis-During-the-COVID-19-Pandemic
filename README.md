@@ -458,3 +458,10 @@ The decay arc from Initial Shock to Recovery is not a finding about COVID specif
 ---
 
 *This analysis was conducted as part of a broader project examining the quantitative economic impact of the COVID-19 pandemic across multiple asset classes and time periods. All data sources, transformation parameters, and statistical thresholds are documented within the individual Jupyter notebooks.*
+
+---
+
+
+## Copyright
+
+Nicholas J. George © 2026. All Rights Reserved.
