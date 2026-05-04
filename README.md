@@ -117,7 +117,7 @@ The first notebook in the project analysis, `econ_anlys_fnd_opt_cnds.ipynb`, sys
 
 ### 2.1: Levels Analysis
 
-The levels analysis tests whether COVID data levels (or their cumulative and rolling-average transforms) co-move with and causally precede economic indicator levels. Both series are non-stationary in levels and require stationarity correction, meaning the causal signal detected here reflects the joint trending behavior of the series within each phase — a more relaxed standard than the percentage-change analysis but well-suited for identifying long-run relationships and cointegration.
+The levels analysis tests whether COVID data levels (or their cumulative and rolling-average transforms) synchronize with and causally precede economic indicator levels. Both series are non-stationary in levels and require stationarity correction, meaning the causal signal detected here reflects the joint trending behavior of the series within each phase — a more relaxed standard than the percentage-change analysis but well-suited for identifying long-run relationships and cointegration.
 
 ---
 
