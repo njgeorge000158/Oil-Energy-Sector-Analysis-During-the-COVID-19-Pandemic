@@ -115,7 +115,7 @@ Higher scores indicate stronger, more consistent, and more directionally reliabl
 
 The first notebook in the project analysis, `econ_anlys_fnd_opt_cnds.ipynb`, systematically scores all combinations of COVID variables, transformations, and economic indicator categories across all four time periods. The top 10 pairings for each phase, in both levels and percentage-change form, are tabulated below.
 
-### 2.1 Part 1: Levels Analysis
+### 2.1: Levels Analysis
 
 The levels analysis tests whether COVID data levels (or their cumulative and rolling-average transforms) co-move with and causally precede economic indicator levels. Both series are non-stationary in levels and require stationarity correction, meaning the causal signal detected here reflects the joint trending behavior of the series within each phase — a more relaxed standard than the percentage-change analysis but well-suited for identifying long-run relationships and cointegration.
 
@@ -159,7 +159,7 @@ The levels analysis tests whether COVID data levels (or their cumulative and rol
 
 *The Recovery phase scores remain meaningfully elevated (top score 51.99), with `metals` dominating the Y side by appearing in 7 of the top 10 positions. This is the most striking shift from prior phases and reflects the commodity supercycle dynamics of 2022 where the x-variables `covid_deaths` and `covid_c&d` predict metal prices during a period shaped by supply chain disruption, China zero-COVID lockdowns, and the Russia-Ukraine conflict's commodity implications. The significant COVID → `metals` scores in the Recovery period operate primarily through supply disruption rather than investor sentiment.*
 
-### 2.2 Part 2: Percentage-Change Analysis
+### 2.2: Percentage-Change Analysis
 
 The percentage-change analysis strips out shared trending behavior and tests whether short-run changes in COVID data predict short-run changes in economic indicator returns. This is a more demanding and more econometrically rigorous evidence standard: both series must be stationary by construction, and detected Granger causality reflects genuine predictive information content rather than shared trend momentum.
 
