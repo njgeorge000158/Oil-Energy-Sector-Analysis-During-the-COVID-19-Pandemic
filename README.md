@@ -139,9 +139,13 @@ The levels analysis tests whether COVID data levels (or their cumulative and rol
 
 *The Initial Shock levels analysis produces the highest scores of any phase: top score 66.06 for `covid_c&d` → `stk_mkt`. All 10 rows have `cuml. x = True` and `roll. x = True`, confirming that the cumulative 7-day rolling average of combined cases and deaths is the strongest COVID signal for equity markets during the crash. Stock market indices (`stk_mkt`) and interest rates (`intrt_rts`) dominate the Y side, with metals (`metals`) appearing later in the ranking — consistent with the acute financial panic of the period driving equity and rate markets more directly than commodities.*
 
+---
+
 #### Adaptation — Levels Top 10
 
-![Table 1.3: COVID Data vs. Economic Indicators Top 10 Scores (Adaptation)](econ_anlys_fnd_opt_cndsTable13CovidDatavsEconomicIndicatorsTop10ScoresAdaptation.png)
+<img width="479" height="405" alt="econ_anlys_fnd_opt_cndsTable13CovidDatavsEconomicIndicatorsTop10ScoresAdaptation" src="https://github.com/user-attachments/assets/1f01f498-723f-428f-98e7-888fb669cec8" />
+
+---
 
 *The Adaptation phase scores decline from the Initial Shock peak (top score 54.75 for `covid_deaths` → `intrt_rts`). The dominant X series shifts from `covid_c&d` to `covid_deaths` — a meaningful change reflecting the market's informational pivot from tracking the breadth of infection to tracking severity as vaccines changed the risk calculus. Interest rates (`intrt_rts`) lead the Y side, consistent with pandemic developments driving central bank accommodation expectations through the vaccine rollout and Delta wave periods.*
 
