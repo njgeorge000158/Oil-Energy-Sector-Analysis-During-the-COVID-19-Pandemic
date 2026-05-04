@@ -23,7 +23,7 @@
 3. [Phase Analysis](#3-phase-analysis)
    - [Initial Shock: COVID Cases and Deaths vs. Stock Market Indices](#31-initial-shock-covid-cases-and-deaths-vs-stock-market-indices)
    - [Adaptation: COVID Death Rate vs. Metal Commodity Returns](#32-adaptation-covid-death-rate-vs-metal-commodity-returns)
-   - [Recovery: Combined COVID Signal vs. Metal Commodity Returns](#33-recovery-combined-covid-signal-vs-metal-commodity-returns)
+   - [Recovery: Total COVID Signal vs. Metal Commodity Returns](#33-recovery-total-covid-signal-vs-metal-commodity-returns)
    - [Full Period: COVID Death Rate vs. Exchange Rate Returns](#34-full-period-covid-death-rate-vs-exchange-rate-returns)
 4. [Cross-Phase Findings](#4-cross-phase-findings)
    - [The Causal Decay Arc](#41-the-causal-decay-arc)
@@ -41,7 +41,7 @@
 
 Did the COVID-19 pandemic exert a statistically detectable, directionally consistent, and economically meaningful causal influence on financial market indicators, and, if so, how did that influence evolve across the distinct phases of the pandemic? This project provides a systematic, quantitative answer using econometric time series methods applied to daily pandemic data and daily financial market data spanning the full 966 days of the dataset, from the first recorded U.S. case on January 22, 2020, through September 14, 2022.
 
-The analysis proceeds from the recognition that "COVID affected markets" is too coarse a claim to be informative. More precise questions are necessary: *Which* COVID metric — case counts, death counts, or a combined measure — carried the stronger causal signal? *Which* economic indicators were most reliably predicted by pandemic data? Did the relationship persist across the full pandemic, or was it concentrated in specific phases? And, did the form of the relationship — its sign, lag structure, and causal direction — change as the pandemic evolved?
+The analysis proceeds from the recognition that "COVID affected markets" is too coarse a claim to be informative. More precise questions are necessary: *Which* COVID metric — case counts, death counts, or a total measure — carried the stronger causal signal? *Which* economic indicators were most reliably predicted by pandemic data? Did the relationship persist across the full pandemic, or was it concentrated in specific phases? And, did the form of the relationship — its sign, lag structure, and causal direction — change as the pandemic evolved?
 
 ### 1.2 Data and Scope
 
@@ -201,7 +201,7 @@ The percentage-change analysis strips out shared trending behavior and tests whe
 
 ---
 
-*The Recovery percentage-change analysis is led by rolling, cumulative `covid_c&d%` → `metals%` with a score of 55.67. The return of the combined `covid_c&d` metric as the dominant x-variable, replacing `covid_deaths`, reflects the Omicron wave's distinctive epidemiology where cases surged to all-time highs while fatality rates remained lower than prior waves.*
+*The Recovery percentage-change analysis is led by rolling, cumulative `covid_c&d%` → `metals%` with a score of 55.67. The return of the `covid_c&d` metric as the dominant x-variable, replacing `covid_deaths`, reflects the Omicron wave's distinctive epidemiology where cases surged to all-time highs while fatality rates remained lower than prior waves.*
 
 ### 2.3 Optimal Candidates by Phase
 
@@ -301,7 +301,7 @@ The net sign of the COVID→ metals relationship during Adaptation depends on wh
 
 ---
 
-### 3.3 Recovery: Combined COVID Signal vs. Metal Commodity Returns
+### 3.3 Recovery: Total COVID Signal vs. Metal Commodity Returns
 
 **Notebook:** `econ_anlys_rec_pct_rll7_cml_cnd_mts.ipynb`  
 **X Variable:** `covid_c&d` — 7-day rolling average of cumulative cases and deaths, percentage change  
@@ -323,7 +323,7 @@ The Recovery period is the shortest phase and the one with the lowest composite 
 
 #### Why `covid_c&d` Returns as the Dominant X Variable
 
-The shift back to the combined `covid_c&d` metric — used in the Initial Shock but replaced by `covid_deaths` alone in Adaptation — reflects the Recovery period's distinctive epidemiology. Omicron's case-death decoupling (historic case counts, lower-than-expected fatalities) meant that `covid_deaths` alone would miss a large portion of the economically relevant COVID signal: the scale of the case surge mattered enormously for supply chain disruption and zero-COVID policy responses, even when mortality impact was attenuated by vaccines. The combined `covid_c&d` metric captured both dimensions.
+The shift back to the `covid_c&d` metric — used in the Initial Shock but replaced by `covid_deaths` alone in Adaptation — reflects the Recovery period's distinctive epidemiology. Omicron's case-death decoupling (historic case counts, lower-than-expected fatalities) meant that `covid_deaths` alone would miss a large portion of the economically relevant COVID signal: the scale of the case surge mattered enormously for supply chain disruption and zero-COVID policy responses, even when mortality impact was attenuated by vaccines. The `covid_c&d` metric captured both dimensions.
 
 #### Key Analytical Findings
 
@@ -405,7 +405,7 @@ The COVID variable that best predicts economic indicators changed across phases 
 
 The Initial Shock → Adaptation transition from `covid_c&d` to `covid_deaths` alone is particularly meaningful. It documents the moment when vaccine development changed the market's informational calculus: case counts, once the primary measure of pandemic severity, became increasingly decoupled from economic impact once effective vaccines demonstrated that cases need not translate to deaths at historical rates. Investors and policymakers shifted their attention to fatality data as the more economically actionable signal.
 
-The return of `covid_c&d` in the Recovery phase reflects the Omicron variant's specific properties — extraordinarily high case counts combined with lower-than-expected fatality rates — which required the combined metric to capture both the scale of disruption (case counts) and its attenuated severity (death rates).
+The return of `covid_c&d` in the Recovery phase reflects the Omicron variant's specific properties — extraordinarily high case counts combined with lower-than-expected fatality rates — which required the total metric to capture both the scale of disruption (case counts) and its attenuated severity (death rates).
 
 ### 4.3 The Shift in the Dominant Economic Indicator
 
