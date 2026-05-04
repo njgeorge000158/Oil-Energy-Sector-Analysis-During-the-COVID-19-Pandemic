@@ -161,7 +161,7 @@ The levels analysis tests whether COVID data levels (or their cumulative and rol
 
 ### 2.2: Percentage-Change Analysis
 
-The percentage-change analysis strips out shared trending behavior and tests whether short-run changes in COVID data predict short-run changes in economic indicator returns. This is a more demanding and more econometrically rigorous evidence standard: both series must be stationary by construction, and detected Granger causality reflects genuine predictive information content rather than shared trend momentum.
+The percentage-change analysis strips out shared trending behavior and tests whether short-run changes in COVID data predict short-run changes in economic indicator returns. This approach is a more demanding and more econometrically rigorous evidence standard: both series must be stationary by construction, and detected Granger causality reflects genuine predictive information content rather than shared trend momentum.
 
 ---
 
