@@ -181,7 +181,7 @@ The percentage-change analysis strips out shared trending behavior and tests whe
 
 ---
 
-*The Initial Shock percentage-change analysis produces the second-highest scores of any phase with a top score of 60.98 for cumulative rolling `covid_c&d` → `stk_mkt`. The top category exactly mirrors the levels analysis leader for this phase, confirming that the COVID → equity channel during the crash was robust to both the trend-level and short-run specifications. The y-variables `stk_mkt` and `metals` dominate the top rankings, with equity indices scores in the lead.*
+*The Initial Shock percentage-change analysis produces the second-highest scores of any phase with a top score of 60.98 for cumulative, rolling `covid_c&d%` → `stk_mkt%`. The top category exactly mirrors the levels analysis leader for this phase, confirming that the COVID → equity channel during the crash was robust to both the trend-level and short-run specifications. The y-variables `stk_mkt` and `metals` dominate the top rankings, with equity indices scores in the lead.*
 
 ---
 
@@ -191,7 +191,7 @@ The percentage-change analysis strips out shared trending behavior and tests whe
 
 ---
 
-*The Adaptation percentage-change analysis is led by cumulative, 7-day rolling average `covid_deaths` → `metals` (score 56.60). The y-variable `metals` dominates the Y side with 7 of the 10 top positions, while `petrol_plus` and `exchg_rts` account for the remainder. The consistent appearance of `covid_deaths` (rather than `covid_cases` or `covid_c&d`) as the x-variable confirms the informational shift toward fatality data as the key COVID signal during the Adaptation period.*
+*The Adaptation percentage-change analysis is led by cumulative, rolling `covid_deaths%` → `metals%` with a score of 56.60. The y-variable `metals` dominates the Y side with 7 of the 10 top positions, while `petrol_plus` and `exchg_rts` account for the remainder. The consistent appearance of `covid_deaths` (rather than `covid_cases` or `covid_c&d`) as the x-variable confirms the informational shift toward fatality data as the key COVID signal during the Adaptation period.*
 
 ---
 
