@@ -171,7 +171,7 @@ The percentage-change analysis strips out shared trending behavior and tests whe
 
 ---
 
-*The category `covid_deaths%` → `exchg_rts%` (exchange rates) leads the Full Period percentage-change analysis with a score of 51.81. The y-variable `exchg_rts` dominates its competitors with 8 of the 10 top positions, while `metals` appears in the remaining two. Furthermore, exchange rate returns maintain the most persistent short-run relationship with COVID mortality percentage changes across the entire 966-day window, outperforming equities, commodities, and interest rates.*
+*The category `covid_deaths%` → `exchg_rts%` (exchange rates) leads the Full Period percentage-change analysis with a score of 51.81. The y-variable `exchg_rts` dominates the rankings with 8 of the 10 top positions while `metals` appears in the remaining two. Furthermore, exchange rate returns maintain the most persistent short-run relationship with COVID mortality percentage changes across the entire 966-day window, outperforming equities, commodities, and interest rates.*
 
 ---
 
@@ -191,7 +191,7 @@ The percentage-change analysis strips out shared trending behavior and tests whe
 
 ---
 
-*The Adaptation percentage-change analysis is led by cumulative, rolling `covid_deaths%` → `metals%` with a score of 56.60. The y-variable `metals` dominates the Y side with 7 of the 10 top positions, while `petrol_plus` and `exchg_rts` account for the remainder. The consistent appearance of `covid_deaths` (rather than `covid_cases` or `covid_c&d`) as the x-variable confirms the informational shift toward fatality data as the key COVID signal.*
+*The Adaptation percentage-change analysis is led by cumulative, rolling `covid_deaths%` → `metals%` with a score of 56.60. The y-variable `metals` dominates the rankings with 7 of the 10 top positions while `petrol_plus` and `exchg_rts` account for the remainder. The consistent appearance of `covid_deaths` (rather than `covid_cases` or `covid_c&d`) as the x-variable confirms the informational shift toward fatality data as the key COVID signal.*
 
 ---
 
