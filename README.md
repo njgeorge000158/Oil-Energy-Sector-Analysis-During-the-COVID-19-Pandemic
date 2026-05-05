@@ -940,7 +940,7 @@ The COVID variable that best predicted financial market outcomes changed across 
 
 | Phase | Dominant X-Variable | Transformation | Interpretation |
 |---|---|---|---|
-| Initial Shock | `covid_c&d` | cumulative, 7-day rolling avg | Breadth and severity jointly unknown; total pandemic scale was the operative signal |
+| Initial Shock | `covid_c&d` | Cumulative, 7-day rolling avg | Breadth and severity jointly unknown; total pandemic scale was the operative signal |
 | Adaptation | `covid_deaths` | Cumulative, 7-day rolling avg, % change | Severity more informative than breadth; fatality rate tracked policy-relevant economic risk |
 | Recovery | `covid_c&d` | Cumulative, 7-day rolling avg, % change | Omicron's case-death decoupling required both dimensions to capture the full disruption signal |
 | Full Period | `covid_deaths` | Raw % change, no smoothing | Daily death changes provided the most temporally persistent signal across all phases |
