@@ -78,11 +78,11 @@ The full combinatorial space of COVID variables, transformations, indicator cate
 
 ### 1.3 Pandemic Phase Definitions
 
-The 966-day dataset is divided into four analytically distinct periods reflecting the pandemic's macroeconomic character:
+The 966-day dataset is divided into four analytically distinct periods whose boundaries reflect genuine structural transitions in the pandemic's macroeconomic character — points at which the dominant transmission mechanism, the operative policy environment, and the informational structure of COVID data all shifted simultaneously rather than gradually.
 
-| Phase | Start | End | Duration | Character |
+| Phase | Start | End | Duration | Macroeconomic Character |
 |---|---|---|---|---|
-| **Full Period** | 01/22/2020 | 09/14/2022 | ~966 days | Entire dataset |
+| **Full Period** | 01/22/2020 | 09/14/2022 | ~966 days | Complete dataset; all three phases pooled |
 | **Initial Shock** | 01/22/2020 | 06/07/2020 | ~137 days | Pandemic emergence, historic market crash, emergency policy response |
 | **Adaptation** | 06/08/2020 | 11/25/2021 | ~536 days | Vaccine development and rollout, market recovery, Delta wave |
 | **Recovery** | 11/26/2021 | 09/14/2022 | ~292 days | Omicron wave, Federal Reserve tightening cycle, post-pandemic normalization |
