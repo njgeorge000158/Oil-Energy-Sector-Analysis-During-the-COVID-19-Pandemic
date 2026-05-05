@@ -9,11 +9,11 @@
 ## Table of Contents
 
 1. [Introduction](#1-introduction)
-   - [Research Question](#11-research-question)
-   - [Data and Scope](#12-data-and-scope)
-   - [Pandemic Phase Definitions](#13-pandemic-phase-definitions)
-   - [Analytical Methodology](#14-analytical-methodology)
-   - [Composite Scoring Framework](#15-composite-scoring-framework)
+   - [1.1 Research Question](#11-research-question)
+   - [1.2 Data and Scope](#12-data-and-scope)
+   - [1.3 Pandemic Phase Definitions](#13-pandemic-phase-definitions)
+   - [1.4 Analytical Methodology](#14-analytical-methodology)
+   - [1.5 Composite Scoring Framework](#15-composite-scoring-framework)
 2. [Candidate Selection: Identifying the Strongest COVID–Economic Pairings](#2-candidate-selection-identifying-the-strongest-covideconomic-pairings)
    - [Part 1: Levels Analysis](#21-part-1-levels-analysis)
    - [Part 2: Percentage-Change Analysis](#22-part-2-percentage-change-analysis)
