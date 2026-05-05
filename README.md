@@ -49,7 +49,7 @@ The answer this project provides to its central research question is neither a s
 
 ### 1.2 Data and Scope
 
-The dataset spans 966 trading days from **January 22, 2020 to September 14, 2022** and covers three COVID-19 data variants against five categories of economic indicators:
+The dataset spans 966 calendar days from January 22, 2020 through September 14, 2022, covering the complete arc of the COVID-19 pandemic's acute economic impact — from the first recorded U.S. case through the Federal Reserve's aggressive tightening cycle and the beginning of post-pandemic normalization. All series are observed at daily frequency. Three COVID-19 data variants are tested against six categories of economic indicators, with each COVID variant available in multiple transformed representations, producing a combinatorially large space of candidate pairings that the composite scoring framework systematically evaluates and ranks.
 
 **COVID-19 Variables (X)**
 
@@ -59,18 +59,22 @@ The dataset spans 966 trading days from **January 22, 2020 to September 14, 2022
 | `covid_deaths` | Confirmed COVID-19 deaths |
 | `covid_c&d` | Total confirmed cases and deaths |
 
-Each COVID variable is tested in raw form and with optional transformations: a 7-day rolling average (`x_roll`), cumulative accumulation (`xcml`), and percentage change (`xpct`).
+Each COVID variable is tested in its raw daily form and with up to three optional transformations applied independently or in combination: a 7-day rolling average (`x_roll`), which suppresses within-week reporting periodicity and smooths daily noise; cumulative accumulation (`xcml`), which converts daily counts into running totals that proxy for the pandemic's accumulated economic damage; and percentage change (`xpct`), which transforms the series into stationary growth rates suitable for direct comparison with financial market return series. The interaction of three base variables with up to three binary transformation flags generates a rich space of COVID signal representations whose differential performance across phases — which transformations dominate which indicator classes in which periods — is itself a substantive finding about how financial markets processed pandemic information at different points in the pandemic's evolution.
 
 **Economic Indicators (Y)**
 
-| Category | Description |
-|---|---|
-| `stk_mkt` | Stock market indices (5 indices) |
-| `metals` | Metal commodity prices — industrial and precious (5 metals) |
-| `exchg_rts` | Exchange rates — major currency/USD pairs (5 rates) |
-| `agr1` / `agr2` | Agricultural commodity price indices (5 indices / 5 indices) |
-| `intrt_rts` | Interest rate instruments (5 instruments) |
-| `petrol_plus` | Oil, gas, and energy sector indices (5 indices) |
+| Category | Instruments | Description |
+|---|---|---|
+| `stk_mkt` | 5 indices | Major U.S. stock market indices |
+| `metals` | 5 metals | Industrial and precious metal commodity prices |
+| `exchg_rts` | 5 pairs | Major currency / USD bilateral exchange rates |
+| `agr1` / `agr2` | 5 indices each | Agricultural commodity price indices |
+| `intrt_rts` | 5 instruments | Interest rate instruments across the yield curve |
+| `petrol_plus` | 5 indices | Oil, gas, and broader energy sector indices |
+
+The six indicator categories were selected to span the primary transmission channels through which pandemic severity could plausibly reach financial market prices: investor sentiment and earnings expectations through equity indices; physical supply chain disruption through metal and agricultural commodity prices; monetary policy divergence and safe-haven dynamics through exchange rates; yield curve and credit market responses through interest rate instruments; and energy demand and supply disruption through petroleum and energy indices. The five-instrument depth within each category provides cross-sectional variation that distinguishes between instruments within the same asset class — allowing the analysis to identify, for example, which specific metals were most COVID-sensitive and why — rather than treating each category as a single homogeneous exposure.
+
+The full combinatorial space of COVID variables, transformations, indicator categories, and analytical periods generates several thousand candidate pairings, all of which are scored by the composite framework in the candidate selection notebook before phase-specific analyses are conducted on the highest-ranked pairings. This exhaustive scoring approach — evaluating all combinations rather than selecting on the basis of prior conviction or observed correlation — is the design feature that allows the project's cross-phase variable and indicator rotation findings to be interpreted as data-driven rather than assumption-driven: the framework recovered which COVID metrics, transformations, and indicator classes were most causally connected in each phase without being told in advance where to look.
 
 ### 1.3 Pandemic Phase Definitions
 
