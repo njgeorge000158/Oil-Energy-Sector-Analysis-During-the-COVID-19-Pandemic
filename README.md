@@ -344,14 +344,6 @@ The Adaptation period brought the emergence of COVID's supply-side economic chan
 
 #### Key Analytical Findings
 
-Now I have the complete picture. Here is the updated and improved section:
-
----
-
-**3.2 Adaptation: COVID Death Rate vs. Metal Commodity Returns**
-
-**Key Analytical Findings**
-
 **Percentage-Change Framework.** Both series are in percentage-change form, meaning the analysis tests whether short-run accelerations in the death rate are associated with directional changes in metal returns. This is a more demanding test than the levels analysis used in the Initial Shock: there is no shared trend to inflate the correlation, and Granger causality must reflect genuine short-run predictive information rather than co-trending. The shift to percentage changes also means that the scatter plots and lag correlations are operating on a much noisier signal, which is reflected throughout the results.
 
 **Contemporaneous Correlation.** The scatter plots reveal a clear structural divide between precious and industrial metals in how they relate to the COVID death rate during the Adaptation period. Gold shows a diffuse, near-shapeless cloud with a shallow degree-2 polynomial fit (quadratic coefficient 2.65e-02) — no meaningful contemporaneous relationship in either direction. Silver and copper produce near-identical U-shaped scatter profiles with degree-2 fits, suggesting that extreme death-rate accelerations in either direction are associated with higher metal returns, while moderate changes show no relationship — a pattern more consistent with volatility coupling than directional causation. Platinum stands apart as the only metal with a visually coherent positive scatter profile: the degree-5 polynomial fits a broadly upward-sloping cloud, indicating that higher death-rate acceleration is associated with higher platinum returns across most of the data range, consistent with the supply disruption channel dominating for this metal. Palladium shows the shallowest and most linear scatter of the five (degree-1 fit, coefficient 7.69e-03), with a near-horizontal fitted line and enormous vertical spread at all x-values — essentially no contemporaneous signal.
